@@ -1,0 +1,291 @@
+#!/usr/bin/env python
+
+import codecs, copy, itertools, math, multiprocessing, operator, os, os.path, re, string, sys, time;
+#import lxml.etree as etree;
+import xml.etree.ElementTree as etree;
+import pgf;
+#from translation_pipeline import indentXMLNodes;
+
+#sys.stdin = codecs.getreader('utf-8')(sys.stdin);
+#sys.stdout = codecs.getwriter('utf-8')(sys.stdout);
+#sys.stderr = codecs.getwriter('utf-8')(sys.stderr);
+
+'''
+def convertToGFTokens(conll_sentence):
+    tokens = [];
+    for entry in conll_sentence:
+	# handle numbers;
+	# handle named entities;
+	# simply lower case the rest;
+	tokens.append(token['form'].lower() if token['feats'].find('nertype') == -1 and token['form'] != 'I' else token['form']);
+    return " ".join(tokens);
+
+def prepareGFInput(conllfile):
+    import conll_utils;
+    with codecs.open(conllfile, 'r', 'utf-8') as infile:
+	for sentence in conll_utils.sentences_from_conll(infile):
+	    yield convertToGFTokens(sentence);
+'''
+
+def gf_lexerI(sentence):
+    return sentence.rstrip(string.whitespace+string.punctuation);
+
+def gf_lexerChi(sentence):
+    sentence = sentence.decode('utf-8');
+    tokens, idx, n = [], 0, len(sentence);
+    prev = True;
+    while idx < n:
+	if sentence[idx] in string.whitespace:
+	    prev = True;
+	    idx += 1;
+	    continue;
+	if 0 < ord(sentence[idx]) < 128:
+	    if sentence[idx] in string.punctuation:
+		prev = True;
+	    if prev:
+		tokens.append( sentence[idx] );
+		prev = False;
+	    else:
+		tokens[-1] = tokens[-1]+sentence[idx];
+	else:
+	    prev = True;
+	    tokens.append( sentence[idx] );
+	idx += 1;
+    return ' '.join(tokens).encode('utf-8');
+
+def gf_lexer(lang='Eng'):
+    if lang[-3:] == 'Eng':
+	return gf_lexerI;
+    elif lang[-3:] == 'Chi':
+	return gf_lexerChi;
+    elif lang == 'translator':
+	import translation_pipeline;
+	return translation_pipeline.pipeline_lexer;
+    else:
+	return gf_lexerI;
+
+def web_lexer(grammar, lang, sentences):
+    tok_sentences = itertools.imap(gf_lexer('translator'), sentences);
+    for instance in tok_sentences:
+	tokensList = re.split('\s+?', instance, maxsplit=1);
+	token = tokensList[0];
+	lowertoken = token.lower();
+	count = 0;
+	for analysis in grammar.languages[lang].lookupMorpho(lowertoken):
+	    count += 1;
+	if count:
+	    yield '%s %s' %(lowertoken, ' '.join(tokensList[1:]));
+	else:
+	    yield '%s %s' %(token, ' '.join(tokensList[1:]));
+
+def gf_postprocessor(sentence):
+    if sentence == None:
+	return '';
+    if sentence.startswith('* ') or sentence.startswith('% '):
+	sentence = sentence[2:];
+    sentence = sentence.replace(' &+ ', '');
+    sentence = sentence.replace('<+>', ' ');
+    return sentence;
+
+def printJohnsonRerankerFormat(gfparsesList, sentid=itertools.count(1)):
+    johnsonRepr = [];
+    #johnsonRepr.append( '%s %s' %(len(parsesList), sentid) );
+    parseHash = {};
+    for parse in sorted(gfparsesList, key=operator.itemgetter(0)):
+	if parseHash.has_key(parse[1]):
+	    print >>sys.stderr, "Duplicate parses found in K-best parsing";
+	    continue; # to remove duplicates; could be necessary for re-training the parser
+	johnsonRepr.append( str(-1*parse[0]) );
+	johnsonRepr.append( str(parse[1]) );
+	parseHash[parse[1]] = parseHash.get(str(parse[1]), 0)+1;
+    curid = sentid.next();
+    if len(gfparsesList):
+	johnsonRepr.insert(0, '%d %d' %(sum(parseHash.values()), curid));
+    return '\n'.join(johnsonRepr)+'\n';
+
+def readJohnsonRerankerTrees(inputStream):
+    endOfParse = False;
+    while True:
+	sentheader = inputStream.next();
+	if sentheader == '':
+	    break;
+	parsescount, sentidx = map(int, sentheader.strip().split());
+	parsesBlock = [];
+	for i in xrange(parsescount):
+	    parseprob = inputStream.next();
+	    if parseprob.strip() == '':
+		endOfParse = True;
+		break;
+	    parse = inputStream.next();
+	    parsesBlock.append( (float(parseprob.strip()), pgf.readExpr(parse.strip())) );
+	yield sentidx, parsesBlock;
+	if not endOfParse:
+	    _ = inputStream.next();
+	endOfParse = False;
+
+def printMosesNbestFormat(hypothesisList, sentid=itertools.count(1)):
+    mosesRepr = [];
+    sid = sentid.next();
+    for hypScores, hypStr in hypothesisList:
+	mosesRepr.append("%d ||| %s ||| NULL ||| %s" %(sid, hypStr, ' '.join(['%.6f'%score for score in hypScores])));
+    return '\n'.join(mosesRepr);
+
+def readMosesNbestFormat(inputStream):
+    transBlock = [];
+    currentHypothesisId = 0;
+    while True:
+	line = inputStream.next();
+	if line == '':
+	    break;
+	fields = line.strip().split('|||');
+	if str(fields[0].strip()) != str(currentHypothesisId):
+	    yield currentHypothesisId, transBlock;
+	    transBlock = [];
+	    currentHypothesisId = int(fields[0]);
+	transBlock.append( (map(float, tuple([val.strip() for val in fields[3].split()])), fields[1].strip()) );
+
+def getKTranslations(grammar, tgtlanguage, abstractParsesList):
+    generator = grammar.languages[tgtlanguage].linearize;
+    for parsesBlock in abstractParsesList:
+	kBestTrans = [];
+	for parseprob, parse in parsesBlock:
+	    #print str(parse);
+	    kBestTrans.append( ((parseprob,), gf_postprocessor( generator(parse) )) );
+	yield kBestTrans;
+
+def getKBestParses(grammar, language, sentences, K, callbacks=[]):
+    parser = grammar.languages[language].parse;
+    for sentidx, sent in enumerate(sentences):
+	sent = sent.strip();
+	tstart = time.time();
+	kBestParses = [];
+	try:
+	    for parseidx, parse in enumerate( parser(sent, heuristics=0, callbacks=callbacks) ):
+		kBestParses.append(parse);
+		if parseidx == K-1:
+		    break;
+	    tend = time.time();
+	    print >>sys.stderr, '%d\t%.4f' %(sentidx+1, tend-tstart);
+	    yield kBestParses;
+	except pgf.ParseError, err:
+	    tend = time.time();
+	    print >>sys.stderr, '%d\t%.4f\t%s' %(sentidx+1, tend-tstart, err);
+	    yield kBestParses;
+	except UnicodeEncodeError, err:
+	    tend = time.time();
+	    print >>sys.stderr, '%d\t%.4f\t%s' %(sentidx+1, tend-tstart, err);
+	    yield kBestParses;
+
+def getMultiParses(grammar, language, sentences, bagSize=0.001, callbacks=[]):
+    logRange = math.log(bagSize);
+    logTol   = 0;
+    parser = grammar.languages[language].parse;
+    for sentidx, sent in enumerate(sentences):
+	sent = sent.strip();
+	tstart = time.time();
+	kBestParses, maxprob, firstprob = [], sys.maxint, sys.maxint;
+	try:
+	    for parseidx, parse in enumerate( parser(sent, heuristics=0, callbacks=callbacks) ):
+		if firstprob == sys.maxint:
+		    firstprob = parse[0];
+		maxprob = min(maxprob, parse[0]);
+		if parse[0] > firstprob-logRange+logTol: 
+		    break;
+		kBestParses.append( parse );
+	    tend = time.time();
+	    print >>sys.stderr, '%d\t%.4f' %(sentidx+1, tend-tstart);
+	    yield sorted(filter(lambda X: X[0]<=(maxprob-logRange), kBestParses), key=operator.itemgetter(0));
+	except pgf.ParseError, err:
+	    tend = time.time();
+	    print >>sys.stderr, '%d\t%.4f\t%s' %(sentidx+1, tend-tstart, err);
+	    yield sorted(filter(lambda X: X[0]<=(maxprob-logRange), kBestParses), key=operator.itemgetter(0));
+	except UnicodeEncodeError, err:
+	    tend = time.time();
+	    print >>sys.stderr, '%d\t%.4f\t%s' %(sentidx+1, tend-tstart, err);
+	    yield sorted(filter(lambda X: X[0]<=(maxprob-logRange), kBestParses), key=operator.itemgetter(0));
+
+def pgf_parse(*args):
+    grammarfile, start_cat, lang = args[0], args[1], args[2];
+    inputSet = itertools.imap(gf_lexer('translator'), codecs.open(args[3], 'r', 'utf-8') if len(args) > 3 else sys.stdin);
+    grammar = pgf.readPGF(grammarfile);
+    outputPrinter = operator.itemgetter(1);
+    for parsesBlock in getKBestParses(grammar, lang, inputSet, K=1):
+	print str(outputPrinter(parsesBlock[0])) if len(parsesBlock) else '';
+    return;
+
+def pgf_kparse(*args):
+    grammarfile, start_cat, lang, K = args[0], args[1], args[2], int(args[3]);
+    inputSet = itertools.imap(gf_lexer('translator'), codecs.open(args[4], 'r') if len(args) > 4 else sys.stdin);
+    grammar = pgf.readPGF(grammarfile);
+    outputPrinter = printJohnsonRerankerFormat;
+    for parsesBlock in getKBestParses(grammar, lang, inputSet, K):
+	strParses = str(outputPrinter(parsesBlock));
+	if not (strParses == '\n'):
+	    print strParses;
+    return;
+
+def pgf_multiparse(*args):
+    grammarfile, start_cat, lang, beam = args[0], args[1], args[2], float(args[3]);
+    #inputSet = itertools.imap(gf_lexer('translator'), codecs.open(args[4], 'r') if len(args) > 4 else sys.stdin);
+    grammar = pgf.readPGF(grammarfile);
+    
+    import translation_pipeline_v2;
+    translation_pipeline_v2.SRCLANG = lang;
+    translation_pipeline_v2.GRAMMAR = grammar;
+    callbacks = [('PN', translation_pipeline_v2.parseNames)];
+    #callbacks = [('PN', translation_pipeline_v2.parseNames), ('Symb', translation_pipeline_v2.parseUnknown)];
+    
+    print translation_pipeline_v2.SRCLANG;
+    print translation_pipeline_v2.GRAMMAR.languages;
+
+    inputSet = web_lexer(grammar, lang, codecs.open(args[4], 'r') if len(args) > 4 else sys.stdin);
+    outputPrinter = printJohnsonRerankerFormat;
+    for parsesBlock in getMultiParses(grammar, lang, inputSet, beam, callbacks=callbacks):
+	strParses = str(outputPrinter(parsesBlock));
+	if not (strParses == '\n'):
+	    #print strParses;
+	    pass;
+    return;
+
+def pgf_translate(*args):
+    grammarfile, start_cat, srclang, tgtlang = args[0], args[1], args[2], args[3];
+    inputSet = itertools.imap(gf_lexer('translator'), codecs.open(args[4], 'r', 'utf-8') if len(args) > 4 else sys.stdin);
+    grammar = pgf.readPGF(grammarfile);
+    outputPrinter = operator.itemgetter(1);
+    for transBlock in getKTranslations(grammar, tgtlang, getKBestParses(grammar, srclang, inputSet, K=1)):
+	print str(outputPrinter(transBlock[0])) if len(transBlock) else '';
+    return;
+
+def pgf_ktranslate(*args):
+    grammarfile, start_cat, srclang, tgtlang, K = args[0], args[1], args[2], args[3], int(args[4]);
+    inputSet = itertools.imap(gf_lexer('translator'), codecs.open(args[5], 'r', 'utf-8') if len(args) > 5 else sys.stdin);
+    grammar = pgf.readPGF(grammarfile);
+    outputPrinter = printMosesNbestFormat;
+    for transBlock in getKTranslations(grammar, tgtlang, getKBestParses(grammar, srclang, inputSet, K)):
+	strTrans = str(outputPrinter(transBlock));
+	if strTrans:
+	    print strTrans;
+    return;
+
+def pgf_klinearize(*args):
+    grammarfile, tgtlang = args[0], args[1];
+    inputSet = [(sentid, parsesBlock) for sentid, parsesBlock in readJohnsonRerankerTrees( codecs.open(args[2], 'r', 'utf-8') if len(args) > 2 else sys.stdin )];
+    sentIdsList  = itertools.imap(operator.itemgetter(0), inputSet);
+    parsesBlocks = map(operator.itemgetter(1), inputSet);
+    grammar = pgf.readPGF(grammarfile);
+    outputPrinter = printMosesNbestFormat;
+    for transBlock in getKTranslations(grammar, tgtlang, parsesBlocks):
+	strTrans = str(outputPrinter(transBlock, sentIdsList));
+	if strTrans:
+	    print strTrans;
+    return;
+
+
+if __name__ == '__main__':
+    #pgf_parse(*sys.argv[1:]);
+    #pgf_kparse(*sys.argv[1:]);
+    pgf_multiparse(*sys.argv[1:]);
+    #pgf_klinearize(*sys.argv[1:]);
+    #pgf_translate(*sys.argv[1:]);
+    #pgf_ktranslate(*sys.argv[1:]);
+    #sys.exit(0);

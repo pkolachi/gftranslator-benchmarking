@@ -1,0 +1,86 @@
+\documentclass[a4paper, 11pt]{article}
+\topmargin-2.0cm
+
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{extramarks}
+\usepackage{pagecounting}
+\usepackage{color}
+\usepackage[round]{natbib}
+\usepackage{lipsum}
+\usepackage{enumerate}
+%\usepackage{tipa}
+%\usepackage{gb4e}
+\usepackage{graphicx}
+\usepackage{amsmath, amsthm}
+%\usepackage{colortbl}
+\usepackage{caption}
+\usepackage[a4paper]{geometry}
+\usepackage{url}
+
+\advance\oddsidemargin-0.35in
+\advance\evensidemargin-0.65in
+\textheight9.5in
+\textwidth6.5in
+
+\newcommand{\hsp}{\hspace*{\parindent}}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+
+\newcommand\blfootnote[1]{
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}
+  \addtocounter{footnote}{-1}
+  \endgroup
+}
+
+%\sectionfont{\large}
+
+\begin{document}
+
+\pagestyle{fancy}
+\lhead{\textcolor{gray}{Prasanth Kolachina}}
+\chead{\textcolor{gray}{}}
+\rhead{\textcolor{gray}{REMU}}
+\lfoot{\textcolor{gray}{prasanth.kolachina@cse.gu.se}}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.5pt} 
+\renewcommand{\footrulewidth}{0.5pt} 
+\fancyfoot[C]{\footnotesize \textcolor{gray}{}} 
+
+\centerline{ {\Large MT Error Analysis: A case-study towards Hybrid MT} }
+\vspace*{1cm}
+
+There have been a number of hand-crafted \textit{computational grammar} development projects in the last
+few decades attempting to build comprehensive wide-coverage grammars for natural languages using different
+grammatical formalisms. Such formalisms have been designed to be richer than context-free grammars
+in terms of their generative capacity. While efforts in defining these formalisms have contributed
+to grammars with detailed linguistic analysis, such grammars also lack the distributional information
+necessary for disambiguation tasks such as parsing. Alternatively, grammars constructed with necessary 
+distributional information from annotated corpora like treebanks have shown to be effective in a wide 
+variety of NLP applications, but are typically not linguistically interesting. 
+
+However, these efforts to construct grammars from annotated corpora are often interleaved with 
+language-specific and annotation-specific information to extract linguistic units of grammars. Such
+annotation-specific information can be abstracted away during grammar extraction, allowing uniform
+extraction of grammars for multiple languages. This has been verified in the case of context-free grammars
+where language-independent methods to construct grammars from corpora have been proposed over time.
+In my talk, I will address this issue in the context of Tree Adjoining Grammars. TAG grammars, proposed by
+Joshi et. al (1976) have been developed for a wide range of languages and put to use in a multitude of
+NLP applications ranging from parsing to generation.
+
+I propose a `normative' grammar extraction procedure to extract multi-lingual TAG grammars by seperating out
+language- and annotation-specific details out of the extraction procedure. As part of this, I will address
+the specific problem of inducing argument/adjunct distinction in syntactic structures without
+using annotation-specific details. I will present the results of my experiments on the Swedish treebank
+\textit{Talbanken}, and show that the procedure can indeed work in an annotation-neutral manner. The results
+show that the extracted grammars can serve as a first-order approximation to hand-crafted grammars useful
+in creating wide-coverage grammars. 
+
+%If you want references on a separate page, uncomment the following command.
+%\clearpage
+%\begin{small}
+%\bibliographystyle{plainnat}
+%\bibliography{references}
+%\end{small}
+
+\end{document}

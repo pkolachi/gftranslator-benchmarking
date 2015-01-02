@@ -1,0 +1,310 @@
+#!/usr/bin/env python
+
+import argparse, codecs, copy, functools, itertools, logging, math, operator, os, os.path, re, string, sys, time;
+#import pathos.multiprocessing as multiprocessing;
+#import multiprocessing;
+#import lxml.etree as etree;
+import xml.etree.ElementTree as etree;
+import pgf;
+import gf_utils;
+
+# http://snipplr.com/view/25657/indent-xml-using-elementtree/
+def indentXMLNodes(elem, level=0):
+    i = "\n" + level*"  "
+    if len(elem):
+	if not elem.text or not elem.text.strip():
+	    elem.text = i + "  "
+	if not elem.tail or not elem.tail.strip():
+	    elem.tail = i
+	for elem in elem:
+	    indentXMLNodes(elem, level+1)
+	if not elem.tail or not elem.tail.strip():
+	    elem.tail = i
+    else:
+	if level and (not elem.tail or not elem.tail.strip()):
+	    elem.tail = i
+    
+def readTranslationPipelineOptions(propsfile, default_namespace):
+    with codecs.open(propsfile, 'r', 'utf-8') as infile:
+	for line in infile:
+	    if not line.strip():
+		continue;
+	    key, value = line.strip().split('=', 1);
+	    key, value = key.strip(), value.strip();
+	    if   key == 'srclang':  default_namespace.srclang = value;
+	    elif key == 'tgtlangs': default_namespace.tgtlangs = [val.strip() for val in ','.split(value)];
+	    elif key == 'input':    default_namespace.input = value;
+	    elif key == 'format':   default_namespace.format = value;
+	    elif key == 'exp_directory': default_namespace.exp_directory = value;
+	    else:
+		#print >>sys.stderr, "Unknown option-%s found in props file. Ignoring and proceeding." %(key);
+		logging.warning("Unknown option-%s found in props file. Ignoring and proceeding." %(key));
+		continue;
+    return default_namespace;
+
+def sgmReader(sgmDoc):
+    root = sgmDoc.getroot();
+    for element in root.iter():
+	if element.text is not None and element.text.strip():
+	    yield element.text.strip().encode('utf-8');
+
+def addToSgm(sgmDoc, strItem):
+    for node in sgmDoc.findall('.//seg'):
+	if not node.text.strip():
+	    strItem = strItem.decode('utf-8');
+	    node.text = ' %s ' %(strItem if strItem.strip() else 'EMPTY');
+	    return;
+    logging.error("No more nodes available for adding content");
+    return;
+
+def sgmWriter(sgmDoc):
+    indentXMLNodes( sgmDoc.getroot() );
+    return etree.tostring(sgmDoc.getroot(), encoding='utf-8', method='xml');
+
+def getXMLSkeleton(sgmDoc, tgtlang):
+    skeletonDoc = copy.deepcopy(sgmDoc);
+    root = skeletonDoc.getroot();
+    root.tag = 'tstset';
+    root.attrib['trlang'] = tgtlang[-3:];
+    root.find('doc').attrib['sysid'] = tgtlang[:-3];
+    for node in root.findall('.//seg'):
+	node.text = '';
+    return skeletonDoc;
+
+def pipeline_lexer(sentence):
+    tokens = sentence.strip().split();
+    #tokens = filter(None, re.split('(\W+)', sentence.strip()));
+    n = len(tokens);
+    idx = len(tokens)-1;
+    while idx >= 0:
+	if tokens[idx] in ".?!":
+	    idx -= 1;
+	else:
+	    break;
+    return ' '.join(tokens[:idx+1]);
+
+def clean_gfstrings(sentence):
+    absFuncName = re.compile('\[[^]]+?\]');
+    untranslatedEntries = {};
+    for entry in re.findall(absFuncName, sentence):
+	untranslatedEntries[entry] = untranslatedEntries.setdefault(entry, 0)+1;
+    for entry in untranslatedEntries:
+	while untranslatedEntries[entry] > 1:
+	    sentence = sentence.replace(entry, '', 1);
+	    untranslatedEntries[entry] -= 1;
+	sentence = sentence.replace(entry, ' '.join(entry[1:-1].split('_')[:-1]) if entry.find('_') != -1 else '');
+    return ' '.join( sentence.split() );
+
+def translateWord(grammar, language, tgtlanguage, word):
+    lowerword = word.lower();
+    try:
+	partialExprList = grammar.languages[language].parse(word, cat='Chunk');
+	for expr in partialExprList:
+	    trans = grammar.languages[tgtlanguage].linearize(expr[1]);
+	    if not trans: print expr[1], tgtlanguage;
+	    return gf_utils.gf_postprocessor( trans if trans else ' ' );
+    except pgf.ParseError:
+	morphAnalysis = grammar.languages[language].lookupMorpho(word) + grammar.languages[language].lookupMorpho(lowerword);
+	for morph in morphAnalysis:
+	    if grammar.languages[tgtlanguage].hasLinearization(morph[0]):
+		return gf_utils.gf_postprocessor( grammar.languages[tgtlanguage].linearize( pgf.readExpr(morph[0]) ) );
+    return word;
+
+def translationByLookup(grammar, language, tgtlanguages, sentence):
+    return [(lang, gf_utils.gf_postprocessor("% " + " ".join([translateWord(grammar, language, lang, word) for word in sentence.split()]))) \
+	    for lang in tgtlanguages];
+
+def translateWordsAsChunks(grammar, language, tgtlanguages, word):
+    parser = grammar.languages[language].parse;
+    linearizersList = dict([(lang, grammar.languages[lang].linearize) for lang in tgtlanguages]);
+    translations = [];
+    try:
+	for parseidx, parse in enumerate( parser(word) ):
+	    for lang in tgtlanguages:
+		trans = linearizersList[lang](parse[1]);
+		translations.append(( lang, gf_utils.gf_postprocessor(trans.strip() if trans else '') ) );
+	    break;
+    except pgf.ParseError, err:
+	return [];
+    return translations;
+
+def translateWord_(grammar, language, tgtlanguages, word):
+    possible_translations = translateWordsAsChunks(grammar, language, tgtlanguages, word);
+    if len(possible_translations):
+	return possible_translations;
+
+    lowerword = word.lower();
+    try:
+	partialExprList = grammar.languages[language].parse(word, cat='Chunk');
+	for expr in partialExprList:
+	    return [(lang, gf_utils.gf_postprocessor( grammar.languages[lang].linearize(expr[1]) )) for lang in tgtlanguages];
+    except pgf.ParseError:
+	morphAnalysis = grammar.languages[language].lookupMorpho(word) + grammar.languages[language].lookupMorpho(lowerword);
+	for morph in morphAnalysis:
+	    countPositiveLanguages = filter(None, [grammar.languages[lang].hasLinearization(morph[0]) for lang in tgtlanguages]);
+	    if len(countPositiveLanguages) > 0.5*len(tgtlanguages):
+		return [(lang, gf_utils.gf_postprocessor( grammar.languages[lang].linearize( pgf.readExpr(morph[0]) ) )) for lang in tgtlanguages];
+    return [(lang, word) for lang in tgtlanguages];
+
+def translationByLookup_(grammar, language, tgtlanguages, sentence):
+    parser = grammar.languages[language].parse;
+    linearizersList = dict([(lang, grammar.languages[lang].linearize) for lang in tgtlanguages]);
+    queue = [sentence.strip().split()];
+    transChunks = {};
+    while len(queue):
+	head = queue[0];
+	if not len(head):
+	    pass;
+	elif len(head) == 1 and head[0].strip():
+	    for lang, wordchoice in translateWord_(grammar, language, tgtlanguages, head[0]):
+		transChunks.setdefault(lang, []).append( gf_utils.gf_postprocessor(wordchoice) );
+	else:
+	    try:
+		for parseidx, parse in enumerate( parser(' '.join(head)) ):
+		    for lang in tgtlanguages:
+			if linearizersList[lang](parse[1]) == None:
+			    transChunks.setdefault(lang, []).append( ' ' );
+			else:
+			    transChunks.setdefault(lang, []).append( gf_utils.gf_postprocessor( linearizersList[lang](parse[1]).strip() ) );
+		    break;
+	    except pgf.ParseError, err:
+		#unseenToken = re.findall('"[^"]+?"', err.message)[0][1:-1];
+		unseenToken = err.message.strip().split()[-1][1:-1];
+		idx = head.index(unseenToken);
+		queue.insert(1, head[:idx] );
+		queue.insert(2, [head[idx]] );
+		queue.insert(3, head[idx+1:] );
+	del queue[0];
+    for lang in tgtlanguages:
+	yield (lang, ' '.join(transChunks[lang]));
+
+def pipelineParsing(grammar, language, sentences):
+    #buf = [sent for sent in sentences];
+    buf, sentences = itertools.tee(sentences, 2);
+    sentences = itertools.imap(gf_utils.gf_lexer(lang=language), sentences);
+    for sent, parsesBlock in itertools.izip(buf, gf_utils.getKBestParses(grammar, language, sentences, 20)):
+	#print len(parsesBlock);
+	yield (sent, parsesBlock);
+
+def pipelineParsing_alt(*args):
+    for result in pipelineParsing(args):
+	yield result;
+
+def pipelineParsing_multi(grammar, language, sentences):
+    buf = [sent for sent in sentences];
+    size = 25;
+    chunks = (buf[start:start+size] for start in xrange(0, len(buf)-size+1, size));
+    args = [];
+    for batch in chunks:
+	args.append( (grammar, language, batch) );
+    return multiprocessing.Pool(3).imap(pipelineParsing_alt, [arguments for arguments in args], chunksize=math.log(len(args), 10));
+
+def translation_pipeline(props):
+    if props.propsfile:
+	props = readTranslationPipelineOptions(props.propsfile, props);
+
+    if not os.path.isdir( props.exp_directory ):
+	logging.info( "Creating output directory: %s" %(props.exp_directory) );
+	#print "Creating output directory: %s" %(props.exp_directory);
+	os.makedirs(props.exp_directory);
+    
+    if not props.srclang:
+	logging.critical( "Mandatory option source-lang missing. Can not determine source language." );
+	#print "Mandatory option source-lang missing. Can not determine source language.";
+	sys.exit(1);
+    
+    grammar = pgf.readPGF(props.pgffile);
+    
+    sourceLanguage = filter(None, [lang if lang[-3:] == props.srclang else '' for lang in grammar.languages.keys()])[0];
+    logging.info( "Translating from %s"%(sourceLanguage) );
+    
+    if len(props.tgtlangs):
+	target_langs = props.tgtlangs;
+    else:
+	target_langs = filter(None, [lang[-3:] if lang != sourceLanguage else '' for lang in grammar.languages.keys()]);
+    targetLanguages = filter(None, [lang if lang[-3:] in target_langs else '' for lang in grammar.languages.keys()]);
+    logging.info( "Translating into the following languages: %s"%(','.join(targetLanguages)) );
+    
+    if not props.input:
+	logging.info( "Input file name missing. Reading input from stdin." );
+	inputStream = sys.stdin;
+	outputPrefix = os.getpid();
+    else:
+	inputStream = codecs.open(props.input, 'r');
+	outputPrefix = os.path.splitext( os.path.split(props.input)[1] )[0];
+    
+    if props.format == 'sgm':
+	inputDoc    = etree.parse(inputStream);
+	reader      = sgmReader;
+	skeletonDoc = getXMLSkeleton;
+	addItem     = addToSgm;
+	writer      = sgmWriter;
+    elif props.format == 'txt':
+	logging.info( "Input format is txt. Assuming one-sentence-per-line format." );
+	inputDoc    = inputStream;
+	reader      = lambda X: X;
+	skeletonDoc = lambda X, lang: list();
+	addItem     = lambda X, y: list.append(X, y); 
+	writer      = lambda X: '\n'.join(X);
+    
+    translationBlocks = {};
+    for tgtlang in targetLanguages+['abstract']:
+	translationBlocks[tgtlang] = skeletonDoc(inputDoc, tgtlang);
+
+    preprocessor  = pipeline_lexer;
+    postprocessor = lambda X: X #clean_gfstrings;
+
+    logging.info( "Parsing text in %s" %(sourceLanguage) );
+    # 1. Get Abstract Trees for sentences in source language.
+    #absParses = [parsesBlock for parsesBlock in pipelineParsing_multi( grammar, sourceLanguage, itertools.imap(preprocessor, reader(inputDoc)) )];
+    absParses  = [parsesBlock for parsesBlock in pipelineParsing( grammar, sourceLanguage, itertools.imap(preprocessor, reader(inputDoc)) )];
+
+    logging.info( "Linearizing into %s" %(','.join(targetLanguages)) );
+    # 2. Linearize in all target Languages
+    for idx, parsesBlock in enumerate( itertools.imap(operator.itemgetter(1), absParses) ):
+	translationBuffer = {};
+	if not len(parsesBlock):
+	    # failed to parse;
+	    # translate using lookup
+	    for tgtlang, translation in translationByLookup_(grammar, sourceLanguage, targetLanguages, absParses[idx][0]):
+		addItem(translationBlocks[tgtlang], postprocessor(translation));
+	    addItem(translationBlocks['abstract'], '');
+	else:
+	    bestTranslationIdx = 0;
+	    for tgtlang in targetLanguages:
+		#print "Linearizing into %s" %tgtlang;
+		translationBuffer[tgtlang] = gf_utils.getKTranslations(grammar, tgtlang, [parsesBlock]).next();
+		for tidx, translation in enumerate(translationBuffer[tgtlang]):
+		    if postprocessor(translation[1]).strip():
+			if tidx > bestTranslationIdx:
+			    bestTranslationIdx = tidx;
+			break;
+
+	    for tgtlang in targetLanguages:
+		translation = translationBuffer[tgtlang][bestTranslationIdx] if len(translationBuffer[tgtlang]) > bestTranslationIdx else ((None,), '');
+		addItem(translationBlocks[tgtlang], postprocessor(translation[1]));
+
+	    addItem(translationBlocks['abstract'], str(parsesBlock[bestTranslationIdx][1]));
+
+    for tgtlang in targetLanguages+['abstract']:
+	outputFile = os.path.join( props.exp_directory, '%s-%s.%s' %(outputPrefix, tgtlang[-3:] if tgtlang!='abstract' else 'abstract', props.format) );
+	logging.info( "Writing translations for %s to %s" %(tgtlang, outputFile) );
+	with codecs.open(outputFile, 'w') as outputStream:
+	    print >>outputStream, writer(translationBlocks[tgtlang]);
+    return;
+
+def cmdLineParser():
+    argparser = argparse.ArgumentParser(prog='translation_pipeline.py', description='Run the GF translation pipeline on standard test-sets');
+    argparser.add_argument('-g', '--pgf', dest='pgffile', required=True, help='PGF grammar file to run the pipeline');
+    argparser.add_argument('-s', '--source', dest='srclang', default='', help='Source language of input sentences');
+    argparser.add_argument('-t', '--target', dest='tgtlangs', nargs='*', default=[], help='Target languages to linearize (default is all other languages)');
+    argparser.add_argument('-i', '--input', dest='input', default='', help='input file (default will accept STDIN)');
+    argparser.add_argument('-f', '--format', dest='format', default='txt', choices=['txt', 'sgm'], help='input file format (output files will be written in the same format)');
+    argparser.add_argument('-e', '--exp', dest='exp_directory', default=os.getcwd(), help='experiement directory to write translation files');
+    argparser.add_argument('-p', '--props', dest='propsfile', default='', help='properties file for the translation pipeline (specify the above arguments in a file)');
+    return argparser;
+
+if __name__ == '__main__':
+    logging.basicConfig(level='INFO');
+    pipelineEnv = cmdLineParser().parse_args(sys.argv[1:]);
+    translation_pipeline(pipelineEnv);

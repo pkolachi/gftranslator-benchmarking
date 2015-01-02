@@ -1,0 +1,1881 @@
+Phrasebook: PQuestion (QProp (PropAction (ABePlace IFemale (ThePlace Airport))))
+PhrasebookChi: 我 在 机 场 吗 ？
+PhrasebookEng: am I at the airport ?
+ Phrasebook: PQuestion (QProp (PropAction (ABePlace IMale (ThePlace Airport))))
+PhrasebookChi: 我 在 机 场 吗 ？
+PhrasebookEng: am I at the airport ?
+ Phrasebook: PQuestion (QProp (PropAction (ATired (Children (PersonName NameNN)))))
+PhrasebookChi: NN 的 孩 子 累 了 吗 ？
+PhrasebookEng: are NN 's children tired ?
+ Phrasebook: PQuestion (QProp (PropAction (ABePlace (Children WeFemale) (SuperlPlace TheClosest Hotel))))
+PhrasebookChi: 我 们 的 孩 子 在 最 近 的 那 个 旅 馆 吗 ？
+PhrasebookEng: are our children in the nearest hotel ?
+ Phrasebook: PQuestion (QProp (PropAction (ABePlace (Children WeMale) (SuperlPlace TheClosest Hotel))))
+PhrasebookChi: 我 们 的 孩 子 在 最 近 的 那 个 旅 馆 吗 ？
+PhrasebookEng: are our children in the nearest hotel ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasAge TheyFemale (NNumeral (num (pot2as3 (pot1as2 pot111)))))))
+PhrasebookChi: 他 们 十 一 岁 吗 ？
+PhrasebookEng: are they eleven years old ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasAge TheyMale (NNumeral (num (pot2as3 (pot1as2 pot111)))))))
+PhrasebookChi: 他 们 十 一 岁 吗 ？
+PhrasebookEng: are they eleven years old ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasAge YouFamFemale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n8)))))))))
+PhrasebookChi: 你 八 岁 吗 ？
+PhrasebookEng: are you eight years old ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasAge YouFamMale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n8)))))))))
+PhrasebookChi: 你 八 岁 吗 ？
+PhrasebookEng: are you eight years old ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasAge YouPlurFamFemale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n8)))))))))
+PhrasebookChi: 你 们 八 岁 吗 ？
+PhrasebookEng: are you eight years old ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasAge YouPlurFamMale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n8)))))))))
+PhrasebookChi: 你 们 八 岁 吗 ？
+PhrasebookEng: are you eight years old ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasAge YouPlurPolFemale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n8)))))))))
+PhrasebookChi: 你 们 八 岁 吗 ？
+PhrasebookEng: are you eight years old ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasAge YouPlurPolMale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n8)))))))))
+PhrasebookChi: 你 们 八 岁 吗 ？
+PhrasebookEng: are you eight years old ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasAge YouPolFemale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n8)))))))))
+PhrasebookChi: 您 八 岁 吗 ？
+PhrasebookEng: are you eight years old ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasAge YouPolMale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n8)))))))))
+PhrasebookChi: 您 八 岁 吗 ？
+PhrasebookEng: are you eight years old ?
+ Phrasebook: PQuestion (QProp (PropAction (ACitizen YouFamFemale (CitiNat Norwegian))))
+PhrasebookChi: 你 是 挪 威 人 吗 ？
+PhrasebookEng: are you Norwegian ?
+ Phrasebook: PQuestion (QProp (PropAction (ACitizen YouFamMale (CitiNat Norwegian))))
+PhrasebookChi: 你 是 挪 威 人 吗 ？
+PhrasebookEng: are you Norwegian ?
+ Phrasebook: PQuestion (QProp (PropAction (ACitizen YouPlurFamFemale (CitiNat Norwegian))))
+PhrasebookChi: 你 们 是 挪 威 人 吗 ？
+PhrasebookEng: are you Norwegian ?
+ Phrasebook: PQuestion (QProp (PropAction (ACitizen YouPlurFamMale (CitiNat Norwegian))))
+PhrasebookChi: 你 们 是 挪 威 人 吗 ？
+PhrasebookEng: are you Norwegian ?
+ Phrasebook: PQuestion (QProp (PropAction (ACitizen YouPlurPolFemale (CitiNat Norwegian))))
+PhrasebookChi: 你 们 是 挪 威 人 吗 ？
+PhrasebookEng: are you Norwegian ?
+ Phrasebook: PQuestion (QProp (PropAction (ACitizen YouPlurPolMale (CitiNat Norwegian))))
+PhrasebookChi: 你 们 是 挪 威 人 吗 ？
+PhrasebookEng: are you Norwegian ?
+ Phrasebook: PQuestion (QProp (PropAction (ACitizen YouPolFemale (CitiNat Norwegian))))
+PhrasebookChi: 您 是 挪 威 人 吗 ？
+PhrasebookEng: are you Norwegian ?
+ Phrasebook: PQuestion (QProp (PropAction (ACitizen YouPolMale (CitiNat Norwegian))))
+PhrasebookChi: 您 是 挪 威 人 吗 ？
+PhrasebookEng: are you Norwegian ?
+ Phrasebook: PQuestion (QProp (PropAction (AMarried (Children YouFamFemale))))
+PhrasebookChi: 你 的 孩 子 是 已 婚 的 吗 ？
+PhrasebookEng: are your children married ?
+ Phrasebook: PQuestion (QProp (PropAction (AMarried (Children YouFamMale))))
+PhrasebookChi: 你 的 孩 子 是 已 婚 的 吗 ？
+PhrasebookEng: are your children married ?
+ Phrasebook: PQuestion (QProp (PropAction (AMarried (Children YouPlurFamFemale))))
+PhrasebookChi: 你 们 的 孩 子 是 已 婚 的 吗 ？
+PhrasebookEng: are your children married ?
+ Phrasebook: PQuestion (QProp (PropAction (AMarried (Children YouPlurFamMale))))
+PhrasebookChi: 你 们 的 孩 子 是 已 婚 的 吗 ？
+PhrasebookEng: are your children married ?
+ Phrasebook: PQuestion (QProp (PropAction (AMarried (Children YouPlurPolFemale))))
+PhrasebookChi: 你 们 的 孩 子 是 已 婚 的 吗 ？
+PhrasebookEng: are your children married ?
+ Phrasebook: PQuestion (QProp (PropAction (AMarried (Children YouPlurPolMale))))
+PhrasebookChi: 你 们 的 孩 子 是 已 婚 的 吗 ？
+PhrasebookEng: are your children married ?
+ Phrasebook: PQuestion (QProp (PropAction (AMarried (Children YouPolFemale))))
+PhrasebookChi: 您 的 孩 子 是 已 婚 的 吗 ？
+PhrasebookEng: are your children married ?
+ Phrasebook: PQuestion (QProp (PropAction (AMarried (Children YouPolMale))))
+PhrasebookChi: 您 的 孩 子 是 已 婚 的 吗 ？
+PhrasebookEng: are your children married ?
+ Phrasebook: PImperativeFamPos (V2Buy (OneObj (ObjPlural Apple)))
+PhrasebookChi: 买 些 苹 果
+PhrasebookEng: buy apples
+ Phrasebook: PImperativePlurPos (V2Buy (OneObj (ObjPlural Apple)))
+PhrasebookChi: 买 些 苹 果
+PhrasebookEng: buy apples
+ Phrasebook: PImperativePolPos (V2Buy (OneObj (ObjPlural Apple)))
+PhrasebookChi: 买 些 苹 果
+PhrasebookEng: buy apples
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan (Daughter She) VSwim (ThePlace School))))
+PhrasebookChi: 她 的 女 儿 能 在 学 校 游 泳 吗 ？
+PhrasebookEng: can her daughter swim at the school ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow (Daughter She) VSwim (ThePlace School))))
+PhrasebookChi: 她 的 女 儿 会 在 学 校 游 泳 吗 ？
+PhrasebookEng: can her daughter swim at the school ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MCan YouFamFemale (V2Buy (ObjAndObj (ObjMass (MassDrink Tea)) (OneObj (DrinkNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) Coffee)))))))
+PhrasebookChi: 你 能 买 茶 和 两 个 咖 啡 吗 ？
+PhrasebookEng: can you buy tea and two coffees ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MCan YouFamMale (V2Buy (ObjAndObj (ObjMass (MassDrink Tea)) (OneObj (DrinkNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) Coffee)))))))
+PhrasebookChi: 你 能 买 茶 和 两 个 咖 啡 吗 ？
+PhrasebookEng: can you buy tea and two coffees ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MCan YouPolFemale (V2Buy (ObjAndObj (ObjMass (MassDrink Tea)) (OneObj (DrinkNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) Coffee)))))))
+PhrasebookChi: 您 能 买 茶 和 两 个 咖 啡 吗 ？
+PhrasebookEng: can you buy tea and two coffees ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MCan YouPolMale (V2Buy (ObjAndObj (ObjMass (MassDrink Tea)) (OneObj (DrinkNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) Coffee)))))))
+PhrasebookChi: 您 能 买 茶 和 两 个 咖 啡 吗 ？
+PhrasebookEng: can you buy tea and two coffees ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MKnow YouFamFemale (V2Buy (ObjAndObj (ObjMass (MassDrink Tea)) (OneObj (DrinkNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) Coffee)))))))
+PhrasebookChi: 你 会 买 茶 和 两 个 咖 啡 吗 ？
+PhrasebookEng: can you buy tea and two coffees ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MKnow YouFamMale (V2Buy (ObjAndObj (ObjMass (MassDrink Tea)) (OneObj (DrinkNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) Coffee)))))))
+PhrasebookChi: 你 会 买 茶 和 两 个 咖 啡 吗 ？
+PhrasebookEng: can you buy tea and two coffees ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MKnow YouPolFemale (V2Buy (ObjAndObj (ObjMass (MassDrink Tea)) (OneObj (DrinkNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) Coffee)))))))
+PhrasebookChi: 您 会 买 茶 和 两 个 咖 啡 吗 ？
+PhrasebookEng: can you buy tea and two coffees ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MKnow YouPolMale (V2Buy (ObjAndObj (ObjMass (MassDrink Tea)) (OneObj (DrinkNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) Coffee)))))))
+PhrasebookChi: 您 会 买 茶 和 两 个 咖 啡 吗 ？
+PhrasebookEng: can you buy tea and two coffees ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MCan YouPlurFamFemale (V2Buy (ObjAndObj (ObjMass (MassDrink Tea)) (OneObj (DrinkNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) Coffee)))))))
+PhrasebookChi: 你 们 能 买 茶 和 两 个 咖 啡 吗 ？
+PhrasebookEng: can you buy tea and two coffees ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MCan YouPlurFamMale (V2Buy (ObjAndObj (ObjMass (MassDrink Tea)) (OneObj (DrinkNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) Coffee)))))))
+PhrasebookChi: 你 们 能 买 茶 和 两 个 咖 啡 吗 ？
+PhrasebookEng: can you buy tea and two coffees ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MCan YouPlurPolFemale (V2Buy (ObjAndObj (ObjMass (MassDrink Tea)) (OneObj (DrinkNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) Coffee)))))))
+PhrasebookChi: 你 们 能 买 茶 和 两 个 咖 啡 吗 ？
+PhrasebookEng: can you buy tea and two coffees ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MCan YouPlurPolMale (V2Buy (ObjAndObj (ObjMass (MassDrink Tea)) (OneObj (DrinkNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) Coffee)))))))
+PhrasebookChi: 你 们 能 买 茶 和 两 个 咖 啡 吗 ？
+PhrasebookEng: can you buy tea and two coffees ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MKnow YouPlurFamFemale (V2Buy (ObjAndObj (ObjMass (MassDrink Tea)) (OneObj (DrinkNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) Coffee)))))))
+PhrasebookChi: 你 们 会 买 茶 和 两 个 咖 啡 吗 ？
+PhrasebookEng: can you buy tea and two coffees ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MKnow YouPlurFamMale (V2Buy (ObjAndObj (ObjMass (MassDrink Tea)) (OneObj (DrinkNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) Coffee)))))))
+PhrasebookChi: 你 们 会 买 茶 和 两 个 咖 啡 吗 ？
+PhrasebookEng: can you buy tea and two coffees ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MKnow YouPlurPolFemale (V2Buy (ObjAndObj (ObjMass (MassDrink Tea)) (OneObj (DrinkNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) Coffee)))))))
+PhrasebookChi: 你 们 会 买 茶 和 两 个 咖 啡 吗 ？
+PhrasebookEng: can you buy tea and two coffees ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MKnow YouPlurPolMale (V2Buy (ObjAndObj (ObjMass (MassDrink Tea)) (OneObj (DrinkNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) Coffee)))))))
+PhrasebookChi: 你 们 会 买 茶 和 两 个 咖 啡 吗 ？
+PhrasebookEng: can you buy tea and two coffees ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan YouFamFemale (V2Wait WeFemale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 能 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan YouFamFemale (V2Wait WeMale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 能 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan YouFamMale (V2Wait WeFemale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 能 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan YouFamMale (V2Wait WeMale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 能 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan YouPolFemale (V2Wait WeFemale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 您 能 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan YouPolFemale (V2Wait WeMale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 您 能 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan YouPolMale (V2Wait WeFemale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 您 能 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan YouPolMale (V2Wait WeMale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 您 能 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow YouFamFemale (V2Wait WeFemale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 会 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow YouFamFemale (V2Wait WeMale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 会 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow YouFamMale (V2Wait WeFemale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 会 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow YouFamMale (V2Wait WeMale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 会 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow YouPolFemale (V2Wait WeFemale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 您 会 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow YouPolFemale (V2Wait WeMale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 您 会 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow YouPolMale (V2Wait WeFemale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 您 会 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow YouPolMale (V2Wait WeMale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 您 会 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan YouPlurFamFemale (V2Wait WeFemale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 们 能 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan YouPlurFamFemale (V2Wait WeMale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 们 能 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan YouPlurFamMale (V2Wait WeFemale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 们 能 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan YouPlurFamMale (V2Wait WeMale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 们 能 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan YouPlurPolFemale (V2Wait WeFemale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 们 能 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan YouPlurPolFemale (V2Wait WeMale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 们 能 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan YouPlurPolMale (V2Wait WeFemale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 们 能 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan YouPlurPolMale (V2Wait WeMale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 们 能 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow YouPlurFamFemale (V2Wait WeFemale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 们 会 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow YouPlurFamFemale (V2Wait WeMale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 们 会 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow YouPlurFamMale (V2Wait WeFemale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 们 会 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow YouPlurFamMale (V2Wait WeMale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 们 会 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow YouPlurPolFemale (V2Wait WeFemale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 们 会 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow YouPlurPolFemale (V2Wait WeMale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 们 会 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow YouPlurPolMale (V2Wait WeFemale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 们 会 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow YouPlurPolMale (V2Wait WeMale) (SuperlPlace TheClosest Cinema))))
+PhrasebookChi: 你 们 会 在 最 近 的 那 个 电 影 院 等 我 们 吗 ？
+PhrasebookEng: can you wait for us at the nearest cinema ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MCan (Son YouFamFemale) VSwim)))
+PhrasebookChi: 你 的 儿 子 能 游 泳 吗 ？
+PhrasebookEng: can your son swim ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MCan (Son YouFamMale) VSwim)))
+PhrasebookChi: 你 的 儿 子 能 游 泳 吗 ？
+PhrasebookEng: can your son swim ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MCan (Son YouPlurFamFemale) VSwim)))
+PhrasebookChi: 你 们 的 儿 子 能 游 泳 吗 ？
+PhrasebookEng: can your son swim ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MCan (Son YouPlurFamMale) VSwim)))
+PhrasebookChi: 你 们 的 儿 子 能 游 泳 吗 ？
+PhrasebookEng: can your son swim ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MCan (Son YouPlurPolFemale) VSwim)))
+PhrasebookChi: 你 们 的 儿 子 能 游 泳 吗 ？
+PhrasebookEng: can your son swim ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MCan (Son YouPlurPolMale) VSwim)))
+PhrasebookChi: 你 们 的 儿 子 能 游 泳 吗 ？
+PhrasebookEng: can your son swim ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MCan (Son YouPolFemale) VSwim)))
+PhrasebookChi: 您 的 儿 子 能 游 泳 吗 ？
+PhrasebookEng: can your son swim ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MCan (Son YouPolMale) VSwim)))
+PhrasebookChi: 您 的 儿 子 能 游 泳 吗 ？
+PhrasebookEng: can your son swim ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MKnow (Son YouFamFemale) VSwim)))
+PhrasebookChi: 你 的 儿 子 会 游 泳 吗 ？
+PhrasebookEng: can your son swim ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MKnow (Son YouFamMale) VSwim)))
+PhrasebookChi: 你 的 儿 子 会 游 泳 吗 ？
+PhrasebookEng: can your son swim ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MKnow (Son YouPlurFamFemale) VSwim)))
+PhrasebookChi: 你 们 的 儿 子 会 游 泳 吗 ？
+PhrasebookEng: can your son swim ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MKnow (Son YouPlurFamMale) VSwim)))
+PhrasebookChi: 你 们 的 儿 子 会 游 泳 吗 ？
+PhrasebookEng: can your son swim ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MKnow (Son YouPlurPolFemale) VSwim)))
+PhrasebookChi: 你 们 的 儿 子 会 游 泳 吗 ？
+PhrasebookEng: can your son swim ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MKnow (Son YouPlurPolMale) VSwim)))
+PhrasebookChi: 你 们 的 儿 子 会 游 泳 吗 ？
+PhrasebookEng: can your son swim ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MKnow (Son YouPolFemale) VSwim)))
+PhrasebookChi: 您 的 儿 子 会 游 泳 吗 ？
+PhrasebookEng: can your son swim ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MKnow (Son YouPolMale) VSwim)))
+PhrasebookChi: 您 的 儿 子 会 游 泳 吗 ？
+PhrasebookEng: can your son swim ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan (Wife YouFamFemale) (V2Buy (OneObj (ObjMass Milk))) (SuperlPlace TheClosest Supermarket))))
+PhrasebookChi: 你 的 妻 子 能 在 最 近 的 那 家 超 级 市 场 买 牛 奶 吗 ？
+PhrasebookEng: can your wife buy milk at the nearest supermarket ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan (Wife YouFamMale) (V2Buy (OneObj (ObjMass Milk))) (SuperlPlace TheClosest Supermarket))))
+PhrasebookChi: 你 的 妻 子 能 在 最 近 的 那 家 超 级 市 场 买 牛 奶 吗 ？
+PhrasebookEng: can your wife buy milk at the nearest supermarket ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan (Wife YouPlurFamFemale) (V2Buy (OneObj (ObjMass Milk))) (SuperlPlace TheClosest Supermarket))))
+PhrasebookChi: 你 们 的 妻 子 能 在 最 近 的 那 家 超 级 市 场 买 牛 奶 吗 ？
+PhrasebookEng: can your wife buy milk at the nearest supermarket ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan (Wife YouPlurFamMale) (V2Buy (OneObj (ObjMass Milk))) (SuperlPlace TheClosest Supermarket))))
+PhrasebookChi: 你 们 的 妻 子 能 在 最 近 的 那 家 超 级 市 场 买 牛 奶 吗 ？
+PhrasebookEng: can your wife buy milk at the nearest supermarket ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan (Wife YouPlurPolFemale) (V2Buy (OneObj (ObjMass Milk))) (SuperlPlace TheClosest Supermarket))))
+PhrasebookChi: 你 们 的 妻 子 能 在 最 近 的 那 家 超 级 市 场 买 牛 奶 吗 ？
+PhrasebookEng: can your wife buy milk at the nearest supermarket ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan (Wife YouPlurPolMale) (V2Buy (OneObj (ObjMass Milk))) (SuperlPlace TheClosest Supermarket))))
+PhrasebookChi: 你 们 的 妻 子 能 在 最 近 的 那 家 超 级 市 场 买 牛 奶 吗 ？
+PhrasebookEng: can your wife buy milk at the nearest supermarket ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan (Wife YouPolFemale) (V2Buy (OneObj (ObjMass Milk))) (SuperlPlace TheClosest Supermarket))))
+PhrasebookChi: 您 的 妻 子 能 在 最 近 的 那 家 超 级 市 场 买 牛 奶 吗 ？
+PhrasebookEng: can your wife buy milk at the nearest supermarket ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MCan (Wife YouPolMale) (V2Buy (OneObj (ObjMass Milk))) (SuperlPlace TheClosest Supermarket))))
+PhrasebookChi: 您 的 妻 子 能 在 最 近 的 那 家 超 级 市 场 买 牛 奶 吗 ？
+PhrasebookEng: can your wife buy milk at the nearest supermarket ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow (Wife YouFamFemale) (V2Buy (OneObj (ObjMass Milk))) (SuperlPlace TheClosest Supermarket))))
+PhrasebookChi: 你 的 妻 子 会 在 最 近 的 那 家 超 级 市 场 买 牛 奶 吗 ？
+PhrasebookEng: can your wife buy milk at the nearest supermarket ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow (Wife YouFamMale) (V2Buy (OneObj (ObjMass Milk))) (SuperlPlace TheClosest Supermarket))))
+PhrasebookChi: 你 的 妻 子 会 在 最 近 的 那 家 超 级 市 场 买 牛 奶 吗 ？
+PhrasebookEng: can your wife buy milk at the nearest supermarket ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow (Wife YouPlurFamFemale) (V2Buy (OneObj (ObjMass Milk))) (SuperlPlace TheClosest Supermarket))))
+PhrasebookChi: 你 们 的 妻 子 会 在 最 近 的 那 家 超 级 市 场 买 牛 奶 吗 ？
+PhrasebookEng: can your wife buy milk at the nearest supermarket ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow (Wife YouPlurFamMale) (V2Buy (OneObj (ObjMass Milk))) (SuperlPlace TheClosest Supermarket))))
+PhrasebookChi: 你 们 的 妻 子 会 在 最 近 的 那 家 超 级 市 场 买 牛 奶 吗 ？
+PhrasebookEng: can your wife buy milk at the nearest supermarket ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow (Wife YouPlurPolFemale) (V2Buy (OneObj (ObjMass Milk))) (SuperlPlace TheClosest Supermarket))))
+PhrasebookChi: 你 们 的 妻 子 会 在 最 近 的 那 家 超 级 市 场 买 牛 奶 吗 ？
+PhrasebookEng: can your wife buy milk at the nearest supermarket ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow (Wife YouPlurPolMale) (V2Buy (OneObj (ObjMass Milk))) (SuperlPlace TheClosest Supermarket))))
+PhrasebookChi: 你 们 的 妻 子 会 在 最 近 的 那 家 超 级 市 场 买 牛 奶 吗 ？
+PhrasebookEng: can your wife buy milk at the nearest supermarket ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow (Wife YouPolFemale) (V2Buy (OneObj (ObjMass Milk))) (SuperlPlace TheClosest Supermarket))))
+PhrasebookChi: 您 的 妻 子 会 在 最 近 的 那 家 超 级 市 场 买 牛 奶 吗 ？
+PhrasebookEng: can your wife buy milk at the nearest supermarket ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MKnow (Wife YouPolMale) (V2Buy (OneObj (ObjMass Milk))) (SuperlPlace TheClosest Supermarket))))
+PhrasebookChi: 您 的 妻 子 会 在 最 近 的 那 家 超 级 市 场 买 牛 奶 吗 ？
+PhrasebookEng: can your wife buy milk at the nearest supermarket ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson (Children She) YouFamFemale)))
+PhrasebookChi: 她 的 孩 子 认 识 你 吗 ？
+PhrasebookEng: do her children know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson (Children She) YouFamMale)))
+PhrasebookChi: 她 的 孩 子 认 识 你 吗 ？
+PhrasebookEng: do her children know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson (Children She) YouPlurFamFemale)))
+PhrasebookChi: 她 的 孩 子 认 识 你 们 吗 ？
+PhrasebookEng: do her children know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson (Children She) YouPlurFamMale)))
+PhrasebookChi: 她 的 孩 子 认 识 你 们 吗 ？
+PhrasebookEng: do her children know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson (Children She) YouPlurPolFemale)))
+PhrasebookChi: 她 的 孩 子 认 识 你 们 吗 ？
+PhrasebookEng: do her children know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson (Children She) YouPlurPolMale)))
+PhrasebookChi: 她 的 孩 子 认 识 你 们 吗 ？
+PhrasebookEng: do her children know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson (Children She) YouPolFemale)))
+PhrasebookChi: 她 的 孩 子 认 识 您 吗 ？
+PhrasebookEng: do her children know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson (Children She) YouPolMale)))
+PhrasebookChi: 她 的 孩 子 认 识 您 吗 ？
+PhrasebookEng: do her children know you ?
+ Phrasebook: PQuestion (QProp (PropAction (ALive (Children He) (CountryNat Romanian))))
+PhrasebookChi: 他 的 孩 子 住 罗 马 尼 亚 吗 ？
+PhrasebookEng: do his children live in Romania ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrase IFemale (V2Buy (ObjAndObj (ObjMass Milk) (OneObj (ObjNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) Apple)))))))
+PhrasebookChi: 我 买 牛 奶 和 两 个 苹 果 吗 ？
+PhrasebookEng: do I buy milk and two apples ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrase IMale (V2Buy (ObjAndObj (ObjMass Milk) (OneObj (ObjNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) Apple)))))))
+PhrasebookChi: 我 买 牛 奶 和 两 个 苹 果 吗 ？
+PhrasebookEng: do I buy milk and two apples ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion IFemale (HowMuchCost (That Apple)))))
+PhrasebookChi: 我 知 道 那 个 苹 果 是 多 少 钱 吗 ？
+PhrasebookEng: do I know how much that apple costs ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion IMale (HowMuchCost (That Apple)))))
+PhrasebookChi: 我 知 道 那 个 苹 果 是 多 少 钱 吗 ？
+PhrasebookEng: do I know how much that apple costs ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson IFemale YouFamFemale)))
+PhrasebookChi: 我 认 识 你 吗 ？
+PhrasebookEng: do I know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson IFemale YouFamMale)))
+PhrasebookChi: 我 认 识 你 吗 ？
+PhrasebookEng: do I know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson IFemale YouPlurFamFemale)))
+PhrasebookChi: 我 认 识 你 们 吗 ？
+PhrasebookEng: do I know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson IFemale YouPlurFamMale)))
+PhrasebookChi: 我 认 识 你 们 吗 ？
+PhrasebookEng: do I know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson IFemale YouPlurPolFemale)))
+PhrasebookChi: 我 认 识 你 们 吗 ？
+PhrasebookEng: do I know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson IFemale YouPlurPolMale)))
+PhrasebookChi: 我 认 识 你 们 吗 ？
+PhrasebookEng: do I know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson IFemale YouPolFemale)))
+PhrasebookChi: 我 认 识 您 吗 ？
+PhrasebookEng: do I know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson IFemale YouPolMale)))
+PhrasebookChi: 我 认 识 您 吗 ？
+PhrasebookEng: do I know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson IMale YouFamFemale)))
+PhrasebookChi: 我 认 识 你 吗 ？
+PhrasebookEng: do I know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson IMale YouFamMale)))
+PhrasebookChi: 我 认 识 你 吗 ？
+PhrasebookEng: do I know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson IMale YouPlurFamFemale)))
+PhrasebookChi: 我 认 识 你 们 吗 ？
+PhrasebookEng: do I know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson IMale YouPlurFamMale)))
+PhrasebookChi: 我 认 识 你 们 吗 ？
+PhrasebookEng: do I know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson IMale YouPlurPolFemale)))
+PhrasebookChi: 我 认 识 你 们 吗 ？
+PhrasebookEng: do I know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson IMale YouPlurPolMale)))
+PhrasebookChi: 我 认 识 你 们 吗 ？
+PhrasebookEng: do I know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson IMale YouPolFemale)))
+PhrasebookChi: 我 认 识 您 吗 ？
+PhrasebookEng: do I know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson IMale YouPolMale)))
+PhrasebookChi: 我 认 识 您 吗 ？
+PhrasebookEng: do I know you ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion (Children TheyFemale) (QProp (PropClosedDate (ThePlace Supermarket) Today)))))
+PhrasebookChi: 他 们 的 孩 子 知 道 今 天 超 级 市 场 是 不 是 关 闭 的 吗 ？
+PhrasebookEng: do their children know if the supermarket is closed today ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion (Children TheyMale) (QProp (PropClosedDate (ThePlace Supermarket) Today)))))
+PhrasebookChi: 他 们 的 孩 子 知 道 今 天 超 级 市 场 是 不 是 关 闭 的 吗 ？
+PhrasebookEng: do their children know if the supermarket is closed today ?
+ Phrasebook: PQuestion (QProp (ItCost (These Apple) (AmountCurrency (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n5)))))) Euro)))
+PhrasebookChi: 这 些 苹 果 是 五 个 欧 元 吗 ？
+PhrasebookEng: do these apples cost five euros ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasRoom TheyFemale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))))))
+PhrasebookChi: 他 们 有 给 两 个 人 的 一 个 房 间 吗 ？
+PhrasebookEng: do they have a room for two persons ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasRoom TheyMale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))))))
+PhrasebookChi: 他 们 有 给 两 个 人 的 一 个 房 间 吗 ？
+PhrasebookEng: do they have a room for two persons ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion TheyFemale (HowMuchCost (That Pizza)))))
+PhrasebookChi: 他 们 知 道 那 个 比 萨 饼 是 多 少 钱 吗 ？
+PhrasebookEng: do they know how much that pizza costs ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion TheyMale (HowMuchCost (That Pizza)))))
+PhrasebookChi: 他 们 知 道 那 个 比 萨 饼 是 多 少 钱 吗 ？
+PhrasebookEng: do they know how much that pizza costs ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence TheyFemale (SHaveNo IFemale Pizza))))
+PhrasebookChi: 他 们 知 道 我 没 有 比 萨 饼 吗 ？
+PhrasebookEng: do they know that I don't have pizzas ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence TheyFemale (SHaveNo IMale Pizza))))
+PhrasebookChi: 他 们 知 道 我 没 有 比 萨 饼 吗 ？
+PhrasebookEng: do they know that I don't have pizzas ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence TheyMale (SHaveNo IFemale Pizza))))
+PhrasebookChi: 他 们 知 道 我 没 有 比 萨 饼 吗 ？
+PhrasebookEng: do they know that I don't have pizzas ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence TheyMale (SHaveNo IMale Pizza))))
+PhrasebookChi: 他 们 知 道 我 没 有 比 萨 饼 吗 ？
+PhrasebookEng: do they know that I don't have pizzas ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion TheyFemale (QWhatName YouFamFemale))))
+PhrasebookChi: 他 们 知 道 你 贵 姓 吗 ？
+PhrasebookEng: do they know what your name is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion TheyFemale (QWhatName YouFamMale))))
+PhrasebookChi: 他 们 知 道 你 贵 姓 吗 ？
+PhrasebookEng: do they know what your name is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion TheyFemale (QWhatName YouPlurFamFemale))))
+PhrasebookChi: 他 们 知 道 你 们 贵 姓 吗 ？
+PhrasebookEng: do they know what your name is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion TheyFemale (QWhatName YouPlurFamMale))))
+PhrasebookChi: 他 们 知 道 你 们 贵 姓 吗 ？
+PhrasebookEng: do they know what your name is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion TheyFemale (QWhatName YouPlurPolFemale))))
+PhrasebookChi: 他 们 知 道 你 们 贵 姓 吗 ？
+PhrasebookEng: do they know what your name is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion TheyFemale (QWhatName YouPlurPolMale))))
+PhrasebookChi: 他 们 知 道 你 们 贵 姓 吗 ？
+PhrasebookEng: do they know what your name is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion TheyFemale (QWhatName YouPolFemale))))
+PhrasebookChi: 他 们 知 道 您 贵 姓 吗 ？
+PhrasebookEng: do they know what your name is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion TheyFemale (QWhatName YouPolMale))))
+PhrasebookChi: 他 们 知 道 您 贵 姓 吗 ？
+PhrasebookEng: do they know what your name is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion TheyMale (QWhatName YouFamFemale))))
+PhrasebookChi: 他 们 知 道 你 贵 姓 吗 ？
+PhrasebookEng: do they know what your name is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion TheyMale (QWhatName YouFamMale))))
+PhrasebookChi: 他 们 知 道 你 贵 姓 吗 ？
+PhrasebookEng: do they know what your name is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion TheyMale (QWhatName YouPlurFamFemale))))
+PhrasebookChi: 他 们 知 道 你 们 贵 姓 吗 ？
+PhrasebookEng: do they know what your name is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion TheyMale (QWhatName YouPlurFamMale))))
+PhrasebookChi: 他 们 知 道 你 们 贵 姓 吗 ？
+PhrasebookEng: do they know what your name is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion TheyMale (QWhatName YouPlurPolFemale))))
+PhrasebookChi: 他 们 知 道 你 们 贵 姓 吗 ？
+PhrasebookEng: do they know what your name is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion TheyMale (QWhatName YouPlurPolMale))))
+PhrasebookChi: 他 们 知 道 你 们 贵 姓 吗 ？
+PhrasebookEng: do they know what your name is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion TheyMale (QWhatName YouPolFemale))))
+PhrasebookChi: 他 们 知 道 您 贵 姓 吗 ？
+PhrasebookEng: do they know what your name is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion TheyMale (QWhatName YouPolMale))))
+PhrasebookChi: 他 们 知 道 您 贵 姓 吗 ？
+PhrasebookEng: do they know what your name is ?
+ Phrasebook: PQuestion (QProp (PropAction (ALive TheyFemale (CountryNat English))))
+PhrasebookChi: 他 们 住 英 国 吗 ？
+PhrasebookEng: do they live in England ?
+ Phrasebook: PQuestion (QProp (PropAction (ALive TheyMale (CountryNat English))))
+PhrasebookChi: 他 们 住 英 国 吗 ？
+PhrasebookEng: do they live in England ?
+ Phrasebook: PQuestion (QProp (PropAction (ASpeak TheyFemale (LangNat French))))
+PhrasebookChi: 他 们 说 法 语 吗 ？
+PhrasebookEng: do they speak French ?
+ Phrasebook: PQuestion (QProp (PropAction (ASpeak TheyMale (LangNat French))))
+PhrasebookChi: 他 们 说 法 语 吗 ？
+PhrasebookEng: do they speak French ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MWant TheyFemale VSleep)))
+PhrasebookChi: 他 们 想 睡 吗 ？
+PhrasebookEng: do they want to sleep ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MWant TheyMale VSleep)))
+PhrasebookChi: 他 们 想 睡 吗 ？
+PhrasebookEng: do they want to sleep ?
+ Phrasebook: PQuestion (QDoHave WeFemale (OneObj (ObjMass Milk)))
+PhrasebookChi: 我 们 有 牛 奶 吗 ？
+PhrasebookEng: do we have milk ?
+ Phrasebook: PQuestion (QDoHave WeMale (OneObj (ObjMass Milk)))
+PhrasebookChi: 我 们 有 牛 奶 吗 ？
+PhrasebookEng: do we have milk ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeFemale (HowMuchCost (These Apple)))))
+PhrasebookChi: 我 们 知 道 这 些 苹 果 是 多 少 钱 吗 ？
+PhrasebookEng: do we know how much these apples cost ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeMale (HowMuchCost (These Apple)))))
+PhrasebookChi: 我 们 知 道 这 些 苹 果 是 多 少 钱 吗 ？
+PhrasebookEng: do we know how much these apples cost ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeFemale (WherePerson (Children WeFemale)))))
+PhrasebookChi: 我 们 知 道 我 们 的 孩 子 在 哪 里 吗 ？
+PhrasebookEng: do we know where our children are ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeFemale (WherePerson (Children WeMale)))))
+PhrasebookChi: 我 们 知 道 我 们 的 孩 子 在 哪 里 吗 ？
+PhrasebookEng: do we know where our children are ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeMale (WherePerson (Children WeFemale)))))
+PhrasebookChi: 我 们 知 道 我 们 的 孩 子 在 哪 里 吗 ？
+PhrasebookEng: do we know where our children are ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeMale (WherePerson (Children WeMale)))))
+PhrasebookChi: 我 们 知 道 我 们 的 孩 子 在 哪 里 吗 ？
+PhrasebookEng: do we know where our children are ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeFemale (QWhereDoVerbPhrase WeFemale VEat))))
+PhrasebookChi: 我 们 知 道 我 们 去 哪 里 吃 吗 ？
+PhrasebookEng: do we know where we eat ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeFemale (QWhereDoVerbPhrase WeMale VEat))))
+PhrasebookChi: 我 们 知 道 我 们 去 哪 里 吃 吗 ？
+PhrasebookEng: do we know where we eat ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeMale (QWhereDoVerbPhrase WeFemale VEat))))
+PhrasebookChi: 我 们 知 道 我 们 去 哪 里 吃 吗 ？
+PhrasebookEng: do we know where we eat ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeMale (QWhereDoVerbPhrase WeMale VEat))))
+PhrasebookChi: 我 们 知 道 我 们 去 哪 里 吃 吗 ？
+PhrasebookEng: do we know where we eat ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MWant WeFemale (V2Drink (OneObj (ObjMass (SuchMassKind (PropQuality Cold) (MassDrink Beer))))) (SuperlPlace TheClosest Restaurant))))
+PhrasebookChi: 我 们 想 在 最 近 的 那 间 饭 店 喝 冷 啤 酒 吗 ？
+PhrasebookEng: do we want to drink cold beer in the nearest restaurant ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MWant WeMale (V2Drink (OneObj (ObjMass (SuchMassKind (PropQuality Cold) (MassDrink Beer))))) (SuperlPlace TheClosest Restaurant))))
+PhrasebookChi: 我 们 想 在 最 近 的 那 间 饭 店 喝 冷 啤 酒 吗 ？
+PhrasebookEng: do we want to drink cold beer in the nearest restaurant ?
+ Phrasebook: PQuestion (QProp (PropAction (AWantGo WeFemale (ThePlace University))))
+PhrasebookChi: 我 们 想 去 大 学 吗 ？
+PhrasebookEng: do we want to go to the university ?
+ Phrasebook: PQuestion (QProp (PropAction (AWantGo WeMale (ThePlace University))))
+PhrasebookChi: 我 们 想 去 大 学 吗 ？
+PhrasebookEng: do we want to go to the university ?
+ Phrasebook: PQuestion (QProp (PropAction (AWant WeFemale (ObjAndObj (ObjMass (MassDrink Wine)) (OneObj (ObjMass Chicken))))))
+PhrasebookChi: 我 们 要 酒 和 鸡 吗 ？
+PhrasebookEng: do we want wine and chicken ?
+ Phrasebook: PQuestion (QProp (PropAction (AWant WeMale (ObjAndObj (ObjMass (MassDrink Wine)) (OneObj (ObjMass Chicken))))))
+PhrasebookChi: 我 们 要 酒 和 鸡 吗 ？
+PhrasebookEng: do we want wine and chicken ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrase YouFamFemale (V2Buy (OneObj (ObjItem (ThatMass Fish)))))))
+PhrasebookChi: 你 买 那 条 鱼 吗 ？
+PhrasebookEng: do you buy that fish ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrase YouFamMale (V2Buy (OneObj (ObjItem (ThatMass Fish)))))))
+PhrasebookChi: 你 买 那 条 鱼 吗 ？
+PhrasebookEng: do you buy that fish ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrase YouPolFemale (V2Buy (OneObj (ObjItem (ThatMass Fish)))))))
+PhrasebookChi: 您 买 那 条 鱼 吗 ？
+PhrasebookEng: do you buy that fish ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrase YouPolMale (V2Buy (OneObj (ObjItem (ThatMass Fish)))))))
+PhrasebookChi: 您 买 那 条 鱼 吗 ？
+PhrasebookEng: do you buy that fish ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrase YouPlurFamFemale (V2Buy (OneObj (ObjItem (ThatMass Fish)))))))
+PhrasebookChi: 你 们 买 那 条 鱼 吗 ？
+PhrasebookEng: do you buy that fish ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrase YouPlurFamMale (V2Buy (OneObj (ObjItem (ThatMass Fish)))))))
+PhrasebookChi: 你 们 买 那 条 鱼 吗 ？
+PhrasebookEng: do you buy that fish ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrase YouPlurPolFemale (V2Buy (OneObj (ObjItem (ThatMass Fish)))))))
+PhrasebookChi: 你 们 买 那 条 鱼 吗 ？
+PhrasebookEng: do you buy that fish ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrase YouPlurPolMale (V2Buy (OneObj (ObjItem (ThatMass Fish)))))))
+PhrasebookChi: 你 们 买 那 条 鱼 吗 ？
+PhrasebookEng: do you buy that fish ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrasePlace YouFamFemale VDrink (APlace Disco))))
+PhrasebookChi: 你 在 一 个 迪 斯 科 喝 吗 ？
+PhrasebookEng: do you drink at a disco ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrasePlace YouFamMale VDrink (APlace Disco))))
+PhrasebookChi: 你 在 一 个 迪 斯 科 喝 吗 ？
+PhrasebookEng: do you drink at a disco ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrasePlace YouPolFemale VDrink (APlace Disco))))
+PhrasebookChi: 您 在 一 个 迪 斯 科 喝 吗 ？
+PhrasebookEng: do you drink at a disco ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrasePlace YouPolMale VDrink (APlace Disco))))
+PhrasebookChi: 您 在 一 个 迪 斯 科 喝 吗 ？
+PhrasebookEng: do you drink at a disco ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrasePlace YouPlurFamFemale VDrink (APlace Disco))))
+PhrasebookChi: 你 们 在 一 个 迪 斯 科 喝 吗 ？
+PhrasebookEng: do you drink at a disco ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrasePlace YouPlurFamMale VDrink (APlace Disco))))
+PhrasebookChi: 你 们 在 一 个 迪 斯 科 喝 吗 ？
+PhrasebookEng: do you drink at a disco ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrasePlace YouPlurPolFemale VDrink (APlace Disco))))
+PhrasebookChi: 你 们 在 一 个 迪 斯 科 喝 吗 ？
+PhrasebookEng: do you drink at a disco ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrasePlace YouPlurPolMale VDrink (APlace Disco))))
+PhrasebookChi: 你 们 在 一 个 迪 斯 科 喝 吗 ？
+PhrasebookEng: do you drink at a disco ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasTable YouFamFemale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))))))
+PhrasebookChi: 你 有 给 两 个 人 的 一 张 桌 子 吗 ？
+PhrasebookEng: do you have a table for two persons ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasTable YouFamMale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))))))
+PhrasebookChi: 你 有 给 两 个 人 的 一 张 桌 子 吗 ？
+PhrasebookEng: do you have a table for two persons ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasTable YouPlurFamFemale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))))))
+PhrasebookChi: 你 们 有 给 两 个 人 的 一 张 桌 子 吗 ？
+PhrasebookEng: do you have a table for two persons ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasTable YouPlurFamMale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))))))
+PhrasebookChi: 你 们 有 给 两 个 人 的 一 张 桌 子 吗 ？
+PhrasebookEng: do you have a table for two persons ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasTable YouPlurPolFemale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))))))
+PhrasebookChi: 你 们 有 给 两 个 人 的 一 张 桌 子 吗 ？
+PhrasebookEng: do you have a table for two persons ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasTable YouPlurPolMale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))))))
+PhrasebookChi: 你 们 有 给 两 个 人 的 一 张 桌 子 吗 ？
+PhrasebookEng: do you have a table for two persons ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasTable YouPolFemale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))))))
+PhrasebookChi: 您 有 给 两 个 人 的 一 张 桌 子 吗 ？
+PhrasebookEng: do you have a table for two persons ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasTable YouPolMale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))))))
+PhrasebookChi: 您 有 给 两 个 人 的 一 张 桌 子 吗 ？
+PhrasebookEng: do you have a table for two persons ?
+ Phrasebook: PQuestion (QDoHave YouFamFemale (ObjAndObj (ObjItem (Thes (SuchKind (PropQuality Warm) Pizza))) (OneObj (ObjMass (SuchMassKind (PropQuality Cold) (SuchMassKind (PropQuality (PropCit (CitiNat German))) (MassDrink Beer)))))))
+PhrasebookChi: 你 有 热 比 萨 饼 和 冷 德 国 啤 酒 吗 ？
+PhrasebookEng: do you have the warm pizzas and cold German beer ?
+ Phrasebook: PQuestion (QDoHave YouFamMale (ObjAndObj (ObjItem (Thes (SuchKind (PropQuality Warm) Pizza))) (OneObj (ObjMass (SuchMassKind (PropQuality Cold) (SuchMassKind (PropQuality (PropCit (CitiNat German))) (MassDrink Beer)))))))
+PhrasebookChi: 你 有 热 比 萨 饼 和 冷 德 国 啤 酒 吗 ？
+PhrasebookEng: do you have the warm pizzas and cold German beer ?
+ Phrasebook: PQuestion (QDoHave YouPlurFamFemale (ObjAndObj (ObjItem (Thes (SuchKind (PropQuality Warm) Pizza))) (OneObj (ObjMass (SuchMassKind (PropQuality Cold) (SuchMassKind (PropQuality (PropCit (CitiNat German))) (MassDrink Beer)))))))
+PhrasebookChi: 你 们 有 热 比 萨 饼 和 冷 德 国 啤 酒 吗 ？
+PhrasebookEng: do you have the warm pizzas and cold German beer ?
+ Phrasebook: PQuestion (QDoHave YouPlurFamMale (ObjAndObj (ObjItem (Thes (SuchKind (PropQuality Warm) Pizza))) (OneObj (ObjMass (SuchMassKind (PropQuality Cold) (SuchMassKind (PropQuality (PropCit (CitiNat German))) (MassDrink Beer)))))))
+PhrasebookChi: 你 们 有 热 比 萨 饼 和 冷 德 国 啤 酒 吗 ？
+PhrasebookEng: do you have the warm pizzas and cold German beer ?
+ Phrasebook: PQuestion (QDoHave YouPlurPolFemale (ObjAndObj (ObjItem (Thes (SuchKind (PropQuality Warm) Pizza))) (OneObj (ObjMass (SuchMassKind (PropQuality Cold) (SuchMassKind (PropQuality (PropCit (CitiNat German))) (MassDrink Beer)))))))
+PhrasebookChi: 你 们 有 热 比 萨 饼 和 冷 德 国 啤 酒 吗 ？
+PhrasebookEng: do you have the warm pizzas and cold German beer ?
+ Phrasebook: PQuestion (QDoHave YouPlurPolMale (ObjAndObj (ObjItem (Thes (SuchKind (PropQuality Warm) Pizza))) (OneObj (ObjMass (SuchMassKind (PropQuality Cold) (SuchMassKind (PropQuality (PropCit (CitiNat German))) (MassDrink Beer)))))))
+PhrasebookChi: 你 们 有 热 比 萨 饼 和 冷 德 国 啤 酒 吗 ？
+PhrasebookEng: do you have the warm pizzas and cold German beer ?
+ Phrasebook: PQuestion (QDoHave YouPolFemale (ObjAndObj (ObjItem (Thes (SuchKind (PropQuality Warm) Pizza))) (OneObj (ObjMass (SuchMassKind (PropQuality Cold) (SuchMassKind (PropQuality (PropCit (CitiNat German))) (MassDrink Beer)))))))
+PhrasebookChi: 您 有 热 比 萨 饼 和 冷 德 国 啤 酒 吗 ？
+PhrasebookEng: do you have the warm pizzas and cold German beer ?
+ Phrasebook: PQuestion (QDoHave YouPolMale (ObjAndObj (ObjItem (Thes (SuchKind (PropQuality Warm) Pizza))) (OneObj (ObjMass (SuchMassKind (PropQuality Cold) (SuchMassKind (PropQuality (PropCit (CitiNat German))) (MassDrink Beer)))))))
+PhrasebookChi: 您 有 热 比 萨 饼 和 冷 德 国 啤 酒 吗 ？
+PhrasebookEng: do you have the warm pizzas and cold German beer ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson YouFamFemale (Husband She))))
+PhrasebookChi: 你 认 识 她 的 丈 夫 吗 ？
+PhrasebookEng: do you know her husband ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson YouFamMale (Husband She))))
+PhrasebookChi: 你 认 识 她 的 丈 夫 吗 ？
+PhrasebookEng: do you know her husband ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson YouPlurFamFemale (Husband She))))
+PhrasebookChi: 你 们 认 识 她 的 丈 夫 吗 ？
+PhrasebookEng: do you know her husband ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson YouPlurFamMale (Husband She))))
+PhrasebookChi: 你 们 认 识 她 的 丈 夫 吗 ？
+PhrasebookEng: do you know her husband ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson YouPlurPolFemale (Husband She))))
+PhrasebookChi: 你 们 认 识 她 的 丈 夫 吗 ？
+PhrasebookEng: do you know her husband ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson YouPlurPolMale (Husband She))))
+PhrasebookChi: 你 们 认 识 她 的 丈 夫 吗 ？
+PhrasebookEng: do you know her husband ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson YouPolFemale (Husband She))))
+PhrasebookChi: 您 认 识 她 的 丈 夫 吗 ？
+PhrasebookEng: do you know her husband ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowPerson YouPolMale (Husband She))))
+PhrasebookChi: 您 认 识 她 的 丈 夫 吗 ？
+PhrasebookEng: do you know her husband ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouFamFemale (HowFarBy (ThePlace Park) (ByTransp Bike)))))
+PhrasebookChi: 你 知 道 乘 自 行 车 到 公 园 有 多 远 吗 ？
+PhrasebookEng: do you know how far the park is by bike ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouFamMale (HowFarBy (ThePlace Park) (ByTransp Bike)))))
+PhrasebookChi: 你 知 道 乘 自 行 车 到 公 园 有 多 远 吗 ？
+PhrasebookEng: do you know how far the park is by bike ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPlurFamFemale (HowFarBy (ThePlace Park) (ByTransp Bike)))))
+PhrasebookChi: 你 们 知 道 乘 自 行 车 到 公 园 有 多 远 吗 ？
+PhrasebookEng: do you know how far the park is by bike ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPlurFamMale (HowFarBy (ThePlace Park) (ByTransp Bike)))))
+PhrasebookChi: 你 们 知 道 乘 自 行 车 到 公 园 有 多 远 吗 ？
+PhrasebookEng: do you know how far the park is by bike ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPlurPolFemale (HowFarBy (ThePlace Park) (ByTransp Bike)))))
+PhrasebookChi: 你 们 知 道 乘 自 行 车 到 公 园 有 多 远 吗 ？
+PhrasebookEng: do you know how far the park is by bike ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPlurPolMale (HowFarBy (ThePlace Park) (ByTransp Bike)))))
+PhrasebookChi: 你 们 知 道 乘 自 行 车 到 公 园 有 多 远 吗 ？
+PhrasebookEng: do you know how far the park is by bike ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPolFemale (HowFarBy (ThePlace Park) (ByTransp Bike)))))
+PhrasebookChi: 您 知 道 乘 自 行 车 到 公 园 有 多 远 吗 ？
+PhrasebookEng: do you know how far the park is by bike ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPolMale (HowFarBy (ThePlace Park) (ByTransp Bike)))))
+PhrasebookChi: 您 知 道 乘 自 行 车 到 公 园 有 多 远 吗 ？
+PhrasebookEng: do you know how far the park is by bike ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouFamFemale (HowMuchCost (This Pizza)))))
+PhrasebookChi: 你 知 道 这 个 比 萨 饼 是 多 少 钱 吗 ？
+PhrasebookEng: do you know how much this pizza costs ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouFamMale (HowMuchCost (This Pizza)))))
+PhrasebookChi: 你 知 道 这 个 比 萨 饼 是 多 少 钱 吗 ？
+PhrasebookEng: do you know how much this pizza costs ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPlurFamFemale (HowMuchCost (This Pizza)))))
+PhrasebookChi: 你 们 知 道 这 个 比 萨 饼 是 多 少 钱 吗 ？
+PhrasebookEng: do you know how much this pizza costs ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPlurFamMale (HowMuchCost (This Pizza)))))
+PhrasebookChi: 你 们 知 道 这 个 比 萨 饼 是 多 少 钱 吗 ？
+PhrasebookEng: do you know how much this pizza costs ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPlurPolFemale (HowMuchCost (This Pizza)))))
+PhrasebookChi: 你 们 知 道 这 个 比 萨 饼 是 多 少 钱 吗 ？
+PhrasebookEng: do you know how much this pizza costs ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPlurPolMale (HowMuchCost (This Pizza)))))
+PhrasebookChi: 你 们 知 道 这 个 比 萨 饼 是 多 少 钱 吗 ？
+PhrasebookEng: do you know how much this pizza costs ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPolFemale (HowMuchCost (This Pizza)))))
+PhrasebookChi: 您 知 道 这 个 比 萨 饼 是 多 少 钱 吗 ？
+PhrasebookEng: do you know how much this pizza costs ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPolMale (HowMuchCost (This Pizza)))))
+PhrasebookChi: 您 知 道 这 个 比 萨 饼 是 多 少 钱 吗 ？
+PhrasebookEng: do you know how much this pizza costs ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouFamFemale (QProp (PropClosed (ThePlace Shop))))))
+PhrasebookChi: 你 知 道 商 店 是 不 是 关 闭 的 吗 ？
+PhrasebookEng: do you know if the shop is closed ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouFamMale (QProp (PropClosed (ThePlace Shop))))))
+PhrasebookChi: 你 知 道 商 店 是 不 是 关 闭 的 吗 ？
+PhrasebookEng: do you know if the shop is closed ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPlurFamFemale (QProp (PropClosed (ThePlace Shop))))))
+PhrasebookChi: 你 们 知 道 商 店 是 不 是 关 闭 的 吗 ？
+PhrasebookEng: do you know if the shop is closed ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPlurFamMale (QProp (PropClosed (ThePlace Shop))))))
+PhrasebookChi: 你 们 知 道 商 店 是 不 是 关 闭 的 吗 ？
+PhrasebookEng: do you know if the shop is closed ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPlurPolFemale (QProp (PropClosed (ThePlace Shop))))))
+PhrasebookChi: 你 们 知 道 商 店 是 不 是 关 闭 的 吗 ？
+PhrasebookEng: do you know if the shop is closed ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPlurPolMale (QProp (PropClosed (ThePlace Shop))))))
+PhrasebookChi: 你 们 知 道 商 店 是 不 是 关 闭 的 吗 ？
+PhrasebookEng: do you know if the shop is closed ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPolFemale (QProp (PropClosed (ThePlace Shop))))))
+PhrasebookChi: 您 知 道 商 店 是 不 是 关 闭 的 吗 ？
+PhrasebookEng: do you know if the shop is closed ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPolMale (QProp (PropClosed (ThePlace Shop))))))
+PhrasebookChi: 您 知 道 商 店 是 不 是 关 闭 的 吗 ？
+PhrasebookEng: do you know if the shop is closed ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouFamFemale (IsTranspPlace Train (ThePlace Airport)))))
+PhrasebookChi: 你 知 道 有 不 有 去 机 场 的 火 车 吗 ？
+PhrasebookEng: do you know if there is a train to the airport ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouFamMale (IsTranspPlace Train (ThePlace Airport)))))
+PhrasebookChi: 你 知 道 有 不 有 去 机 场 的 火 车 吗 ？
+PhrasebookEng: do you know if there is a train to the airport ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPlurFamFemale (IsTranspPlace Train (ThePlace Airport)))))
+PhrasebookChi: 你 们 知 道 有 不 有 去 机 场 的 火 车 吗 ？
+PhrasebookEng: do you know if there is a train to the airport ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPlurFamMale (IsTranspPlace Train (ThePlace Airport)))))
+PhrasebookChi: 你 们 知 道 有 不 有 去 机 场 的 火 车 吗 ？
+PhrasebookEng: do you know if there is a train to the airport ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPlurPolFemale (IsTranspPlace Train (ThePlace Airport)))))
+PhrasebookChi: 你 们 知 道 有 不 有 去 机 场 的 火 车 吗 ？
+PhrasebookEng: do you know if there is a train to the airport ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPlurPolMale (IsTranspPlace Train (ThePlace Airport)))))
+PhrasebookChi: 你 们 知 道 有 不 有 去 机 场 的 火 车 吗 ？
+PhrasebookEng: do you know if there is a train to the airport ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPolFemale (IsTranspPlace Train (ThePlace Airport)))))
+PhrasebookChi: 您 知 道 有 不 有 去 机 场 的 火 车 吗 ？
+PhrasebookEng: do you know if there is a train to the airport ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion YouPolMale (IsTranspPlace Train (ThePlace Airport)))))
+PhrasebookChi: 您 知 道 有 不 有 去 机 场 的 火 车 吗 ？
+PhrasebookEng: do you know if there is a train to the airport ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeFemale (QProp (PropAction (AKnowPerson He (Daughter (PersonName NameNN))))))))
+PhrasebookChi: 我 们 知 道 他 认 识 不 认 识 NN 的 女 儿 吗 ？
+PhrasebookEng: do we know if he knows NN 's daughter ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeMale (QProp (PropAction (AKnowPerson He (Daughter (PersonName NameNN))))))))
+PhrasebookChi: 我 们 知 道 他 认 识 不 认 识 NN 的 女 儿 吗 ？
+PhrasebookEng: do we know if he knows NN 's daughter ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence YouFamFemale (SPropNot (PropClosedDate (SuperlPlace TheCheapest Supermarket) Today)))))
+PhrasebookChi: 你 知 道 今 天 最 廉 价 的 那 家 超 级 市 场 不 是 关 闭 的 吗 ？
+PhrasebookEng: do you know that the cheapest supermarket isn't closed today ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence YouFamMale (SPropNot (PropClosedDate (SuperlPlace TheCheapest Supermarket) Today)))))
+PhrasebookChi: 你 知 道 今 天 最 廉 价 的 那 家 超 级 市 场 不 是 关 闭 的 吗 ？
+PhrasebookEng: do you know that the cheapest supermarket isn't closed today ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence YouPlurFamFemale (SPropNot (PropClosedDate (SuperlPlace TheCheapest Supermarket) Today)))))
+PhrasebookChi: 你 们 知 道 今 天 最 廉 价 的 那 家 超 级 市 场 不 是 关 闭 的 吗 ？
+PhrasebookEng: do you know that the cheapest supermarket isn't closed today ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence YouPlurFamMale (SPropNot (PropClosedDate (SuperlPlace TheCheapest Supermarket) Today)))))
+PhrasebookChi: 你 们 知 道 今 天 最 廉 价 的 那 家 超 级 市 场 不 是 关 闭 的 吗 ？
+PhrasebookEng: do you know that the cheapest supermarket isn't closed today ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence YouPlurPolFemale (SPropNot (PropClosedDate (SuperlPlace TheCheapest Supermarket) Today)))))
+PhrasebookChi: 你 们 知 道 今 天 最 廉 价 的 那 家 超 级 市 场 不 是 关 闭 的 吗 ？
+PhrasebookEng: do you know that the cheapest supermarket isn't closed today ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence YouPlurPolMale (SPropNot (PropClosedDate (SuperlPlace TheCheapest Supermarket) Today)))))
+PhrasebookChi: 你 们 知 道 今 天 最 廉 价 的 那 家 超 级 市 场 不 是 关 闭 的 吗 ？
+PhrasebookEng: do you know that the cheapest supermarket isn't closed today ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence YouPolFemale (SPropNot (PropClosedDate (SuperlPlace TheCheapest Supermarket) Today)))))
+PhrasebookChi: 您 知 道 今 天 最 廉 价 的 那 家 超 级 市 场 不 是 关 闭 的 吗 ？
+PhrasebookEng: do you know that the cheapest supermarket isn't closed today ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence YouPolMale (SPropNot (PropClosedDate (SuperlPlace TheCheapest Supermarket) Today)))))
+PhrasebookChi: 您 知 道 今 天 最 廉 价 的 那 家 超 级 市 场 不 是 关 闭 的 吗 ？
+PhrasebookEng: do you know that the cheapest supermarket isn't closed today ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence YouFamFemale (SPropNot (Is (Those Apple) (Too Cheap))))))
+PhrasebookChi: 你 知 道 那 些 苹 果 不 是 太 廉 价 的 吗 ？
+PhrasebookEng: do you know that those apples aren't too cheap ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence YouFamMale (SPropNot (Is (Those Apple) (Too Cheap))))))
+PhrasebookChi: 你 知 道 那 些 苹 果 不 是 太 廉 价 的 吗 ？
+PhrasebookEng: do you know that those apples aren't too cheap ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence YouPlurFamFemale (SPropNot (Is (Those Apple) (Too Cheap))))))
+PhrasebookChi: 你 们 知 道 那 些 苹 果 不 是 太 廉 价 的 吗 ？
+PhrasebookEng: do you know that those apples aren't too cheap ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence YouPlurFamMale (SPropNot (Is (Those Apple) (Too Cheap))))))
+PhrasebookChi: 你 们 知 道 那 些 苹 果 不 是 太 廉 价 的 吗 ？
+PhrasebookEng: do you know that those apples aren't too cheap ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence YouPlurPolFemale (SPropNot (Is (Those Apple) (Too Cheap))))))
+PhrasebookChi: 你 们 知 道 那 些 苹 果 不 是 太 廉 价 的 吗 ？
+PhrasebookEng: do you know that those apples aren't too cheap ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence YouPlurPolMale (SPropNot (Is (Those Apple) (Too Cheap))))))
+PhrasebookChi: 你 们 知 道 那 些 苹 果 不 是 太 廉 价 的 吗 ？
+PhrasebookEng: do you know that those apples aren't too cheap ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence YouPolFemale (SPropNot (Is (Those Apple) (Too Cheap))))))
+PhrasebookChi: 您 知 道 那 些 苹 果 不 是 太 廉 价 的 吗 ？
+PhrasebookEng: do you know that those apples aren't too cheap ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence YouPolMale (SPropNot (Is (Those Apple) (Too Cheap))))))
+PhrasebookChi: 您 知 道 那 些 苹 果 不 是 太 廉 价 的 吗 ？
+PhrasebookEng: do you know that those apples aren't too cheap ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrasePlace YouFamFemale VSleep (APlace Hotel))))
+PhrasebookChi: 你 在 一 个 旅 馆 睡 吗 ？
+PhrasebookEng: do you sleep in a hotel ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrasePlace YouFamMale VSleep (APlace Hotel))))
+PhrasebookChi: 你 在 一 个 旅 馆 睡 吗 ？
+PhrasebookEng: do you sleep in a hotel ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrasePlace YouPolFemale VSleep (APlace Hotel))))
+PhrasebookChi: 您 在 一 个 旅 馆 睡 吗 ？
+PhrasebookEng: do you sleep in a hotel ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrasePlace YouPolMale VSleep (APlace Hotel))))
+PhrasebookChi: 您 在 一 个 旅 馆 睡 吗 ？
+PhrasebookEng: do you sleep in a hotel ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrasePlace YouPlurFamFemale VSleep (APlace Hotel))))
+PhrasebookChi: 你 们 在 一 个 旅 馆 睡 吗 ？
+PhrasebookEng: do you sleep in a hotel ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrasePlace YouPlurFamMale VSleep (APlace Hotel))))
+PhrasebookChi: 你 们 在 一 个 旅 馆 睡 吗 ？
+PhrasebookEng: do you sleep in a hotel ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrasePlace YouPlurPolFemale VSleep (APlace Hotel))))
+PhrasebookChi: 你 们 在 一 个 旅 馆 睡 吗 ？
+PhrasebookEng: do you sleep in a hotel ?
+ Phrasebook: PQuestion (QProp (PropAction (ADoVerbPhrasePlace YouPlurPolMale VSleep (APlace Hotel))))
+PhrasebookChi: 你 们 在 一 个 旅 馆 睡 吗 ？
+PhrasebookEng: do you sleep in a hotel ?
+ Phrasebook: PQuestion (QProp (PropAction (AWant YouFamFemale (OneObj (ObjIndef Apple)))))
+PhrasebookChi: 你 要 一 个 苹 果 吗 ？
+PhrasebookEng: do you want an apple ?
+ Phrasebook: PQuestion (QProp (PropAction (AWant YouFamMale (OneObj (ObjIndef Apple)))))
+PhrasebookChi: 你 要 一 个 苹 果 吗 ？
+PhrasebookEng: do you want an apple ?
+ Phrasebook: PQuestion (QProp (PropAction (AWant YouPlurFamFemale (OneObj (ObjIndef Apple)))))
+PhrasebookChi: 你 们 要 一 个 苹 果 吗 ？
+PhrasebookEng: do you want an apple ?
+ Phrasebook: PQuestion (QProp (PropAction (AWant YouPlurFamMale (OneObj (ObjIndef Apple)))))
+PhrasebookChi: 你 们 要 一 个 苹 果 吗 ？
+PhrasebookEng: do you want an apple ?
+ Phrasebook: PQuestion (QProp (PropAction (AWant YouPlurPolFemale (OneObj (ObjIndef Apple)))))
+PhrasebookChi: 你 们 要 一 个 苹 果 吗 ？
+PhrasebookEng: do you want an apple ?
+ Phrasebook: PQuestion (QProp (PropAction (AWant YouPlurPolMale (OneObj (ObjIndef Apple)))))
+PhrasebookChi: 你 们 要 一 个 苹 果 吗 ？
+PhrasebookEng: do you want an apple ?
+ Phrasebook: PQuestion (QProp (PropAction (AWant YouPolFemale (OneObj (ObjIndef Apple)))))
+PhrasebookChi: 您 要 一 个 苹 果 吗 ？
+PhrasebookEng: do you want an apple ?
+ Phrasebook: PQuestion (QProp (PropAction (AWant YouPolMale (OneObj (ObjIndef Apple)))))
+PhrasebookChi: 您 要 一 个 苹 果 吗 ？
+PhrasebookEng: do you want an apple ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MWant YouFamFemale (V2Drink (ObjAndObj (ObjMass (SuchMassKind (PropQuality (PropCit Belgian)) (MassDrink Beer))) (OneObj (ObjMass (SuchMassKind (PropQuality (PropCit (CitiNat French))) (MassDrink Wine)))))) (SuperlPlace TheMostExpensive Restaurant))))
+PhrasebookChi: 你 想 在 最 昂 贵 的 那 间 饭 店 喝 比 利 时 啤 酒 和 法 国 酒 吗 ？
+PhrasebookEng: do you want to drink Belgian beer and French wine in the most expensive restaurant ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MWant YouFamMale (V2Drink (ObjAndObj (ObjMass (SuchMassKind (PropQuality (PropCit Belgian)) (MassDrink Beer))) (OneObj (ObjMass (SuchMassKind (PropQuality (PropCit (CitiNat French))) (MassDrink Wine)))))) (SuperlPlace TheMostExpensive Restaurant))))
+PhrasebookChi: 你 想 在 最 昂 贵 的 那 间 饭 店 喝 比 利 时 啤 酒 和 法 国 酒 吗 ？
+PhrasebookEng: do you want to drink Belgian beer and French wine in the most expensive restaurant ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MWant YouPolFemale (V2Drink (ObjAndObj (ObjMass (SuchMassKind (PropQuality (PropCit Belgian)) (MassDrink Beer))) (OneObj (ObjMass (SuchMassKind (PropQuality (PropCit (CitiNat French))) (MassDrink Wine)))))) (SuperlPlace TheMostExpensive Restaurant))))
+PhrasebookChi: 您 想 在 最 昂 贵 的 那 间 饭 店 喝 比 利 时 啤 酒 和 法 国 酒 吗 ？
+PhrasebookEng: do you want to drink Belgian beer and French wine in the most expensive restaurant ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MWant YouPolMale (V2Drink (ObjAndObj (ObjMass (SuchMassKind (PropQuality (PropCit Belgian)) (MassDrink Beer))) (OneObj (ObjMass (SuchMassKind (PropQuality (PropCit (CitiNat French))) (MassDrink Wine)))))) (SuperlPlace TheMostExpensive Restaurant))))
+PhrasebookChi: 您 想 在 最 昂 贵 的 那 间 饭 店 喝 比 利 时 啤 酒 和 法 国 酒 吗 ？
+PhrasebookEng: do you want to drink Belgian beer and French wine in the most expensive restaurant ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MWant YouPlurFamFemale (V2Drink (ObjAndObj (ObjMass (SuchMassKind (PropQuality (PropCit Belgian)) (MassDrink Beer))) (OneObj (ObjMass (SuchMassKind (PropQuality (PropCit (CitiNat French))) (MassDrink Wine)))))) (SuperlPlace TheMostExpensive Restaurant))))
+PhrasebookChi: 你 们 想 在 最 昂 贵 的 那 间 饭 店 喝 比 利 时 啤 酒 和 法 国 酒 吗 ？
+PhrasebookEng: do you want to drink Belgian beer and French wine in the most expensive restaurant ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MWant YouPlurFamMale (V2Drink (ObjAndObj (ObjMass (SuchMassKind (PropQuality (PropCit Belgian)) (MassDrink Beer))) (OneObj (ObjMass (SuchMassKind (PropQuality (PropCit (CitiNat French))) (MassDrink Wine)))))) (SuperlPlace TheMostExpensive Restaurant))))
+PhrasebookChi: 你 们 想 在 最 昂 贵 的 那 间 饭 店 喝 比 利 时 啤 酒 和 法 国 酒 吗 ？
+PhrasebookEng: do you want to drink Belgian beer and French wine in the most expensive restaurant ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MWant YouPlurPolFemale (V2Drink (ObjAndObj (ObjMass (SuchMassKind (PropQuality (PropCit Belgian)) (MassDrink Beer))) (OneObj (ObjMass (SuchMassKind (PropQuality (PropCit (CitiNat French))) (MassDrink Wine)))))) (SuperlPlace TheMostExpensive Restaurant))))
+PhrasebookChi: 你 们 想 在 最 昂 贵 的 那 间 饭 店 喝 比 利 时 啤 酒 和 法 国 酒 吗 ？
+PhrasebookEng: do you want to drink Belgian beer and French wine in the most expensive restaurant ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MWant YouPlurPolMale (V2Drink (ObjAndObj (ObjMass (SuchMassKind (PropQuality (PropCit Belgian)) (MassDrink Beer))) (OneObj (ObjMass (SuchMassKind (PropQuality (PropCit (CitiNat French))) (MassDrink Wine)))))) (SuperlPlace TheMostExpensive Restaurant))))
+PhrasebookChi: 你 们 想 在 最 昂 贵 的 那 间 饭 店 喝 比 利 时 啤 酒 和 法 国 酒 吗 ？
+PhrasebookEng: do you want to drink Belgian beer and French wine in the most expensive restaurant ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MWant YouFamFemale (V2Eat (OneObj (ObjItem (The Apple)))))))
+PhrasebookChi: 你 想 吃 苹 果 吗 ？
+PhrasebookEng: do you want to eat the apple ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MWant YouFamMale (V2Eat (OneObj (ObjItem (The Apple)))))))
+PhrasebookChi: 你 想 吃 苹 果 吗 ？
+PhrasebookEng: do you want to eat the apple ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MWant YouPolFemale (V2Eat (OneObj (ObjItem (The Apple)))))))
+PhrasebookChi: 您 想 吃 苹 果 吗 ？
+PhrasebookEng: do you want to eat the apple ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MWant YouPolMale (V2Eat (OneObj (ObjItem (The Apple)))))))
+PhrasebookChi: 您 想 吃 苹 果 吗 ？
+PhrasebookEng: do you want to eat the apple ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MWant YouPlurFamFemale (V2Eat (OneObj (ObjItem (The Apple)))))))
+PhrasebookChi: 你 们 想 吃 苹 果 吗 ？
+PhrasebookEng: do you want to eat the apple ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MWant YouPlurFamMale (V2Eat (OneObj (ObjItem (The Apple)))))))
+PhrasebookChi: 你 们 想 吃 苹 果 吗 ？
+PhrasebookEng: do you want to eat the apple ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MWant YouPlurPolFemale (V2Eat (OneObj (ObjItem (The Apple)))))))
+PhrasebookChi: 你 们 想 吃 苹 果 吗 ？
+PhrasebookEng: do you want to eat the apple ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MWant YouPlurPolMale (V2Eat (OneObj (ObjItem (The Apple)))))))
+PhrasebookChi: 你 们 想 吃 苹 果 吗 ？
+PhrasebookEng: do you want to eat the apple ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MWant YouFamFemale VWalk)))
+PhrasebookChi: 你 想 走 吗 ？
+PhrasebookEng: do you want to walk ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MWant YouFamMale VWalk)))
+PhrasebookChi: 你 想 走 吗 ？
+PhrasebookEng: do you want to walk ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MWant YouPolFemale VWalk)))
+PhrasebookChi: 您 想 走 吗 ？
+PhrasebookEng: do you want to walk ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MWant YouPolMale VWalk)))
+PhrasebookChi: 您 想 走 吗 ？
+PhrasebookEng: do you want to walk ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MWant YouPlurFamFemale VWalk)))
+PhrasebookChi: 你 们 想 走 吗 ？
+PhrasebookEng: do you want to walk ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MWant YouPlurFamMale VWalk)))
+PhrasebookChi: 你 们 想 走 吗 ？
+PhrasebookEng: do you want to walk ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MWant YouPlurPolFemale VWalk)))
+PhrasebookChi: 你 们 想 走 吗 ？
+PhrasebookEng: do you want to walk ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MWant YouPlurPolMale VWalk)))
+PhrasebookChi: 你 们 想 走 吗 ？
+PhrasebookEng: do you want to walk ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion He (QWhatAge IFemale))))
+PhrasebookChi: 他 知 道 我 几 岁 吗 ？
+PhrasebookEng: does he know how old I am ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion He (QWhatAge IMale))))
+PhrasebookChi: 他 知 道 我 几 岁 吗 ？
+PhrasebookEng: does he know how old I am ?
+ Phrasebook: PQuestion (QProp (PropAction (AWantGo (Daughter He) (SuperlPlace TheMostPopular Museum))))
+PhrasebookChi: 他 的 女 儿 想 去 最 流 行 的 那 个 博 物 馆 吗 ？
+PhrasebookEng: does his daughter want to go to the most popular museum ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouFamFemale) (SProp (PropAction (ADoVerbPhrase YouFamFemale VWait))))))
+PhrasebookChi: 你 的 女 儿 知 道 你 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouFamFemale) (SProp (PropAction (ADoVerbPhrase YouFamMale VWait))))))
+PhrasebookChi: 你 的 女 儿 知 道 你 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouFamFemale) (SProp (PropAction (ADoVerbPhrase YouPolFemale VWait))))))
+PhrasebookChi: 你 的 女 儿 知 道 您 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouFamFemale) (SProp (PropAction (ADoVerbPhrase YouPolMale VWait))))))
+PhrasebookChi: 你 的 女 儿 知 道 您 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouFamFemale) (SProp (PropAction (ADoVerbPhrase YouPlurFamFemale VWait))))))
+PhrasebookChi: 你 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouFamFemale) (SProp (PropAction (ADoVerbPhrase YouPlurFamMale VWait))))))
+PhrasebookChi: 你 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouFamFemale) (SProp (PropAction (ADoVerbPhrase YouPlurPolFemale VWait))))))
+PhrasebookChi: 你 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouFamFemale) (SProp (PropAction (ADoVerbPhrase YouPlurPolMale VWait))))))
+PhrasebookChi: 你 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouFamMale) (SProp (PropAction (ADoVerbPhrase YouFamFemale VWait))))))
+PhrasebookChi: 你 的 女 儿 知 道 你 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouFamMale) (SProp (PropAction (ADoVerbPhrase YouFamMale VWait))))))
+PhrasebookChi: 你 的 女 儿 知 道 你 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouFamMale) (SProp (PropAction (ADoVerbPhrase YouPolFemale VWait))))))
+PhrasebookChi: 你 的 女 儿 知 道 您 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouFamMale) (SProp (PropAction (ADoVerbPhrase YouPolMale VWait))))))
+PhrasebookChi: 你 的 女 儿 知 道 您 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouFamMale) (SProp (PropAction (ADoVerbPhrase YouPlurFamFemale VWait))))))
+PhrasebookChi: 你 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouFamMale) (SProp (PropAction (ADoVerbPhrase YouPlurFamMale VWait))))))
+PhrasebookChi: 你 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouFamMale) (SProp (PropAction (ADoVerbPhrase YouPlurPolFemale VWait))))))
+PhrasebookChi: 你 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouFamMale) (SProp (PropAction (ADoVerbPhrase YouPlurPolMale VWait))))))
+PhrasebookChi: 你 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurFamFemale) (SProp (PropAction (ADoVerbPhrase YouFamFemale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurFamFemale) (SProp (PropAction (ADoVerbPhrase YouFamMale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurFamFemale) (SProp (PropAction (ADoVerbPhrase YouPolFemale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 您 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurFamFemale) (SProp (PropAction (ADoVerbPhrase YouPolMale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 您 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurFamFemale) (SProp (PropAction (ADoVerbPhrase YouPlurFamFemale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurFamFemale) (SProp (PropAction (ADoVerbPhrase YouPlurFamMale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurFamFemale) (SProp (PropAction (ADoVerbPhrase YouPlurPolFemale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurFamFemale) (SProp (PropAction (ADoVerbPhrase YouPlurPolMale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurFamMale) (SProp (PropAction (ADoVerbPhrase YouFamFemale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurFamMale) (SProp (PropAction (ADoVerbPhrase YouFamMale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurFamMale) (SProp (PropAction (ADoVerbPhrase YouPolFemale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 您 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurFamMale) (SProp (PropAction (ADoVerbPhrase YouPolMale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 您 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurFamMale) (SProp (PropAction (ADoVerbPhrase YouPlurFamFemale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurFamMale) (SProp (PropAction (ADoVerbPhrase YouPlurFamMale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurFamMale) (SProp (PropAction (ADoVerbPhrase YouPlurPolFemale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurFamMale) (SProp (PropAction (ADoVerbPhrase YouPlurPolMale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurPolFemale) (SProp (PropAction (ADoVerbPhrase YouFamFemale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurPolFemale) (SProp (PropAction (ADoVerbPhrase YouFamMale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurPolFemale) (SProp (PropAction (ADoVerbPhrase YouPolFemale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 您 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurPolFemale) (SProp (PropAction (ADoVerbPhrase YouPolMale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 您 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurPolFemale) (SProp (PropAction (ADoVerbPhrase YouPlurFamFemale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurPolFemale) (SProp (PropAction (ADoVerbPhrase YouPlurFamMale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurPolFemale) (SProp (PropAction (ADoVerbPhrase YouPlurPolFemale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurPolFemale) (SProp (PropAction (ADoVerbPhrase YouPlurPolMale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurPolMale) (SProp (PropAction (ADoVerbPhrase YouFamFemale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurPolMale) (SProp (PropAction (ADoVerbPhrase YouFamMale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurPolMale) (SProp (PropAction (ADoVerbPhrase YouPolFemale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 您 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurPolMale) (SProp (PropAction (ADoVerbPhrase YouPolMale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 您 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurPolMale) (SProp (PropAction (ADoVerbPhrase YouPlurFamFemale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurPolMale) (SProp (PropAction (ADoVerbPhrase YouPlurFamMale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurPolMale) (SProp (PropAction (ADoVerbPhrase YouPlurPolFemale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPlurPolMale) (SProp (PropAction (ADoVerbPhrase YouPlurPolMale VWait))))))
+PhrasebookChi: 你 们 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPolFemale) (SProp (PropAction (ADoVerbPhrase YouFamFemale VWait))))))
+PhrasebookChi: 您 的 女 儿 知 道 你 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPolFemale) (SProp (PropAction (ADoVerbPhrase YouFamMale VWait))))))
+PhrasebookChi: 您 的 女 儿 知 道 你 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPolFemale) (SProp (PropAction (ADoVerbPhrase YouPolFemale VWait))))))
+PhrasebookChi: 您 的 女 儿 知 道 您 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPolFemale) (SProp (PropAction (ADoVerbPhrase YouPolMale VWait))))))
+PhrasebookChi: 您 的 女 儿 知 道 您 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPolFemale) (SProp (PropAction (ADoVerbPhrase YouPlurFamFemale VWait))))))
+PhrasebookChi: 您 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPolFemale) (SProp (PropAction (ADoVerbPhrase YouPlurFamMale VWait))))))
+PhrasebookChi: 您 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPolFemale) (SProp (PropAction (ADoVerbPhrase YouPlurPolFemale VWait))))))
+PhrasebookChi: 您 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPolFemale) (SProp (PropAction (ADoVerbPhrase YouPlurPolMale VWait))))))
+PhrasebookChi: 您 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPolMale) (SProp (PropAction (ADoVerbPhrase YouFamFemale VWait))))))
+PhrasebookChi: 您 的 女 儿 知 道 你 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPolMale) (SProp (PropAction (ADoVerbPhrase YouFamMale VWait))))))
+PhrasebookChi: 您 的 女 儿 知 道 你 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPolMale) (SProp (PropAction (ADoVerbPhrase YouPolFemale VWait))))))
+PhrasebookChi: 您 的 女 儿 知 道 您 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPolMale) (SProp (PropAction (ADoVerbPhrase YouPolMale VWait))))))
+PhrasebookChi: 您 的 女 儿 知 道 您 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPolMale) (SProp (PropAction (ADoVerbPhrase YouPlurFamFemale VWait))))))
+PhrasebookChi: 您 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPolMale) (SProp (PropAction (ADoVerbPhrase YouPlurFamMale VWait))))))
+PhrasebookChi: 您 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPolMale) (SProp (PropAction (ADoVerbPhrase YouPlurPolFemale VWait))))))
+PhrasebookChi: 您 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowSentence (Daughter YouPolMale) (SProp (PropAction (ADoVerbPhrase YouPlurPolMale VWait))))))
+PhrasebookChi: 您 的 女 儿 知 道 你 们 等 吗 ？
+PhrasebookEng: does your daughter know that you wait ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion (Husband YouFamFemale) (WherePlace (ThePlace Museum)))))
+PhrasebookChi: 你 的 丈 夫 知 道 博 物 馆 在 哪 里 吗 ？
+PhrasebookEng: does your husband know where the museum is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion (Husband YouFamMale) (WherePlace (ThePlace Museum)))))
+PhrasebookChi: 你 的 丈 夫 知 道 博 物 馆 在 哪 里 吗 ？
+PhrasebookEng: does your husband know where the museum is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion (Husband YouPlurFamFemale) (WherePlace (ThePlace Museum)))))
+PhrasebookChi: 你 们 的 丈 夫 知 道 博 物 馆 在 哪 里 吗 ？
+PhrasebookEng: does your husband know where the museum is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion (Husband YouPlurFamMale) (WherePlace (ThePlace Museum)))))
+PhrasebookChi: 你 们 的 丈 夫 知 道 博 物 馆 在 哪 里 吗 ？
+PhrasebookEng: does your husband know where the museum is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion (Husband YouPlurPolFemale) (WherePlace (ThePlace Museum)))))
+PhrasebookChi: 你 们 的 丈 夫 知 道 博 物 馆 在 哪 里 吗 ？
+PhrasebookEng: does your husband know where the museum is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion (Husband YouPlurPolMale) (WherePlace (ThePlace Museum)))))
+PhrasebookChi: 你 们 的 丈 夫 知 道 博 物 馆 在 哪 里 吗 ？
+PhrasebookEng: does your husband know where the museum is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion (Husband YouPolFemale) (WherePlace (ThePlace Museum)))))
+PhrasebookChi: 您 的 丈 夫 知 道 博 物 馆 在 哪 里 吗 ？
+PhrasebookEng: does your husband know where the museum is ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion (Husband YouPolMale) (WherePlace (ThePlace Museum)))))
+PhrasebookChi: 您 的 丈 夫 知 道 博 物 馆 在 哪 里 吗 ？
+PhrasebookEng: does your husband know where the museum is ?
+ Phrasebook: PImperativeFamNeg (V2Wait He)
+PhrasebookChi: 不 等 他
+PhrasebookEng: don't wait for him
+ Phrasebook: PImperativePlurNeg (V2Wait He)
+PhrasebookChi: 不 等 他
+PhrasebookEng: don't wait for him
+ Phrasebook: PImperativePolNeg (V2Wait He)
+PhrasebookChi: 不 等 他
+PhrasebookEng: don't wait for him
+ Phrasebook: PImperativeFamPos (V2Eat (OneObj (ObjIndef Pizza)))
+PhrasebookChi: 吃 一 个 比 萨 饼
+PhrasebookEng: eat a pizza
+ Phrasebook: PImperativePlurPos (V2Eat (OneObj (ObjIndef Pizza)))
+PhrasebookChi: 吃 一 个 比 萨 饼
+PhrasebookEng: eat a pizza
+ Phrasebook: PImperativePolPos (V2Eat (OneObj (ObjIndef Pizza)))
+PhrasebookChi: 吃 一 个 比 萨 饼
+PhrasebookEng: eat a pizza
+ Phrasebook: PSentence (SHaveNo He (SuchKind (PropQuality Good) Apple))
+PhrasebookChi: 他 没 有 好 苹 果 。
+PhrasebookEng: he doesn't have good apples .
+ Phrasebook: PSentence (SPropNot (PropAction (AMarried He)))
+PhrasebookChi: 他 不 是 已 婚 的 。
+PhrasebookEng: he isn't married .
+ Phrasebook: PSentence (SHave (Wife He) (OneObj (ObjMass Milk)))
+PhrasebookChi: 他 的 妻 子 有 牛 奶 。
+PhrasebookEng: his wife has milk .
+ Phrasebook: PQuestion (HowFar (APlace Supermarket))
+PhrasebookChi: 一 家 超 级 市 场 有 多 远 ？
+PhrasebookEng: how far is a supermarket ?
+ Phrasebook: PQuestion (HowFarBy (ThePlace Airport) (ByTransp Bus))
+PhrasebookChi: 乘 公 共 汽 车 到 机 场 有 多 远 ？
+PhrasebookEng: how far is the airport by bus ?
+ Phrasebook: PQuestion (HowFar (ThePlace Center))
+PhrasebookChi: 中 心 有 多 远 ？
+PhrasebookEng: how far is the center ?
+ Phrasebook: PQuestion (HowMuchCost (Those (SuchKind (PropQuality Cheap) Apple)))
+PhrasebookChi: 那 些 廉 价 的 苹 果 是 多 少 钱 ？
+PhrasebookEng: how much do those cheap apples cost ?
+ Phrasebook: PQuestion (HowMuchCost (ThatMass Cheese))
+PhrasebookChi: 那 块 奶 酪 是 多 少 钱 ？
+PhrasebookEng: how much does that cheese cost ?
+ Phrasebook: PQuestion (QWhatAge (Children (PersonName NameNN)))
+PhrasebookChi: NN 的 孩 子 几 岁 ？
+PhrasebookEng: how old are NN 's children ?
+ Phrasebook: PQuestion (QWhatAge YouFamFemale)
+PhrasebookChi: 你 几 岁 ？
+PhrasebookEng: how old are you ?
+ Phrasebook: PQuestion (QWhatAge YouFamMale)
+PhrasebookChi: 你 几 岁 ？
+PhrasebookEng: how old are you ?
+ Phrasebook: PQuestion (QWhatAge YouPlurFamFemale)
+PhrasebookChi: 你 们 几 岁 ？
+PhrasebookEng: how old are you ?
+ Phrasebook: PQuestion (QWhatAge YouPlurFamMale)
+PhrasebookChi: 你 们 几 岁 ？
+PhrasebookEng: how old are you ?
+ Phrasebook: PQuestion (QWhatAge YouPlurPolFemale)
+PhrasebookChi: 你 们 几 岁 ？
+PhrasebookEng: how old are you ?
+ Phrasebook: PQuestion (QWhatAge YouPlurPolMale)
+PhrasebookChi: 你 们 几 岁 ？
+PhrasebookEng: how old are you ?
+ Phrasebook: PQuestion (QWhatAge YouPolFemale)
+PhrasebookChi: 您 几 岁 ？
+PhrasebookEng: how old are you ?
+ Phrasebook: PQuestion (QWhatAge YouPolMale)
+PhrasebookChi: 您 几 岁 ？
+PhrasebookEng: how old are you ?
+ Phrasebook: PQuestion (QWhatAge (Children YouFamFemale))
+PhrasebookChi: 你 的 孩 子 几 岁 ？
+PhrasebookEng: how old are your children ?
+ Phrasebook: PQuestion (QWhatAge (Children YouFamMale))
+PhrasebookChi: 你 的 孩 子 几 岁 ？
+PhrasebookEng: how old are your children ?
+ Phrasebook: PQuestion (QWhatAge (Children YouPlurFamFemale))
+PhrasebookChi: 你 们 的 孩 子 几 岁 ？
+PhrasebookEng: how old are your children ?
+ Phrasebook: PQuestion (QWhatAge (Children YouPlurFamMale))
+PhrasebookChi: 你 们 的 孩 子 几 岁 ？
+PhrasebookEng: how old are your children ?
+ Phrasebook: PQuestion (QWhatAge (Children YouPlurPolFemale))
+PhrasebookChi: 你 们 的 孩 子 几 岁 ？
+PhrasebookEng: how old are your children ?
+ Phrasebook: PQuestion (QWhatAge (Children YouPlurPolMale))
+PhrasebookChi: 你 们 的 孩 子 几 岁 ？
+PhrasebookEng: how old are your children ?
+ Phrasebook: PQuestion (QWhatAge (Children YouPolFemale))
+PhrasebookChi: 您 的 孩 子 几 岁 ？
+PhrasebookEng: how old are your children ?
+ Phrasebook: PQuestion (QWhatAge (Children YouPolMale))
+PhrasebookChi: 您 的 孩 子 几 岁 ？
+PhrasebookEng: how old are your children ?
+ Phrasebook: PSentence (SHave IFemale (OneObj (ObjMass (SuchMassKind (PropQuality Cold) (MassDrink Beer)))))
+PhrasebookChi: 我 有 冷 啤 酒 。
+PhrasebookEng: I have cold beer .
+ Phrasebook: PSentence (SHave IMale (OneObj (ObjMass (SuchMassKind (PropQuality Cold) (MassDrink Beer)))))
+PhrasebookChi: 我 有 冷 啤 酒 。
+PhrasebookEng: I have cold beer .
+ Phrasebook: PSentence (SHave IFemale (ObjAndObj (ObjPlural Pizza) (OneObj (ObjMass (MassDrink Beer)))))
+PhrasebookChi: 我 有 些 比 萨 饼 和 啤 酒 。
+PhrasebookEng: I have pizzas and beer .
+ Phrasebook: PSentence (SHave IMale (ObjAndObj (ObjPlural Pizza) (OneObj (ObjMass (MassDrink Beer)))))
+PhrasebookChi: 我 有 些 比 萨 饼 和 啤 酒 。
+PhrasebookEng: I have pizzas and beer .
+ Phrasebook: PSentence (SHave IFemale (OneObj (ObjNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n3)))))) (SuchKind (PropQuality Bad) Apple))))
+PhrasebookChi: 我 有 三 个 坏 苹 果 。
+PhrasebookEng: I have three bad apples .
+ Phrasebook: PSentence (SHave IMale (OneObj (ObjNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n3)))))) (SuchKind (PropQuality Bad) Apple))))
+PhrasebookChi: 我 有 三 个 坏 苹 果 。
+PhrasebookEng: I have three bad apples .
+ Phrasebook: PSentence (SProp (PropAction (AHasChildren IFemale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))))))
+PhrasebookChi: 我 有 两 个 孩 子 。
+PhrasebookEng: I have two children .
+ Phrasebook: PSentence (SProp (PropAction (AHasChildren IMale (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))))))
+PhrasebookChi: 我 有 两 个 孩 子 。
+PhrasebookEng: I have two children .
+ Phrasebook: PSentence (SHave IFemale (ObjAndObj (ObjNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) (SuchKind (PropQuality Warm) Pizza)) (OneObj (DrinkNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n3)))))) Beer))))
+PhrasebookChi: 我 有 两 个 热 比 萨 饼 和 三 杯 啤 酒 。
+PhrasebookEng: I have two warm pizzas and three beers .
+ Phrasebook: PSentence (SHave IMale (ObjAndObj (ObjNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n2)))))) (SuchKind (PropQuality Warm) Pizza)) (OneObj (DrinkNumber (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n3)))))) Beer))))
+PhrasebookChi: 我 有 两 个 热 比 萨 饼 和 三 杯 啤 酒 。
+PhrasebookEng: I have two warm pizzas and three beers .
+ Phrasebook: PSentence (SProp (PropAction (AModVerbPhrase MWant IFemale VSit)))
+PhrasebookChi: 我 想 坐 。
+PhrasebookEng: I want to sit .
+ Phrasebook: PSentence (SProp (PropAction (AModVerbPhrase MWant IMale VSit)))
+PhrasebookChi: 我 想 坐 。
+PhrasebookEng: I want to sit .
+ Phrasebook: PQuestion (QProp (PropOpenDate (APlace AmusementPark) Today))
+PhrasebookChi: 今 天 一 个 游 乐 园 是 开 放 的 吗 ？
+PhrasebookEng: is an amusement park open today ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasAge He (NNumeral (num (pot2as3 (pot1as2 (pot1to19 n2))))))))
+PhrasebookChi: 他 一 十 二 岁 吗 ？
+PhrasebookEng: is he twelve years old ?
+ Phrasebook: PQuestion (QProp (PropAction (AIll (Daughter He))))
+PhrasebookChi: 他 的 女 儿 生 病 了 吗 ？
+PhrasebookEng: is his daughter ill ?
+ Phrasebook: PQuestion (QProp (PropAction (AReady (Son He))))
+PhrasebookChi: 他 的 儿 子 是 准 备 好 的 吗 ？
+PhrasebookEng: is his son ready ?
+ Phrasebook: PQuestion (QProp (PropAction (AScared (Son IFemale))))
+PhrasebookChi: 我 的 儿 子 是 惊 慌 的 吗 ？
+PhrasebookEng: is my son scared ?
+ Phrasebook: PQuestion (QProp (PropAction (AScared (Son IMale))))
+PhrasebookChi: 我 的 儿 子 是 惊 慌 的 吗 ？
+PhrasebookEng: is my son scared ?
+ Phrasebook: PQuestion (QProp (PropAction (AMarried (Son (PersonName NameNN)))))
+PhrasebookChi: NN 的 儿 子 是 已 婚 的 吗 ？
+PhrasebookEng: is NN 's son married ?
+ Phrasebook: PQuestion (QProp (PropAction (ABePlace She (APlace AmusementPark))))
+PhrasebookChi: 她 在 一 个 游 乐 园 吗 ？
+PhrasebookEng: is she at an amusement park ?
+ Phrasebook: PQuestion (QProp (PropAction (ACitizen She (CitiNat Finnish))))
+PhrasebookChi: 她 是 芬 兰 人 吗 ？
+PhrasebookEng: is she Finnish ?
+ Phrasebook: PQuestion (QProp (PropAction (ABePlace She (ThePlace (CitRestaurant (CitiNat French))))))
+PhrasebookChi: 她 在 法 国 的 饭 店 吗 ？
+PhrasebookEng: is she in the French restaurant ?
+ Phrasebook: PQuestion (QProp (PropClosed (ThePlace Bank)))
+PhrasebookChi: 银 行 是 关 闭 的 吗 ？
+PhrasebookEng: is the bank closed ?
+ Phrasebook: PQuestion (QProp (PropClosedDate (ThePlace Hospital) Tomorrow))
+PhrasebookChi: 医 院 在 明 天 是 关 闭 的 吗 ？
+PhrasebookEng: is the hospital closed tomorrow ?
+ Phrasebook: PQuestion (QProp (PropOpenDay (SuperlPlace TheMostPopular Disco) Saturday))
+PhrasebookChi: 最 流 行 的 那 个 迪 斯 科 在 星 期 六 是 开 放 的 吗 ？
+PhrasebookEng: is the most popular disco open on Saturdays ?
+ Phrasebook: PQuestion (QProp (PropClosedDate (SuperlPlace TheClosest Airport) (OnDay Thursday)))
+PhrasebookChi: 最 近 的 那 个 机 场 在 星 期 四 是 关 闭 的 吗 ？
+PhrasebookEng: is the nearest airport closed on Thursday ?
+ Phrasebook: PQuestion (QProp (PropClosedDate (SuperlPlace TheClosest Bar) Today))
+PhrasebookChi: 今 天 最 近 的 那 个 酒 吧 是 关 闭 的 吗 ？
+PhrasebookEng: is the nearest bar closed today ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasName (Daughter TheyFemale) NameNN)))
+PhrasebookChi: 他 们 的 女 儿 叫 NN 吗 ？
+PhrasebookEng: is their daughter's name NN ?
+ Phrasebook: PQuestion (QProp (PropAction (AHasName (Daughter TheyMale) NameNN)))
+PhrasebookChi: 他 们 的 女 儿 叫 NN 吗 ？
+PhrasebookEng: is their daughter's name NN ?
+ Phrasebook: PQuestion (IsTranspPlace Bus (ThePlace Airport))
+PhrasebookChi: 有 去 机 场 的 公 共 汽 车 吗 ？
+PhrasebookEng: is there a bus to the airport ?
+ Phrasebook: PQuestion (IsTranspPlace Ferry (ThePlace Park))
+PhrasebookChi: 有 去 公 园 的 渡 船 吗 ？
+PhrasebookEng: is there a ferry to the park ?
+ Phrasebook: PQuestion (QProp (Is (This Apple) (Very Expensive)))
+PhrasebookChi: 这 个 苹 果 是 非 常 昂 贵 的 吗 ？
+PhrasebookEng: is this apple very expensive ?
+ Phrasebook: PQuestion (QProp (Is (ThisMass (MassDrink Wine)) (PropQuality Cold)))
+PhrasebookChi: 这 瓶 酒 是 冷 的 吗 ？
+PhrasebookEng: is this wine cold ?
+ Phrasebook: PQuestion (QProp (PropAction (ABePlace (Wife YouFamFemale) (APlace Hospital))))
+PhrasebookChi: 你 的 妻 子 在 一 个 医 院 吗 ？
+PhrasebookEng: is your wife in a hospital ?
+ Phrasebook: PQuestion (QProp (PropAction (ABePlace (Wife YouFamMale) (APlace Hospital))))
+PhrasebookChi: 你 的 妻 子 在 一 个 医 院 吗 ？
+PhrasebookEng: is your wife in a hospital ?
+ Phrasebook: PQuestion (QProp (PropAction (ABePlace (Wife YouPlurFamFemale) (APlace Hospital))))
+PhrasebookChi: 你 们 的 妻 子 在 一 个 医 院 吗 ？
+PhrasebookEng: is your wife in a hospital ?
+ Phrasebook: PQuestion (QProp (PropAction (ABePlace (Wife YouPlurFamMale) (APlace Hospital))))
+PhrasebookChi: 你 们 的 妻 子 在 一 个 医 院 吗 ？
+PhrasebookEng: is your wife in a hospital ?
+ Phrasebook: PQuestion (QProp (PropAction (ABePlace (Wife YouPlurPolFemale) (APlace Hospital))))
+PhrasebookChi: 你 们 的 妻 子 在 一 个 医 院 吗 ？
+PhrasebookEng: is your wife in a hospital ?
+ Phrasebook: PQuestion (QProp (PropAction (ABePlace (Wife YouPlurPolMale) (APlace Hospital))))
+PhrasebookChi: 你 们 的 妻 子 在 一 个 医 院 吗 ？
+PhrasebookEng: is your wife in a hospital ?
+ Phrasebook: PQuestion (QProp (PropAction (ABePlace (Wife YouPolFemale) (APlace Hospital))))
+PhrasebookChi: 您 的 妻 子 在 一 个 医 院 吗 ？
+PhrasebookEng: is your wife in a hospital ?
+ Phrasebook: PQuestion (QProp (PropAction (ABePlace (Wife YouPolMale) (APlace Hospital))))
+PhrasebookChi: 您 的 妻 子 在 一 个 医 院 吗 ？
+PhrasebookEng: is your wife in a hospital ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MMust (Daughter She) (V2Wait YouFamFemale) (APlace PostOffice))))
+PhrasebookChi: 她 的 女 儿 必 须 在 一 个 邮 局 等 你 吗 ？
+PhrasebookEng: must her daughter wait for you at a post office ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MMust (Daughter She) (V2Wait YouFamMale) (APlace PostOffice))))
+PhrasebookChi: 她 的 女 儿 必 须 在 一 个 邮 局 等 你 吗 ？
+PhrasebookEng: must her daughter wait for you at a post office ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MMust (Daughter She) (V2Wait YouPlurFamFemale) (APlace PostOffice))))
+PhrasebookChi: 她 的 女 儿 必 须 在 一 个 邮 局 等 你 们 吗 ？
+PhrasebookEng: must her daughter wait for you at a post office ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MMust (Daughter She) (V2Wait YouPlurFamMale) (APlace PostOffice))))
+PhrasebookChi: 她 的 女 儿 必 须 在 一 个 邮 局 等 你 们 吗 ？
+PhrasebookEng: must her daughter wait for you at a post office ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MMust (Daughter She) (V2Wait YouPlurPolFemale) (APlace PostOffice))))
+PhrasebookChi: 她 的 女 儿 必 须 在 一 个 邮 局 等 你 们 吗 ？
+PhrasebookEng: must her daughter wait for you at a post office ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MMust (Daughter She) (V2Wait YouPlurPolMale) (APlace PostOffice))))
+PhrasebookChi: 她 的 女 儿 必 须 在 一 个 邮 局 等 你 们 吗 ？
+PhrasebookEng: must her daughter wait for you at a post office ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MMust (Daughter She) (V2Wait YouPolFemale) (APlace PostOffice))))
+PhrasebookChi: 她 的 女 儿 必 须 在 一 个 邮 局 等 您 吗 ？
+PhrasebookEng: must her daughter wait for you at a post office ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MMust (Daughter She) (V2Wait YouPolMale) (APlace PostOffice))))
+PhrasebookChi: 她 的 女 儿 必 须 在 一 个 邮 局 等 您 吗 ？
+PhrasebookEng: must her daughter wait for you at a post office ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MMust TheyFemale (V2Eat (OneObj (ObjIndef Pizza))) (SuperlPlace TheMostExpensive Restaurant))))
+PhrasebookChi: 他 们 必 须 在 最 昂 贵 的 那 间 饭 店 吃 一 个 比 萨 饼 吗 ？
+PhrasebookEng: must they eat a pizza in the most expensive restaurant ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MMust TheyMale (V2Eat (OneObj (ObjIndef Pizza))) (SuperlPlace TheMostExpensive Restaurant))))
+PhrasebookChi: 他 们 必 须 在 最 昂 贵 的 那 间 饭 店 吃 一 个 比 萨 饼 吗 ？
+PhrasebookEng: must they eat a pizza in the most expensive restaurant ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MMust TheyFemale (V2Eat (OneObj (ObjItem (The Pizza)))) (SuperlPlace TheMostExpensive Restaurant))))
+PhrasebookChi: 他 们 必 须 在 最 昂 贵 的 那 间 饭 店 吃 比 萨 饼 吗 ？
+PhrasebookEng: must they eat the pizza in the most expensive restaurant ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrasePlace MMust TheyMale (V2Eat (OneObj (ObjItem (The Pizza)))) (SuperlPlace TheMostExpensive Restaurant))))
+PhrasebookChi: 他 们 必 须 在 最 昂 贵 的 那 间 饭 店 吃 比 萨 饼 吗 ？
+PhrasebookEng: must they eat the pizza in the most expensive restaurant ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MMust TheyFemale (V2Wait WeFemale))))
+PhrasebookChi: 他 们 必 须 等 我 们 吗 ？
+PhrasebookEng: must they wait for us ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MMust TheyFemale (V2Wait WeMale))))
+PhrasebookChi: 他 们 必 须 等 我 们 吗 ？
+PhrasebookEng: must they wait for us ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MMust TheyMale (V2Wait WeFemale))))
+PhrasebookChi: 他 们 必 须 等 我 们 吗 ？
+PhrasebookEng: must they wait for us ?
+ Phrasebook: PQuestion (QProp (PropAction (AModVerbPhrase MMust TheyMale (V2Wait WeMale))))
+PhrasebookChi: 他 们 必 须 等 我 们 吗 ？
+PhrasebookEng: must they wait for us ?
+ Phrasebook: PSentence (SHaveNoMass (Children IFemale) Bread)
+PhrasebookChi: 我 的 孩 子 没 有 面 包 。
+PhrasebookEng: my children don't have bread .
+ Phrasebook: PSentence (SHaveNoMass (Children IMale) Bread)
+PhrasebookChi: 我 的 孩 子 没 有 面 包 。
+PhrasebookEng: my children don't have bread .
+ Phrasebook: PSentence (SProp (PropAction (AHasName IFemale NameNN)))
+PhrasebookChi: 我 叫 NN 。
+PhrasebookEng: my name is NN .
+ Phrasebook: PSentence (SProp (PropAction (AHasName IMale NameNN)))
+PhrasebookChi: 我 叫 NN 。
+PhrasebookEng: my name is NN .
+ Phrasebook: PSentence (SProp (Is (That Pizza) (Very Cold)))
+PhrasebookChi: 那 个 比 萨 饼 是 非 常 冷 的 。
+PhrasebookEng: that pizza is very cold .
+ Phrasebook: PSentence (SPropNot (PropClosed (ThePlace Airport)))
+PhrasebookChi: 机 场 不 是 关 闭 的 。
+PhrasebookEng: the airport isn't closed .
+ Phrasebook: PSentence (SPropNot (PropOpenDay (ThePlace AmusementPark) Monday))
+PhrasebookChi: 游 乐 园 在 星 期 一 不 是 开 放 的 。
+PhrasebookEng: the amusement park isn't open on Mondays .
+ Phrasebook: PSentence (SProp (ItCost (Thes Apple) (AmountCurrency (NNumeral (num (pot2as3 (pot1as2 (pot0as1 (pot0 n5)))))) Euro)))
+PhrasebookChi: 苹 果 是 五 个 欧 元 。
+PhrasebookEng: the apples cost five euros .
+ Phrasebook: PSentence (SPropNot (Is (TheMass Cheese) (PropQuality Cheap)))
+PhrasebookChi: 奶 酪 不 是 廉 价 的 。
+PhrasebookEng: the cheese isn't cheap .
+ Phrasebook: PSentence (SProp (Is (TheMass (MassDrink Coffee)) (Very Cold)))
+PhrasebookChi: 咖 啡 是 非 常 冷 的 。
+PhrasebookEng: the coffee is very cold .
+ Phrasebook: PSentence (SProp (Is (The (SuchKind (PropQuality (PropCit (CitiNat Italian))) Pizza)) (Too Cold)))
+PhrasebookChi: 意 大 利 比 萨 饼 是 太 冷 的 。
+PhrasebookEng: the Italian pizza is too cold .
+ Phrasebook: PSentence (SProp (PropClosed (SuperlPlace TheClosest Airport)))
+PhrasebookChi: 最 近 的 那 个 机 场 是 关 闭 的 。
+PhrasebookEng: the nearest airport is closed .
+ Phrasebook: PSentence (SProp (Is (These Pizza) (Very Suspect)))
+PhrasebookChi: 这 些 比 萨 饼 是 非 常 可 疑 的 。
+PhrasebookEng: these pizzas are very suspect .
+ Phrasebook: PSentence (SPropNot (PropAction (AReady TheyFemale)))
+PhrasebookChi: 他 们 不 是 准 备 好 的 。
+PhrasebookEng: they aren't ready .
+ Phrasebook: PSentence (SPropNot (PropAction (AReady TheyMale)))
+PhrasebookChi: 他 们 不 是 准 备 好 的 。
+PhrasebookEng: they aren't ready .
+ Phrasebook: PSentence (SPropNot (PropAction (AHaveCurr TheyFemale Dollar)))
+PhrasebookChi: 他 们 没 有 美 元 。
+PhrasebookEng: they don't have dollars .
+ Phrasebook: PSentence (SPropNot (PropAction (AHaveCurr TheyMale Dollar)))
+PhrasebookChi: 他 们 没 有 美 元 。
+PhrasebookEng: they don't have dollars .
+ Phrasebook: PSentence (SPropNot (PropAction (AKnowPerson TheyFemale He)))
+PhrasebookChi: 他 们 不 认 识 他 。
+PhrasebookEng: they don't know him .
+ Phrasebook: PSentence (SPropNot (PropAction (AKnowPerson TheyMale He)))
+PhrasebookChi: 他 们 不 认 识 他 。
+PhrasebookEng: they don't know him .
+ Phrasebook: PSentence (SPropNot (PropAction (ASpeak TheyFemale Flemish)))
+PhrasebookChi: 他 们 不 说 佛 兰 德 语 。
+PhrasebookEng: they don't speak Flemish .
+ Phrasebook: PSentence (SPropNot (PropAction (ASpeak TheyMale Flemish)))
+PhrasebookChi: 他 们 不 说 佛 兰 德 语 。
+PhrasebookEng: they don't speak Flemish .
+ Phrasebook: PSentence (SPropNot (Is (This Apple) (PropQuality Fresh)))
+PhrasebookChi: 这 个 苹 果 不 是 新 鲜 的 。
+PhrasebookEng: this apple isn't fresh .
+ Phrasebook: PSentence (SPropNot (Is (This Apple) (Too Bad)))
+PhrasebookChi: 这 个 苹 果 不 是 太 坏 的 。
+PhrasebookEng: this apple isn't too bad .
+ Phrasebook: PImperativeFamPos (V2Wait (Children IFemale))
+PhrasebookChi: 等 我 的 孩 子
+PhrasebookEng: wait for my children
+ Phrasebook: PImperativeFamPos (V2Wait (Children IMale))
+PhrasebookChi: 等 我 的 孩 子
+PhrasebookEng: wait for my children
+ Phrasebook: PImperativePlurPos (V2Wait (Children IFemale))
+PhrasebookChi: 等 我 的 孩 子
+PhrasebookEng: wait for my children
+ Phrasebook: PImperativePlurPos (V2Wait (Children IMale))
+PhrasebookChi: 等 我 的 孩 子
+PhrasebookEng: wait for my children
+ Phrasebook: PImperativePolPos (V2Wait (Children IFemale))
+PhrasebookChi: 等 我 的 孩 子
+PhrasebookEng: wait for my children
+ Phrasebook: PImperativePolPos (V2Wait (Children IMale))
+PhrasebookChi: 等 我 的 孩 子
+PhrasebookEng: wait for my children
+ Phrasebook: PSentence (SHaveNoMass WeFemale (MassDrink Beer))
+PhrasebookChi: 我 们 没 有 啤 酒 。
+PhrasebookEng: we don't have beer .
+ Phrasebook: PSentence (SHaveNoMass WeMale (MassDrink Beer))
+PhrasebookChi: 我 们 没 有 啤 酒 。
+PhrasebookEng: we don't have beer .
+ Phrasebook: PQuestion (QWhatName He)
+PhrasebookChi: 他 贵 姓 ？
+PhrasebookEng: what is his name ?
+ Phrasebook: PQuestion (QWhereModVerbPhrase MWant TheyFemale VDrink)
+PhrasebookChi: 他 们 在 哪 里 想 喝 ？
+PhrasebookEng: where do they want to drink ?
+ Phrasebook: PQuestion (QWhereModVerbPhrase MWant TheyMale VDrink)
+PhrasebookChi: 他 们 在 哪 里 想 喝 ？
+PhrasebookEng: where do they want to drink ?
+ Phrasebook: PQuestion (QWhereDoVerbPhrase (Daughter He) VSleep)
+PhrasebookChi: 他 的 女 儿 去 哪 里 睡 ？
+PhrasebookEng: where does his daughter sleep ?
+ Phrasebook: PQuestion (WherePlace (APlace Hospital))
+PhrasebookChi: 一 个 医 院 在 哪 里 ？
+PhrasebookEng: where is a hospital ?
+ Phrasebook: PQuestion (WherePlace (SuperlPlace TheMostPopular (CitRestaurant (CitiNat Polish))))
+PhrasebookChi: 最 流 行 的 那 间 波 兰 的 饭 店 在 哪 里 ？
+PhrasebookEng: where is the most popular Polish restaurant ?
+ Phrasebook: PQuestion (WherePlace (SuperlPlace TheClosest Bank))
+PhrasebookChi: 最 近 的 那 间 银 行 在 哪 里 ？
+PhrasebookEng: where is the nearest bank ?
+ Phrasebook: PQuestion (QWhereModVerbPhrase MMust IFemale (V2Wait TheyFemale))
+PhrasebookChi: 我 在 哪 里 必 须 等 他 们 ？
+PhrasebookEng: where must I wait for them ?
+ Phrasebook: PQuestion (QWhereModVerbPhrase MMust IFemale (V2Wait TheyMale))
+PhrasebookChi: 我 在 哪 里 必 须 等 他 们 ？
+PhrasebookEng: where must I wait for them ?
+ Phrasebook: PQuestion (QWhereModVerbPhrase MMust IMale (V2Wait TheyFemale))
+PhrasebookChi: 我 在 哪 里 必 须 等 他 们 ？
+PhrasebookEng: where must I wait for them ?
+ Phrasebook: PQuestion (QWhereModVerbPhrase MMust IMale (V2Wait TheyMale))
+PhrasebookChi: 我 在 哪 里 必 须 等 他 们 ？
+PhrasebookEng: where must I wait for them ?
+ Phrasebook: PQuestion (WhichTranspPlace Bus (ThePlace Airport))
+PhrasebookChi: 哪 个 公 共 汽 车 去 机 场 ？
+PhrasebookEng: which bus goes to the airport ?
+ Phrasebook: PQuestion (WhichTranspPlace Tram (ThePlace Zoo))
+PhrasebookChi: 哪 个 电 车 去 动 物 园 ？
+PhrasebookEng: which tram goes to the zoo ?
+ Phrasebook: PSentence (SProp (IsMass (MassDrink Wine) (Very Cheap)))
+PhrasebookChi: 酒 是 非 常 廉 价 的 。
+PhrasebookEng: wine is very cheap .
+ Phrasebook: PSentence (SProp (PropAction (ATired YouFamFemale)))
+PhrasebookChi: 你 累 了 。
+PhrasebookEng: you are tired .
+ Phrasebook: PSentence (SProp (PropAction (ATired YouFamMale)))
+PhrasebookChi: 你 累 了 。
+PhrasebookEng: you are tired .
+ Phrasebook: PSentence (SProp (PropAction (ATired YouPlurFamFemale)))
+PhrasebookChi: 你 们 累 了 。
+PhrasebookEng: you are tired .
+ Phrasebook: PSentence (SProp (PropAction (ATired YouPlurFamMale)))
+PhrasebookChi: 你 们 累 了 。
+PhrasebookEng: you are tired .
+ Phrasebook: PSentence (SProp (PropAction (ATired YouPlurPolFemale)))
+PhrasebookChi: 你 们 累 了 。
+PhrasebookEng: you are tired .
+ Phrasebook: PSentence (SProp (PropAction (ATired YouPlurPolMale)))
+PhrasebookChi: 你 们 累 了 。
+PhrasebookEng: you are tired .
+ Phrasebook: PSentence (SProp (PropAction (ATired YouPolFemale)))
+PhrasebookChi: 您 累 了 。
+PhrasebookEng: you are tired .
+ Phrasebook: PSentence (SProp (PropAction (ATired YouPolMale)))
+PhrasebookChi: 您 累 了 。
+PhrasebookEng: you are tired .
+ Phrasebook: PSentence (SHaveNoMass YouFamFemale (MassDrink Tea))
+PhrasebookChi: 你 没 有 茶 。
+PhrasebookEng: you don't have tea .
+ Phrasebook: PSentence (SHaveNoMass YouFamMale (MassDrink Tea))
+PhrasebookChi: 你 没 有 茶 。
+PhrasebookEng: you don't have tea .
+ Phrasebook: PSentence (SHaveNoMass YouPlurFamFemale (MassDrink Tea))
+PhrasebookChi: 你 们 没 有 茶 。
+PhrasebookEng: you don't have tea .
+ Phrasebook: PSentence (SHaveNoMass YouPlurFamMale (MassDrink Tea))
+PhrasebookChi: 你 们 没 有 茶 。
+PhrasebookEng: you don't have tea .
+ Phrasebook: PSentence (SHaveNoMass YouPlurPolFemale (MassDrink Tea))
+PhrasebookChi: 你 们 没 有 茶 。
+PhrasebookEng: you don't have tea .
+ Phrasebook: PSentence (SHaveNoMass YouPlurPolMale (MassDrink Tea))
+PhrasebookChi: 你 们 没 有 茶 。
+PhrasebookEng: you don't have tea .
+ Phrasebook: PSentence (SHaveNoMass YouPolFemale (MassDrink Tea))
+PhrasebookChi: 您 没 有 茶 。
+PhrasebookEng: you don't have tea .
+ Phrasebook: PSentence (SHaveNoMass YouPolMale (MassDrink Tea))
+PhrasebookChi: 您 没 有 茶 。
+PhrasebookEng: you don't have tea .
+ Phrasebook: PSentence (SProp (PropAction (AHaveCurr YouFamFemale Dollar)))
+PhrasebookChi: 你 有 美 元 。
+PhrasebookEng: you have dollars .
+ Phrasebook: PSentence (SProp (PropAction (AHaveCurr YouFamMale Dollar)))
+PhrasebookChi: 你 有 美 元 。
+PhrasebookEng: you have dollars .
+ Phrasebook: PSentence (SProp (PropAction (AHaveCurr YouPlurFamFemale Dollar)))
+PhrasebookChi: 你 们 有 美 元 。
+PhrasebookEng: you have dollars .
+ Phrasebook: PSentence (SProp (PropAction (AHaveCurr YouPlurFamMale Dollar)))
+PhrasebookChi: 你 们 有 美 元 。
+PhrasebookEng: you have dollars .
+ Phrasebook: PSentence (SProp (PropAction (AHaveCurr YouPlurPolFemale Dollar)))
+PhrasebookChi: 你 们 有 美 元 。
+PhrasebookEng: you have dollars .
+ Phrasebook: PSentence (SProp (PropAction (AHaveCurr YouPlurPolMale Dollar)))
+PhrasebookChi: 你 们 有 美 元 。
+PhrasebookEng: you have dollars .
+ Phrasebook: PSentence (SProp (PropAction (AHaveCurr YouPolFemale Dollar)))
+PhrasebookChi: 您 有 美 元 。
+PhrasebookEng: you have dollars .
+ Phrasebook: PSentence (SProp (PropAction (AHaveCurr YouPolMale Dollar)))
+PhrasebookChi: 您 有 美 元 。
+PhrasebookEng: you have dollars .
+ Phrasebook: PSentence (SProp (PropAction (AModVerbPhrase MMust YouFamFemale VSleep)))
+PhrasebookChi: 你 必 须 睡 。
+PhrasebookEng: you must sleep .
+ Phrasebook: PSentence (SProp (PropAction (AModVerbPhrase MMust YouFamMale VSleep)))
+PhrasebookChi: 你 必 须 睡 。
+PhrasebookEng: you must sleep .
+ Phrasebook: PSentence (SProp (PropAction (AModVerbPhrase MMust YouPolFemale VSleep)))
+PhrasebookChi: 您 必 须 睡 。
+PhrasebookEng: you must sleep .
+ Phrasebook: PSentence (SProp (PropAction (AModVerbPhrase MMust YouPolMale VSleep)))
+PhrasebookChi: 您 必 须 睡 。
+PhrasebookEng: you must sleep .
+ Phrasebook: PSentence (SProp (PropAction (AModVerbPhrase MMust YouPlurFamFemale VSleep)))
+PhrasebookChi: 你 们 必 须 睡 。
+PhrasebookEng: you must sleep .
+ Phrasebook: PSentence (SProp (PropAction (AModVerbPhrase MMust YouPlurFamMale VSleep)))
+PhrasebookChi: 你 们 必 须 睡 。
+PhrasebookEng: you must sleep .
+ Phrasebook: PSentence (SProp (PropAction (AModVerbPhrase MMust YouPlurPolFemale VSleep)))
+PhrasebookChi: 你 们 必 须 睡 。
+PhrasebookEng: you must sleep .
+ Phrasebook: PSentence (SProp (PropAction (AModVerbPhrase MMust YouPlurPolMale VSleep)))
+PhrasebookChi: 你 们 必 须 睡 。
+PhrasebookEng: you must sleep .
+ Phrasebook: PSentence (SProp (PropAction (AModVerbPhrasePlace MWant YouFamFemale VSit (ThePlace Theatre))))
+PhrasebookChi: 你 想 在 剧 院 坐 。
+PhrasebookEng: you want to sit at the theatre .
+ Phrasebook: PSentence (SProp (PropAction (AModVerbPhrasePlace MWant YouFamMale VSit (ThePlace Theatre))))
+PhrasebookChi: 你 想 在 剧 院 坐 。
+PhrasebookEng: you want to sit at the theatre .
+ Phrasebook: PSentence (SProp (PropAction (AModVerbPhrasePlace MWant YouPolFemale VSit (ThePlace Theatre))))
+PhrasebookChi: 您 想 在 剧 院 坐 。
+PhrasebookEng: you want to sit at the theatre .
+ Phrasebook: PSentence (SProp (PropAction (AModVerbPhrasePlace MWant YouPolMale VSit (ThePlace Theatre))))
+PhrasebookChi: 您 想 在 剧 院 坐 。
+PhrasebookEng: you want to sit at the theatre .
+ Phrasebook: PSentence (SProp (PropAction (AModVerbPhrasePlace MWant YouPlurFamFemale VSit (ThePlace Theatre))))
+PhrasebookChi: 你 们 想 在 剧 院 坐 。
+PhrasebookEng: you want to sit at the theatre .
+ Phrasebook: PSentence (SProp (PropAction (AModVerbPhrasePlace MWant YouPlurFamMale VSit (ThePlace Theatre))))
+PhrasebookChi: 你 们 想 在 剧 院 坐 。
+PhrasebookEng: you want to sit at the theatre .
+ Phrasebook: PSentence (SProp (PropAction (AModVerbPhrasePlace MWant YouPlurPolFemale VSit (ThePlace Theatre))))
+PhrasebookChi: 你 们 想 在 剧 院 坐 。
+PhrasebookEng: you want to sit at the theatre .
+ Phrasebook: PSentence (SProp (PropAction (AModVerbPhrasePlace MWant YouPlurPolMale VSit (ThePlace Theatre))))
+PhrasebookChi: 你 们 想 在 剧 院 坐 。
+PhrasebookEng: you want to sit at the theatre .
+ Phrasebook: PSentence (SHaveNoMass (Children YouFamFemale) (MassDrink Coffee))
+PhrasebookChi: 你 的 孩 子 没 有 咖 啡 。
+PhrasebookEng: your children don't have coffee .
+ Phrasebook: PSentence (SHaveNoMass (Children YouFamMale) (MassDrink Coffee))
+PhrasebookChi: 你 的 孩 子 没 有 咖 啡 。
+PhrasebookEng: your children don't have coffee .
+ Phrasebook: PSentence (SHaveNoMass (Children YouPlurFamFemale) (MassDrink Coffee))
+PhrasebookChi: 你 们 的 孩 子 没 有 咖 啡 。
+PhrasebookEng: your children don't have coffee .
+ Phrasebook: PSentence (SHaveNoMass (Children YouPlurFamMale) (MassDrink Coffee))
+PhrasebookChi: 你 们 的 孩 子 没 有 咖 啡 。
+PhrasebookEng: your children don't have coffee .
+ Phrasebook: PSentence (SHaveNoMass (Children YouPlurPolFemale) (MassDrink Coffee))
+PhrasebookChi: 你 们 的 孩 子 没 有 咖 啡 。
+PhrasebookEng: your children don't have coffee .
+ Phrasebook: PSentence (SHaveNoMass (Children YouPlurPolMale) (MassDrink Coffee))
+PhrasebookChi: 你 们 的 孩 子 没 有 咖 啡 。
+PhrasebookEng: your children don't have coffee .
+ Phrasebook: PSentence (SHaveNoMass (Children YouPolFemale) (MassDrink Coffee))
+PhrasebookChi: 您 的 孩 子 没 有 咖 啡 。
+PhrasebookEng: your children don't have coffee .
+ Phrasebook: PSentence (SHaveNoMass (Children YouPolMale) (MassDrink Coffee))
+PhrasebookChi: 您 的 孩 子 没 有 咖 啡 。
+PhrasebookEng: your children don't have coffee .
+ Phrasebook: PSentence (SHaveNoMass (Husband (Daughter YouFamFemale)) Cheese)
+PhrasebookChi: 你 的 女 儿 的 丈 夫 没 有 奶 酪 。
+PhrasebookEng: your daughter's husband doesn't have cheese .
+ Phrasebook: PSentence (SHaveNoMass (Husband (Daughter YouFamMale)) Cheese)
+PhrasebookChi: 你 的 女 儿 的 丈 夫 没 有 奶 酪 。
+PhrasebookEng: your daughter's husband doesn't have cheese .
+ Phrasebook: PSentence (SHaveNoMass (Husband (Daughter YouPlurFamFemale)) Cheese)
+PhrasebookChi: 你 们 的 女 儿 的 丈 夫 没 有 奶 酪 。
+PhrasebookEng: your daughter's husband doesn't have cheese .
+ Phrasebook: PSentence (SHaveNoMass (Husband (Daughter YouPlurFamMale)) Cheese)
+PhrasebookChi: 你 们 的 女 儿 的 丈 夫 没 有 奶 酪 。
+PhrasebookEng: your daughter's husband doesn't have cheese .
+ Phrasebook: PSentence (SHaveNoMass (Husband (Daughter YouPlurPolFemale)) Cheese)
+PhrasebookChi: 你 们 的 女 儿 的 丈 夫 没 有 奶 酪 。
+PhrasebookEng: your daughter's husband doesn't have cheese .
+ Phrasebook: PSentence (SHaveNoMass (Husband (Daughter YouPlurPolMale)) Cheese)
+PhrasebookChi: 你 们 的 女 儿 的 丈 夫 没 有 奶 酪 。
+PhrasebookEng: your daughter's husband doesn't have cheese .
+ Phrasebook: PSentence (SHaveNoMass (Husband (Daughter YouPolFemale)) Cheese)
+PhrasebookChi: 您 的 女 儿 的 丈 夫 没 有 奶 酪 。
+PhrasebookEng: your daughter's husband doesn't have cheese .
+ Phrasebook: PSentence (SHaveNoMass (Husband (Daughter YouPolMale)) Cheese)
+PhrasebookChi: 您 的 女 儿 的 丈 夫 没 有 奶 酪 。
+PhrasebookEng: your daughter's husband doesn't have cheese .
+ Phrasebook: PSentence (SProp (PropAction (ABePlace (Son YouFamFemale) (SuperlPlace TheCheapest Bar))))
+PhrasebookChi: 你 的 儿 子 在 最 廉 价 的 那 个 酒 吧 。
+PhrasebookEng: your son is in the cheapest bar .
+ Phrasebook: PSentence (SProp (PropAction (ABePlace (Son YouFamMale) (SuperlPlace TheCheapest Bar))))
+PhrasebookChi: 你 的 儿 子 在 最 廉 价 的 那 个 酒 吧 。
+PhrasebookEng: your son is in the cheapest bar .
+ Phrasebook: PSentence (SProp (PropAction (ABePlace (Son YouPlurFamFemale) (SuperlPlace TheCheapest Bar))))
+PhrasebookChi: 你 们 的 儿 子 在 最 廉 价 的 那 个 酒 吧 。
+PhrasebookEng: your son is in the cheapest bar .
+ Phrasebook: PSentence (SProp (PropAction (ABePlace (Son YouPlurFamMale) (SuperlPlace TheCheapest Bar))))
+PhrasebookChi: 你 们 的 儿 子 在 最 廉 价 的 那 个 酒 吧 。
+PhrasebookEng: your son is in the cheapest bar .
+ Phrasebook: PSentence (SProp (PropAction (ABePlace (Son YouPlurPolFemale) (SuperlPlace TheCheapest Bar))))
+PhrasebookChi: 你 们 的 儿 子 在 最 廉 价 的 那 个 酒 吧 。
+PhrasebookEng: your son is in the cheapest bar .
+ Phrasebook: PSentence (SProp (PropAction (ABePlace (Son YouPlurPolMale) (SuperlPlace TheCheapest Bar))))
+PhrasebookChi: 你 们 的 儿 子 在 最 廉 价 的 那 个 酒 吧 。
+PhrasebookEng: your son is in the cheapest bar .
+ Phrasebook: PSentence (SProp (PropAction (ABePlace (Son YouPolFemale) (SuperlPlace TheCheapest Bar))))
+PhrasebookChi: 您 的 儿 子 在 最 廉 价 的 那 个 酒 吧 。
+PhrasebookEng: your son is in the cheapest bar .
+ Phrasebook: PSentence (SProp (PropAction (ABePlace (Son YouPolMale) (SuperlPlace TheCheapest Bar))))
+PhrasebookChi: 您 的 儿 子 在 最 廉 价 的 那 个 酒 吧 。
+PhrasebookEng: your son is in the cheapest bar .
+ Phrasebook: PSentence (SPropNot (PropAction (AModVerbPhrase MCan IFemale (V2Wait (Husband IFemale)))))
+PhrasebookChi: 我 不 能 等 我 的 丈 夫 。
+PhrasebookEng: I can't wait for my husband .
+ Phrasebook: PSentence (SPropNot (PropAction (AModVerbPhrase MCan IFemale (V2Wait (Husband IMale)))))
+PhrasebookChi: 我 不 能 等 我 的 丈 夫 。
+PhrasebookEng: I can't wait for my husband .
+ Phrasebook: PSentence (SPropNot (PropAction (AModVerbPhrase MCan IMale (V2Wait (Husband IFemale)))))
+PhrasebookChi: 我 不 能 等 我 的 丈 夫 。
+PhrasebookEng: I can't wait for my husband .
+ Phrasebook: PSentence (SPropNot (PropAction (AModVerbPhrase MCan IMale (V2Wait (Husband IMale)))))
+PhrasebookChi: 我 不 能 等 我 的 丈 夫 。
+PhrasebookEng: I can't wait for my husband .
+ Phrasebook: PSentence (SPropNot (PropAction (AModVerbPhrase MKnow IFemale (V2Wait (Husband IFemale)))))
+PhrasebookChi: 我 不 会 等 我 的 丈 夫 。
+PhrasebookEng: I can't wait for my husband .
+ Phrasebook: PSentence (SPropNot (PropAction (AModVerbPhrase MKnow IFemale (V2Wait (Husband IMale)))))
+PhrasebookChi: 我 不 会 等 我 的 丈 夫 。
+PhrasebookEng: I can't wait for my husband .
+ Phrasebook: PSentence (SPropNot (PropAction (AModVerbPhrase MKnow IMale (V2Wait (Husband IFemale)))))
+PhrasebookChi: 我 不 会 等 我 的 丈 夫 。
+PhrasebookEng: I can't wait for my husband .
+ Phrasebook: PSentence (SPropNot (PropAction (AModVerbPhrase MKnow IMale (V2Wait (Husband IMale)))))
+PhrasebookChi: 我 不 会 等 我 的 丈 夫 。
+PhrasebookEng: I can't wait for my husband .
+ Phrasebook: PSentence (SPropNot (PropAction (AModVerbPhrase MWant IFemale (V2Wait (Children TheyFemale)))))
+PhrasebookChi: 我 不 想 等 他 们 的 孩 子 。
+PhrasebookEng: I don't want to wait for their children .
+ Phrasebook: PSentence (SPropNot (PropAction (AModVerbPhrase MWant IFemale (V2Wait (Children TheyMale)))))
+PhrasebookChi: 我 不 想 等 他 们 的 孩 子 。
+PhrasebookEng: I don't want to wait for their children .
+ Phrasebook: PSentence (SPropNot (PropAction (AModVerbPhrase MWant IMale (V2Wait (Children TheyFemale)))))
+PhrasebookChi: 我 不 想 等 他 们 的 孩 子 。
+PhrasebookEng: I don't want to wait for their children .
+ Phrasebook: PSentence (SPropNot (PropAction (AModVerbPhrase MWant IMale (V2Wait (Children TheyMale)))))
+PhrasebookChi: 我 不 想 等 他 们 的 孩 子 。
+PhrasebookEng: I don't want to wait for their children .
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeFemale (QWhereModVerbPhrase MCan WeFemale (V2Wait TheyFemale)))))
+PhrasebookChi: 我 们 知 道 我 们 在 哪 里 能 等 他 们 吗 ？
+PhrasebookEng: do we know where we can wait for them ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeFemale (QWhereModVerbPhrase MCan WeFemale (V2Wait TheyMale)))))
+PhrasebookChi: 我 们 知 道 我 们 在 哪 里 能 等 他 们 吗 ？
+PhrasebookEng: do we know where we can wait for them ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeFemale (QWhereModVerbPhrase MCan WeMale (V2Wait TheyFemale)))))
+PhrasebookChi: 我 们 知 道 我 们 在 哪 里 能 等 他 们 吗 ？
+PhrasebookEng: do we know where we can wait for them ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeFemale (QWhereModVerbPhrase MCan WeMale (V2Wait TheyMale)))))
+PhrasebookChi: 我 们 知 道 我 们 在 哪 里 能 等 他 们 吗 ？
+PhrasebookEng: do we know where we can wait for them ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeFemale (QWhereModVerbPhrase MKnow WeFemale (V2Wait TheyFemale)))))
+PhrasebookChi: 我 们 知 道 我 们 在 哪 里 会 等 他 们 吗 ？
+PhrasebookEng: do we know where we can wait for them ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeFemale (QWhereModVerbPhrase MKnow WeFemale (V2Wait TheyMale)))))
+PhrasebookChi: 我 们 知 道 我 们 在 哪 里 会 等 他 们 吗 ？
+PhrasebookEng: do we know where we can wait for them ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeFemale (QWhereModVerbPhrase MKnow WeMale (V2Wait TheyFemale)))))
+PhrasebookChi: 我 们 知 道 我 们 在 哪 里 会 等 他 们 吗 ？
+PhrasebookEng: do we know where we can wait for them ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeFemale (QWhereModVerbPhrase MKnow WeMale (V2Wait TheyMale)))))
+PhrasebookChi: 我 们 知 道 我 们 在 哪 里 会 等 他 们 吗 ？
+PhrasebookEng: do we know where we can wait for them ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeMale (QWhereModVerbPhrase MCan WeFemale (V2Wait TheyFemale)))))
+PhrasebookChi: 我 们 知 道 我 们 在 哪 里 能 等 他 们 吗 ？
+PhrasebookEng: do we know where we can wait for them ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeMale (QWhereModVerbPhrase MCan WeFemale (V2Wait TheyMale)))))
+PhrasebookChi: 我 们 知 道 我 们 在 哪 里 能 等 他 们 吗 ？
+PhrasebookEng: do we know where we can wait for them ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeMale (QWhereModVerbPhrase MCan WeMale (V2Wait TheyFemale)))))
+PhrasebookChi: 我 们 知 道 我 们 在 哪 里 能 等 他 们 吗 ？
+PhrasebookEng: do we know where we can wait for them ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeMale (QWhereModVerbPhrase MCan WeMale (V2Wait TheyMale)))))
+PhrasebookChi: 我 们 知 道 我 们 在 哪 里 能 等 他 们 吗 ？
+PhrasebookEng: do we know where we can wait for them ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeMale (QWhereModVerbPhrase MKnow WeFemale (V2Wait TheyFemale)))))
+PhrasebookChi: 我 们 知 道 我 们 在 哪 里 会 等 他 们 吗 ？
+PhrasebookEng: do we know where we can wait for them ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeMale (QWhereModVerbPhrase MKnow WeFemale (V2Wait TheyMale)))))
+PhrasebookChi: 我 们 知 道 我 们 在 哪 里 会 等 他 们 吗 ？
+PhrasebookEng: do we know where we can wait for them ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeMale (QWhereModVerbPhrase MKnow WeMale (V2Wait TheyFemale)))))
+PhrasebookChi: 我 们 知 道 我 们 在 哪 里 会 等 他 们 吗 ？
+PhrasebookEng: do we know where we can wait for them ?
+ Phrasebook: PQuestion (QProp (PropAction (AKnowQuestion WeMale (QWhereModVerbPhrase MKnow WeMale (V2Wait TheyMale)))))
+PhrasebookChi: 我 们 知 道 我 们 在 哪 里 会 等 他 们 吗 ？
+PhrasebookEng: do we know where we can wait for them ?
+ Phrasebook: PSentence (SPropNot (PropAction (ABePlace She (SuperlPlace TheClosest Parking))))
+PhrasebookChi: 她 不 在 最 近 的 那 个 停 车 场 。
+PhrasebookEng: she isn't in the nearest car park .

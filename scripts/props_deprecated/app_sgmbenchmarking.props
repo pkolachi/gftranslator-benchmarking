@@ -1,0 +1,4 @@
+exp_directory=../expt-data/Sep28-2014/app-grammar/controlled-dataset_23May2014/run3/
+srclang=Eng
+format=sgm
+input=../data/controlled-dataset_23May2014/final-dataset/sentences.gcased.en.sgm
