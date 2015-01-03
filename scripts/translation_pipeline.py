@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import argparse, codecs, copy, functools, itertools, logging, math, operator, os, os.path, re, string, sys, time;
+import argparse, codecs, copy, itertools, logging, math, operator, os, os.path, re, string, sys, time;
 #import pathos.multiprocessing as multiprocessing;
 #import multiprocessing;
 #import lxml.etree as etree;
@@ -101,7 +101,6 @@ def translateWord(grammar, language, tgtlanguage, word):
 	partialExprList = grammar.languages[language].parse(word, cat='Chunk');
 	for expr in partialExprList:
 	    trans = grammar.languages[tgtlanguage].linearize(expr[1]);
-	    if not trans: print expr[1], tgtlanguage;
 	    return gf_utils.gf_postprocessor( trans if trans else ' ' );
     except pgf.ParseError:
 	morphAnalysis = grammar.languages[language].lookupMorpho(word) + grammar.languages[language].lookupMorpho(lowerword);
@@ -183,7 +182,6 @@ def pipelineParsing(grammar, language, sentences):
     buf, sentences = itertools.tee(sentences, 2);
     sentences = itertools.imap(gf_utils.gf_lexer(lang=language), sentences);
     for sent, parsesBlock in itertools.izip(buf, gf_utils.getKBestParses(grammar, language, sentences, 20)):
-	#print len(parsesBlock);
 	yield (sent, parsesBlock);
 
 def pipelineParsing_alt(*args):
