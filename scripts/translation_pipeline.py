@@ -2,7 +2,7 @@
 
 import argparse, codecs, copy, itertools, logging, math, operator, os, os.path, re, string, sys, time;
 #import pathos.multiprocessing as multiprocessing;
-#import multiprocessing;
+import multiprocessing;
 #import lxml.etree as etree;
 import xml.etree.ElementTree as etree;
 import pgf;
@@ -190,12 +190,15 @@ def pipelineParsing_alt(*args):
 
 def pipelineParsing_multi(grammar, language, sentences):
     buf = [sent for sent in sentences];
-    size = 25;
+    size = len(buf)/3;
     chunks = (buf[start:start+size] for start in xrange(0, len(buf)-size+1, size));
     args = [];
     for batch in chunks:
 	args.append( (grammar, language, batch) );
-    return multiprocessing.Pool(3).imap(pipelineParsing_alt, [arguments for arguments in args], chunksize=math.log(len(args), 10));
+    with multiprocessing.Pool(3) as pool:
+	for resultChunk in pool.imap(pipelineParsing_alt, [arguments for arguments in args], chunksize=math.log(len(args), 10)):
+	    for result in resultChunk:
+		yield result;
 
 def translation_pipeline(props):
     if props.propsfile:
@@ -254,8 +257,8 @@ def translation_pipeline(props):
 
     logging.info( "Parsing text in %s" %(sourceLanguage) );
     # 1. Get Abstract Trees for sentences in source language.
-    #absParses = [parsesBlock for parsesBlock in pipelineParsing_multi( grammar, sourceLanguage, itertools.imap(preprocessor, reader(inputDoc)) )];
-    absParses  = [parsesBlock for parsesBlock in pipelineParsing( grammar, sourceLanguage, itertools.imap(preprocessor, reader(inputDoc)) )];
+    absParses = [parsesBlock for parsesBlock in pipelineParsing_multi( grammar, sourceLanguage, itertools.imap(preprocessor, reader(inputDoc)) )];
+    #absParses  = [parsesBlock for parsesBlock in pipelineParsing( grammar, sourceLanguage, itertools.imap(preprocessor, reader(inputDoc)) )];
 
     logging.info( "Linearizing into %s" %(','.join(targetLanguages)) );
     # 2. Linearize in all target Languages
