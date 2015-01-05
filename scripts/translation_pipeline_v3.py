@@ -24,10 +24,6 @@ def indentXMLNodes(elem, level=0):
 	if level and (not elem.tail or not elem.tail.strip()):
 	    elem.tail = i
 
-GRAMMAR = '';
-SRCLANG = '';
-TGTLANGS = '';
-
 def readTranslationPipelineOptions(propsfile, default_namespace):
     with codecs.open(propsfile, 'r', 'utf-8') as infile:
 	for line in infile:
@@ -99,104 +95,107 @@ def clean_gfstrings(sentence):
 	sentence = sentence.replace(entry, ' '.join(entry[1:-1].split('_')[:-1]) if entry.find('_') != -1 else '');
     return ' '.join( sentence.split() );
 
-def parseNames(lin_idx, sentence, start):
-    global GRAMMAR, SRCLANG;
-    moving_start, end, eot = start, len(sentence), True;
-    if moving_start < end and sentence[moving_start] != sentence[moving_start].upper():
-	return None;
-    while moving_start < end:
-	if sentence[moving_start] in string.whitespace:
-	    eot = True;
-	elif eot and sentence[moving_start] == sentence[moving_start].upper():
-	    eot = False;
-	    continue;
-	elif eot and sentence[moving_start] != sentence[moving_start].upper():
-	    end = moving_start-1;
-	    break;
-	moving_start += 1;
-    possible_name = sentence[start:end].strip();
-    if possible_name:
-	if SRCLANG.endswith('Eng') and (possible_name == "I" or possible_name == "I'm"):
+def parseNames(grammar, language):
+    def callback(lin_idx, sentence, start):
+	moving_start, end, eot = start, len(sentence), True;
+	if moving_start < end and sentence[moving_start] != sentence[moving_start].upper():
 	    return None;
-	elif SRCLANG.endswith('Eng') and possible_name.endswith("'s"):
-	    end_idx = possible_name.rfind("'s");
-	    if end_idx != -1: 
-		end = end_idx;
-		possible_name = possible_name[:end].strip();
-	expr, prob = None, None;
-	for analysis in GRAMMAR.languages[SRCLANG].lookupMorpho(possible_name):
-	    category = GRAMMAR.functionType(analysis[0]).cat;
-	    if prob < analysis[-1]:
-		if category == "PN":
-		    expr, prob = pgf.Expr(analysis[0], []), analysis[-1];
-		elif category == "Weekday":
-		    expr, prob = pgf.Expr("weekdayPN", [pgf.Expr(analysis[0], [])]), analysis[-1];
-		elif category == "Month":
-		    expr, prob = pgf.Expr("monthPN", [pgf.Expr(analysis[0], [])]), analysis[-1];
-		elif category == "Language":
-		    return None;
-	# generic named entity
-	if expr == None:
-	    expr = pgf.Expr(possible_name);
-	    expr = pgf.Expr("MkSymb", [expr]);
-	    expr = pgf.Expr("SymbPN", [expr]);
-	return (expr, 0, end);
-    return None;
-
-def parseUnknown(lin_idx, sentence, start):
-    global GRAMMAR, SRCLANG;
-    moving_start, end, eot = start, len(sentence), True;
-    if moving_start < end and sentence[moving_start] != sentence[moving_start].upper():
 	while moving_start < end:
 	    if sentence[moving_start] in string.whitespace:
-		end = moving_start;
+		eot = True;
+	    elif eot and sentence[moving_start] == sentence[moving_start].upper():
+		eot = False;
+		continue;
+	    elif eot and sentence[moving_start] != sentence[moving_start].upper():
+		end = moving_start-1;
 		break;
 	    moving_start += 1;
-	unknown_word = sentence[start:end].strip();
-	if unknown_word:
-	    count = 0;
-	    for analysis in GRAMMAR.languages[SRCLANG].lookupMorpho(unknown_word):
-		count += 1;
-	    if not count:
-		expr = pgf.Expr("MkSymb", [pgf.Expr(unknown_word)]);
-		return (expr, 0, end);
-    return None;
+	possible_name = sentence[start:end].strip();
+	if possible_name:
+	    if language.endswith('Eng') and (possible_name == "I" or possible_name == "I'm"):
+		return None;
+	    elif language.endswith('Eng') and possible_name.endswith("'s"):
+		end_idx = possible_name.rfind("'s");
+		if end_idx != -1:
+		    possible_name = possible_name[:end_idx].strip();
+		    end -= 2;
+		    if not possible_name:
+			return None;
+	    expr, prob = None, None;
+	    for analysis in grammar.languages[language].lookupMorpho(possible_name):
+		category = grammar.functionType(analysis[0]).cat;
+		if prob < analysis[-1]:
+		    if category == "PN":
+			expr, prob = pgf.Expr(analysis[0], []), analysis[-1];
+		    elif category == "Weekday":
+			expr, prob = pgf.Expr("weekdayPN", [pgf.Expr(analysis[0], [])]), analysis[-1];
+		    elif category == "Month":
+			expr, prob = pgf.Expr("monthPN", [pgf.Expr(analysis[0], [])]), analysis[-1];
+		    elif category == "Language":
+			return None;
+	    # generic named entity
+	    if expr == None:
+		expr = pgf.Expr(possible_name);
+		expr = pgf.Expr("MkSymb", [expr]);
+		expr = pgf.Expr("SymbPN", [expr]);
+	    return (expr, 0, end);
+	return None;
+    return callback;
 
-def parseTester(lin_idx, sentence, start):
-    if start < len(sentence):
-	return (pgf.Expr(sentence[start]), 0, start+1);
-    return None;
+def parseUnknown(grammar, language):
+    def callback(lin_idx, sentence, start):
+	moving_start, end, eot = start, len(sentence), True;
+	if moving_start < end and sentence[moving_start] != sentence[moving_start].upper():
+	    while moving_start < end:
+		if sentence[moving_start] in string.whitespace:
+		    end = moving_start;
+		    break;
+		moving_start += 1;
+	    unknown_word = sentence[start:end].strip();
+	    if unknown_word:
+		count = 0;
+		for analysis in grammar.languages[language].lookupMorpho(unknown_word):
+		    count += 1;
+		if not count:
+		    expr = pgf.Expr("MkSymb", [pgf.Expr(unknown_word)]);
+		    return (expr, 0, end);
+	return None;
+    return callback;
 
-def translateWord(word, tgtlanguage):
-    global GRAMMAR, SRCLANG, TGTLANGS;
+def parseTester(grammar, language):
+    def callback(lin_idx, sentence, start):
+	if start < len(sentence):
+	    return (pgf.Expr(sentence[start]), 0, start+1);
+	return None;
+    return callback;
+
+def translateWord(grammar, language, tgtlanguage, word):
     lowerword = word.lower();
     try:
-	partialExprList = GRAMMAR.languages[SRCLANG].parse(word, cat='Chunk');
+	partialExprList = grammar.languages[language].parse(word, cat='Chunk');
 	for expr in partialExprList:
 	    trans = grammar.languages[tgtlanguage].linearize(expr[1]);
-	    if not trans: 
+	    if not trans:
 		print expr[1], tgtlanguage;
 	    return gf_utils.gf_postprocessor( trans if trans else ' ' );
     except pgf.ParseError:
-	morphAnalysis = GRAMMAR.languages[SRCLANG].lookupMorpho(word) + GRAMMAR.languages[SRCLANG].lookupMorpho(lowerword);
+	morphAnalysis = grammar.languages[language].lookupMorpho(word) + grammar.languages[language].lookupMorpho(lowerword);
 	for morph in morphAnalysis:
-	    if GRAMMAR.languages[tgtlanguage].hasLinearization(morph[0]):
-		return gf_utils.gf_postprocessor( GRAMMAR.languages[tgtlanguage].linearize( pgf.readExpr(morph[0]) ) );
+	    if grammar.languages[tgtlanguage].hasLinearization(morph[0]):
+		return gf_utils.gf_postprocessor( grammar.languages[tgtlanguage].linearize( pgf.readExpr(morph[0]) ) );
     return word;
 
-def translationByLookup(sentence):
-    global GRAMMAR, SRCLANG, TGTLANGS;
-    return [(lang, gf_utils.gf_postprocessor("% " + " ".join([translateWord(word, language) for word in sentence.split()]))) \
-	    for lang in TGTLANGS];
+def translationByLookup(grammar, language, tgtlanguages, sentence):
+    return [(lang, gf_utils.gf_postprocessor("% " + " ".join([translateWord(grammar, language, lang, word) for word in sentence.split()]))) \
+	    for lang in tgtlanguages];
 
-def translateWordsAsChunks(word):
-    global GRAMMAR, SRCLANG, TGTLANGS;
-    parser = GRAMMAR.languages[SRCLANG].parse;
-    linearizersList = dict((lang, GRAMMAR.languages[lang].linearize) for lang in TGTLANGS);
+def translateWordsAsChunks(grammar, language, tgtlanguages, word):
+    parser = grammar.languages[language].parse;
+    linearizersList = dict((lang, grammar.languages[lang].linearize) for lang in tgtlanguages);
     translations = [];
     try:
 	for parseidx, parse in enumerate( parser(word) ):
-	    for lang in TGTLANGS:
+	    for lang in tgtlanguages:
 		trans = linearizersList[lang](parse[1]);
 		translations.append(( lang, gf_utils.gf_postprocessor(trans.strip() if trans else '') ) );
 	    break;
@@ -204,28 +203,27 @@ def translateWordsAsChunks(word):
 	return [];
     return translations;
 
-def translateWord_(word):
-    global GRAMMAR, SRCLANG, TGTLANGS;
-    possible_translations = translateWordsAsChunks(word);
+def translateWord_(grammar, language, tgtlanguages, word):
+    possible_translations = translateWordsAsChunks(grammar, language, tgtlanguages, word);
     if len(possible_translations):
 	return possible_translations;
+
     lowerword = word.lower();
     try:
-	partialExprList = GRAMMAR.languages[SRCLANG].parse(word, cat='Chunk');
+	partialExprList = grammar.languages[language].parse(word, cat='Chunk');
 	for expr in partialExprList:
-	    return [(lang, gf_utils.gf_postprocessor( GRAMMAR.languages[lang].linearize(expr[1]) ) ) for lang in TGTLANGS];
+	    return [(lang, gf_utils.gf_postprocessor( grammar.languages[lang].linearize(expr[1]) )) for lang in tgtlanguages];
     except pgf.ParseError:
-	morphAnalysis = GRAMMAR.languages[SRCLANG].lookupMorpho(word) + GRAMMAR.languages[SRCLANG].lookupMorpho(lowerword);
+	morphAnalysis = grammar.languages[language].lookupMorpho(word) + grammar.languages[language].lookupMorpho(lowerword);
 	for morph in morphAnalysis:
-	    countPositiveLanguages = filter(None, [GRAMMAR.languages[lang].hasLinearization(morph[0]) for lang in TGTLANGS]);
-	    if len(countPositiveLanguages) > 0.5*len(TGTLANGS):
-		return [(lang, gf_utils.gf_postprocessor( GRAMMAR.languages[lang].linearize( pgf.readExpr(morph[0]) ) )) for lang in TGTLANGS];
-    return [(lang, word) for lang in TGTLANGS];
+	    countPositiveLanguages = filter(None, [grammar.languages[lang].hasLinearization(morph[0]) for lang in tgtlanguages]);
+	    if len(countPositiveLanguages) > 0.5*len(tgtlanguages):
+		return [(lang, gf_utils.gf_postprocessor( grammar.languages[lang].linearize( pgf.readExpr(morph[0]) ) )) for lang in tgtlanguages];
+    return [(lang, word) for lang in tgtlanguages];
 
-def translationByLookup_(sentence):
-    global GRAMMAR, SRCLANG, TGTLANGS;
-    parser = GRAMMAR.languages[SRCLANG].parse;
-    linearizersList = dict([(lang, GRAMMAR.languages[lang].linearize) for lang in TGTLANGS]);
+def translationByLookup_(grammar, language, tgtlanguages, sentence):
+    parser = grammar.languages[language].parse;
+    linearizersList = dict([(lang, grammar.languages[lang].linearize) for lang in tgtlanguages]);
     queue = [sentence.strip().split()];
     transChunks = {};
     while len(queue):
@@ -233,12 +231,12 @@ def translationByLookup_(sentence):
 	if not len(head):
 	    pass;
 	elif len(head) == 1 and head[0].strip():
-	    for lang, wordchoice in translateWord_(head[0]):
+	    for lang, wordchoice in translateWord_(grammar, language, tgtlanguages, head[0]):
 		transChunks.setdefault(lang, []).append( gf_utils.gf_postprocessor(wordchoice) );
 	else:
 	    try:
 		for parseidx, parse in enumerate( parser(' '.join(head)) ):
-		    for lang in TGTLANGS:
+		    for lang in tgtlanguages:
 			if linearizersList[lang](parse[1]) == None:
 			    transChunks.setdefault(lang, []).append( ' ' );
 			else:
@@ -252,30 +250,29 @@ def translationByLookup_(sentence):
 		queue.insert(2, [head[idx]] );
 		queue.insert(3, head[idx+1:] );
 	del queue[0];
-    for lang in TGTLANGS:
+    for lang in tgtlanguages:
 	yield (lang, ' '.join(transChunks[lang]));
 
-def pipelineParsing(sentences):
-    global GRAMMAR, SRCLANG;
+def pipelineParsing(grammar, language, sentences):
     #buf = [sent for sent in sentences];
     buf, sentences = itertools.tee(sentences, 2);
-    sentences = itertools.imap(gf_utils.gf_lexer(lang=SRCLANG), sentences);
-    for sent, parsesBlock in itertools.izip(buf, gf_utils.getKBestParses(GRAMMAR, SRCLANG, sentences, 20, callbacks=[("PN", parseNames), ("Symb", parseUnknown)])):
+    sentences = itertools.imap(gf_utils.gf_lexer(lang=language), sentences);
+    for sent, parsesBlock in itertools.izip(buf, gf_utils.getKBestParses(grammar, language, sentences, 20, \
+	    callbacks=[("PN", parseNames(grammar, language)), ("Symb", parseUnknown(grammar, language))])):
 	#print len(parsesBlock);
 	yield (sent, parsesBlock);
 
 def pipelineParsing_alt(*args):
-    print >>sys.stderr, "started";
     for result in pipelineParsing(args):
 	yield result;
 
-def pipelineParsing_multi(sentences):
+def pipelineParsing_multi(grammar, language, sentences):
     buf = [sent for sent in sentences];
     size = 25;
     chunks = (buf[start:start+size] for start in xrange(0, len(buf)-size+1, size));
     args = [];
     for batch in chunks:
-	args.append( batch );
+	args.append( (grammar, language, batch) );
     return multiprocessing.Pool(3).imap(pipelineParsing_alt, [arguments for arguments in args], chunksize=math.log(len(args), 10));
 
 def translation_pipeline(props):
@@ -294,17 +291,17 @@ def translation_pipeline(props):
 	#print "Mandatory option source-lang missing. Can not determine source language.";
 	sys.exit(1);
     
-    GRAMMAR = pgf.readPGF(props.pgffile);
+    grammar = pgf.readPGF(props.pgffile);
     
-    SRCLANG = filter(None, [lang if lang[-3:] == props.srclang else '' for lang in GRAMMAR.languages.keys()])[0];
-    logging.info( "Translating from %s"%(SRCLANG) );
+    sourceLanguage = filter(None, [lang if lang[-3:] == props.srclang else '' for lang in grammar.languages.keys()])[0];
+    logging.info( "Translating from %s"%(sourceLanguage) );
     
     if len(props.tgtlangs):
 	target_langs = props.tgtlangs;
     else:
-	target_langs = filter(None, [lang[-3:] if lang != SRCLANG else '' for lang in GRAMMAR.languages.keys()]);
-    TGTLANGS = filter(None, [lang if lang[-3:] in target_langs else '' for lang in GRAMMAR.languages.keys()]);
-    logging.info( "Translating into the following languages: %s"%(','.join(TGTLANGS)) );
+	target_langs = filter(None, [lang[-3:] if lang != sourceLanguage else '' for lang in grammar.languages.keys()]);
+    targetLanguages = filter(None, [lang if lang[-3:] in target_langs else '' for lang in grammar.languages.keys()]);
+    logging.info( "Translating into the following languages: %s"%(','.join(targetLanguages)) );
     
     if not props.input:
 	logging.info( "Input file name missing. Reading input from stdin." );
@@ -329,45 +326,45 @@ def translation_pipeline(props):
 	writer      = lambda X: '\n'.join(X);
     
     translationBlocks = {};
-    for tgtlang in TGTLANGS+['abstract']:
+    for tgtlang in targetLanguages+['abstract']:
 	translationBlocks[tgtlang] = skeletonDoc(inputDoc, tgtlang);
 
     preprocessor  = pipeline_lexer;
     postprocessor = lambda X: X #clean_gfstrings;
 
-    logging.info( "Parsing text in %s" %(SRCLANG) );
+    logging.info( "Parsing text in %s" %(sourceLanguage) );
     # 1. Get Abstract Trees for sentences in source language.
     #absParses = [parsesBlock for parsesBlock in pipelineParsing_multi( grammar, sourceLanguage, itertools.imap(preprocessor, reader(inputDoc)) )];
-    absParses  = [parsesBlock for parsesBlock in pipelineParsing( itertools.imap(preprocessor, reader(inputDoc)) )];
+    absParses  = [parsesBlock for parsesBlock in pipelineParsing( grammar, sourceLanguage, itertools.imap(preprocessor, reader(inputDoc)) )];
 
-    logging.info( "Linearizing into %s" %(','.join(TGTLANGS)) );
+    logging.info( "Linearizing into %s" %(','.join(targetLanguages)) );
     # 2. Linearize in all target Languages
     for idx, parsesBlock in enumerate( itertools.imap(operator.itemgetter(1), absParses) ):
 	translationBuffer = {};
 	if not len(parsesBlock):
 	    # failed to parse;
 	    # translate using lookup
-	    for tgtlang, translation in translationByLookup_(absParses[idx][0]):
+	    for tgtlang, translation in translationByLookup_(grammar, sourceLanguage, targetLanguages, absParses[idx][0]):
 		addItem(translationBlocks[tgtlang], postprocessor(translation));
 	    addItem(translationBlocks['abstract'], '');
 	else:
 	    bestTranslationIdx = 0;
-	    for tgtlang in TGTLANGS:
+	    for tgtlang in targetLanguages:
 		#print "Linearizing into %s" %tgtlang;
-		translationBuffer[tgtlang] = gf_utils.getKTranslations(GRAMMAR, tgtlang, [parsesBlock]).next();
+		translationBuffer[tgtlang] = gf_utils.getKTranslations(grammar, tgtlang, [parsesBlock]).next();
 		for tidx, translation in enumerate(translationBuffer[tgtlang]):
 		    if postprocessor(translation[1]).strip():
 			if tidx > bestTranslationIdx:
 			    bestTranslationIdx = tidx;
 			break;
 
-	    for tgtlang in TGTLANGS:
+	    for tgtlang in targetLanguages:
 		translation = translationBuffer[tgtlang][bestTranslationIdx] if len(translationBuffer[tgtlang]) > bestTranslationIdx else ((None,), '');
 		addItem(translationBlocks[tgtlang], postprocessor(translation[1]));
 
 	    addItem(translationBlocks['abstract'], str(parsesBlock[bestTranslationIdx][1]));
 
-    for tgtlang in TGTLANGS+['abstract']:
+    for tgtlang in targetLanguages+['abstract']:
 	outputFile = os.path.join( props.exp_directory, '%s-%s.%s' %(outputPrefix, tgtlang[-3:] if tgtlang!='abstract' else 'abstract', props.format) );
 	logging.info( "Writing translations for %s to %s" %(tgtlang, outputFile) );
 	with codecs.open(outputFile, 'w') as outputStream:
