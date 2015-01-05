@@ -229,21 +229,15 @@ def pgf_multiparse(*args):
     #inputSet = itertools.imap(gf_lexer('translator'), codecs.open(args[4], 'r') if len(args) > 4 else sys.stdin);
     grammar = pgf.readPGF(grammarfile);
     
-    import translation_pipeline_v2;
-    translation_pipeline_v2.SRCLANG = lang;
-    translation_pipeline_v2.GRAMMAR = grammar;
-    callbacks = [('PN', translation_pipeline_v2.parseNames)];
-    #callbacks = [('PN', translation_pipeline_v2.parseNames), ('Symb', translation_pipeline_v2.parseUnknown)];
-    
-    print translation_pipeline_v2.SRCLANG;
-    print translation_pipeline_v2.GRAMMAR.languages;
+    import translation_pipeline_v3;
+    callbacks = [('PN', translation_pipeline_v3.parseNames(grammar, lang)), ('Symb', translation_pipeline_v3.parseUnknown(grammar, lang))];
 
     inputSet = web_lexer(grammar, lang, codecs.open(args[4], 'r') if len(args) > 4 else sys.stdin);
     outputPrinter = printJohnsonRerankerFormat;
     for parsesBlock in getMultiParses(grammar, lang, inputSet, beam, callbacks=callbacks):
 	strParses = str(outputPrinter(parsesBlock));
 	if not (strParses == '\n'):
-	    #print strParses;
+	    print strParses;
 	    pass;
     return;
 
