@@ -1,10 +1,7 @@
 #!/usr/bin/env python
 
 import codecs, copy, itertools, math, multiprocessing, operator, os, os.path, re, string, sys, time;
-#import lxml.etree as etree;
-import xml.etree.ElementTree as etree;
 import pgf;
-#from translation_pipeline import indentXMLNodes;
 
 #sys.stdin = codecs.getreader('utf-8')(sys.stdin);
 #sys.stdout = codecs.getwriter('utf-8')(sys.stdout);
@@ -92,15 +89,23 @@ def printJohnsonRerankerFormat(gfparsesList, sentid=itertools.count(1)):
     #johnsonRepr.append( '%s %s' %(len(parsesList), sentid) );
     parseHash = {};
     for parse in sorted(gfparsesList, key=operator.itemgetter(0)):
-	if parseHash.has_key(parse[1]):
-	    print >>sys.stderr, "Duplicate parses found in K-best parsing";
-	    continue; # to remove duplicates; could be necessary for re-training the parser
-	johnsonRepr.append( str(-1*parse[0]) );
-	johnsonRepr.append( str(parse[1]) );
-	parseHash[parse[1]] = parseHash.get(str(parse[1]), 0)+1;
+	#if parseHash.has_key(parse[1]):
+	#    print >>sys.stderr, "Duplicate parses found in K-best parsing";
+	#    continue; # to remove duplicates; could be necessary for re-training the parser
+	if not parseHash.has_key(str(parse[1])):
+	    johnsonRepr.append( str(-1*parse[0]) );
+	    johnsonRepr.append( str(parse[1]) );
+	parseHash[str(parse[1])] = parseHash.get(str(parse[1]), 0)+1;
     curid = sentid.next();
     if len(gfparsesList):
 	johnsonRepr.insert(0, '%d %d' %(sum(parseHash.values()), curid));
+    duplicateInstances = 0;
+    duplicateInstances = len(filter(lambda X: parseHash[X] > 1, parseHash.keys()));
+    #for abstree in parseHash.keys():
+    #	if parseHash[abstree] != 1:
+    #	    duplicateInstances += 1;
+    if duplicateInstances:
+	print >>sys.stderr, "%d duplicate parses found in K-best parsing" %(duplicateInstances);
     return '\n'.join(johnsonRepr)+'\n';
 
 def readJohnsonRerankerTrees(inputStream):
@@ -194,15 +199,18 @@ def getMultiParses(grammar, language, sentences, bagSize=0.001, callbacks=[]):
 		kBestParses.append( parse );
 	    tend = time.time();
 	    print >>sys.stderr, '%d\t%.4f' %(sentidx+1, tend-tstart);
-	    yield sorted(filter(lambda X: X[0]<=(maxprob-logRange), kBestParses), key=operator.itemgetter(0));
+	    #yield sorted(filter(lambda X: X[0]<=(maxprob-logRange), kBestParses), key=operator.itemgetter(0));
+	    yield filter(lambda X: X[0]<=(maxprob-logRange), kBestParses);
 	except pgf.ParseError, err:
 	    tend = time.time();
 	    print >>sys.stderr, '%d\t%.4f\t%s' %(sentidx+1, tend-tstart, err);
-	    yield sorted(filter(lambda X: X[0]<=(maxprob-logRange), kBestParses), key=operator.itemgetter(0));
+	    #yield sorted(filter(lambda X: X[0]<=(maxprob-logRange), kBestParses), key=operator.itemgetter(0));
+	    yield filter(lambda X: X[0]<=(maxprob-logRange), kBestParses);
 	except UnicodeEncodeError, err:
 	    tend = time.time();
 	    print >>sys.stderr, '%d\t%.4f\t%s' %(sentidx+1, tend-tstart, err);
-	    yield sorted(filter(lambda X: X[0]<=(maxprob-logRange), kBestParses), key=operator.itemgetter(0));
+	    #yield sorted(filter(lambda X: X[0]<=(maxprob-logRange), kBestParses), key=operator.itemgetter(0));
+	    yield filter(lambda X: X[0]<=(maxprob-logRange), kBestParses);
 
 def pgf_parse(*args):
     grammarfile, start_cat, lang = args[0], args[1], args[2];
@@ -273,7 +281,6 @@ def pgf_klinearize(*args):
 	if strTrans:
 	    print strTrans;
     return;
-
 
 if __name__ == '__main__':
     #pgf_parse(*sys.argv[1:]);
