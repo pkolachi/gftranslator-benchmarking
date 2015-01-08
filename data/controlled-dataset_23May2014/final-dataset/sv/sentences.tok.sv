@@ -182,8 +182,6 @@ Förmånerna i avtalet gäller under uppsägningstiden och fem år efter det att
 Tio häften af arbetet ligga i manuskript och jag kan icke få det tryckt !
 Valpen här har i vanlig ordning inte sagt ett ord om vad som förestod .
 Emils röst nådde honom lika självklart som om de befunnit sig i samma stad .
-Ännu konstigare var det att häxan kunde se att en storm var på väg .
-Även i denna fråga kan det bli aktuellt med tilläggsdirektiv till den centrala organisationskommittén .
 Av min beundrarpost förstår jag att folk nu tror att jag lever i paradiset .
 Det är med andra ord lätt att hitta skäl både för och emot regleringar .
 Varje biograf måste finna sin egen metod för att avgöra vad som kan publiceras .
@@ -273,7 +271,6 @@ Industriarbetaren är en anemisk lätting som snart får gå sjukgymnastik för 
 Du vet att menskan ej blir lycklig förr än hon får sin vilja fram .
 Och jag ville gerna se listan för att få en ledning vid bidragets tecknande .
 Det vore en uppmuntran för mig att fortsätta på banan att göra krigen vedervärdiga .
-Är detta bref endast ett uttryck af en tillfällig stämning eller är det ej ?
 Jag är nog djerf lita på din vänliga handräckning i en sådan fatal situation !
 Jag har mottagit intressanta bjudningar här och hvar samt gjort bekantskaper ute i bygden .
 Jag tror att de två delarne i ett band skulle göra ett starkt intryck .
