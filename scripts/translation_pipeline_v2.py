@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 
-import argparse, codecs, copy, functools, itertools, logging, math, operator, os, os.path, re, string, sys, time;
-#import pathos.multiprocessing as multiprocessing;
-#import multiprocessing;
+import argparse, codecs, copy, itertools, logging, math, operator, os, os.path, re, string, sys, time;
 #import lxml.etree as etree;
 import xml.etree.ElementTree as etree;
 import pgf;
@@ -102,15 +100,15 @@ def clean_gfstrings(sentence):
 def parseNames(lin_idx, sentence, start):
     global GRAMMAR, SRCLANG;
     moving_start, end, eot = start, len(sentence), True;
-    if moving_start < end and sentence[moving_start] != sentence[moving_start].upper():
+    if moving_start < end and (not sentence[moving_start].isupper()):
 	return None;
     while moving_start < end:
 	if sentence[moving_start] in string.whitespace:
 	    eot = True;
-	elif eot and sentence[moving_start] == sentence[moving_start].upper():
+	elif eot and sentence[moving_start].isupper()::
 	    eot = False;
 	    continue;
-	elif eot and sentence[moving_start] != sentence[moving_start].upper():
+	elif eot and (not sentence[moving_start].isupper()):
 	    end = moving_start-1;
 	    break;
 	moving_start += 1;
@@ -146,7 +144,7 @@ def parseNames(lin_idx, sentence, start):
 def parseUnknown(lin_idx, sentence, start):
     global GRAMMAR, SRCLANG;
     moving_start, end, eot = start, len(sentence), True;
-    if moving_start < end and sentence[moving_start] != sentence[moving_start].upper():
+    if moving_start < end and not sentence[moving_start].isupper():
 	while moving_start < end:
 	    if sentence[moving_start] in string.whitespace:
 		end = moving_start;
@@ -174,7 +172,7 @@ def translateWord(word, tgtlanguage):
 	partialExprList = GRAMMAR.languages[SRCLANG].parse(word, cat='Chunk');
 	for expr in partialExprList:
 	    trans = grammar.languages[tgtlanguage].linearize(expr[1]);
-	    if not trans: 
+	    if not trans:
 		print expr[1], tgtlanguage;
 	    return gf_utils.gf_postprocessor( trans if trans else ' ' );
     except pgf.ParseError:
@@ -260,23 +258,9 @@ def pipelineParsing(sentences):
     #buf = [sent for sent in sentences];
     buf, sentences = itertools.tee(sentences, 2);
     sentences = itertools.imap(gf_utils.gf_lexer(lang=SRCLANG), sentences);
-    for sent, parsesBlock in itertools.izip(buf, gf_utils.getKBestParses(GRAMMAR, SRCLANG, sentences, 20, callbacks=[("PN", parseNames), ("Symb", parseUnknown)])):
-	#print len(parsesBlock);
+    parser = gf_utils.getKBestParses(GRAMMAR, SRCLANG, 20, callbacks=[("PN", parseNames), ("Symb", parseUnknown)]);
+    for sent, (time, parsesBlock) in itertools.izip(buf, itertools.imap(parser, sentences)):
 	yield (sent, parsesBlock);
-
-def pipelineParsing_alt(*args):
-    print >>sys.stderr, "started";
-    for result in pipelineParsing(args):
-	yield result;
-
-def pipelineParsing_multi(sentences):
-    buf = [sent for sent in sentences];
-    size = 25;
-    chunks = (buf[start:start+size] for start in xrange(0, len(buf)-size+1, size));
-    args = [];
-    for batch in chunks:
-	args.append( batch );
-    return multiprocessing.Pool(3).imap(pipelineParsing_alt, [arguments for arguments in args], chunksize=math.log(len(args), 10));
 
 def translation_pipeline(props):
     global GRAMMAR, SRCLANG, TGTLANGS;
@@ -337,7 +321,6 @@ def translation_pipeline(props):
 
     logging.info( "Parsing text in %s" %(SRCLANG) );
     # 1. Get Abstract Trees for sentences in source language.
-    #absParses = [parsesBlock for parsesBlock in pipelineParsing_multi( grammar, sourceLanguage, itertools.imap(preprocessor, reader(inputDoc)) )];
     absParses  = [parsesBlock for parsesBlock in pipelineParsing( itertools.imap(preprocessor, reader(inputDoc)) )];
 
     logging.info( "Linearizing into %s" %(','.join(TGTLANGS)) );

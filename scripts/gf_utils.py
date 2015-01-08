@@ -64,16 +64,26 @@ def gf_lexer(lang='Eng'):
 def web_lexer(grammar, lang, sentences):
     tok_sentences = itertools.imap(gf_lexer('translator'), sentences);
     for instance in tok_sentences:
-	tokensList = re.split('\s+?', instance, maxsplit=1);
-	token = tokensList[0];
-	lowertoken = token.lower();
+	tokensList = re.split('\s+?', instance);
+	token, lowertoken = tokensList[0], tokensList[0].lower();
 	count = 0;
 	for analysis in grammar.languages[lang].lookupMorpho(lowertoken):
 	    count += 1;
-	if count:
-	    yield '%s %s' %(lowertoken, ' '.join(tokensList[1:]));
-	else:
-	    yield '%s %s' %(token, ' '.join(tokensList[1:]));
+	tokensList[0] = lowertoken if count else token;
+	for idx, token in enumerate(tokensList):
+	    if token.find('-') == -1:
+		continue;
+	    count = 0;
+	    for analysis in grammar.languages[lang].lookupMorpho(token):
+		count += 1;
+	    if count: 
+		continue;
+	    token = tokensList[idx].replace('-', '');
+	    for analysis in grammar.languages[lang].lookupMorpho(token):
+		count += 1;
+	    if count:
+		tokensList[idx] = token;
+	yield ' '.join(tokensList);
 
 def gf_postprocessor(sentence):
     if sentence == None:
@@ -89,23 +99,15 @@ def printJohnsonRerankerFormat(gfparsesList, sentid=itertools.count(1)):
     #johnsonRepr.append( '%s %s' %(len(parsesList), sentid) );
     parseHash = {};
     for parse in sorted(gfparsesList, key=operator.itemgetter(0)):
-	#if parseHash.has_key(parse[1]):
-	#    print >>sys.stderr, "Duplicate parses found in K-best parsing";
-	#    continue; # to remove duplicates; could be necessary for re-training the parser
-	if not parseHash.has_key(str(parse[1])):
+	if not parseHash.has_key(parse[1]):
 	    johnsonRepr.append( str(-1*parse[0]) );
 	    johnsonRepr.append( str(parse[1]) );
-	parseHash[str(parse[1])] = parseHash.get(str(parse[1]), 0)+1;
+	parseHash[parse[1]] = parseHash.get(parse[1], 0)+1;
     curid = sentid.next();
     if len(gfparsesList):
-	johnsonRepr.insert(0, '%d %d' %(sum(parseHash.values()), curid));
-    duplicateInstances = 0;
+	johnsonRepr.insert(0, '%d %d' %(len(parseHash.values()), curid));
     duplicateInstances = len(filter(lambda X: parseHash[X] > 1, parseHash.keys()));
-    #for abstree in parseHash.keys():
-    #	if parseHash[abstree] != 1:
-    #	    duplicateInstances += 1;
-    if duplicateInstances:
-	print >>sys.stderr, "%d duplicate parses found in K-best parsing" %(duplicateInstances);
+    #if duplicateInstances: print >>sys.stderr, "%d duplicate parses found in K-best parsing" %(duplicateInstances);
     return '\n'.join(johnsonRepr)+'\n';
 
 def readJohnsonRerankerTrees(inputStream):
@@ -158,75 +160,93 @@ def getKTranslations(grammar, tgtlanguage, abstractParsesList):
 	    kBestTrans.append( ((parseprob,), gf_postprocessor( generator(parse) )) );
 	yield kBestTrans;
 
-def getKBestParses(grammar, language, sentences, K, callbacks=[]):
+def getKBestParses(grammar, language, K, callbacks=[], serializable=False, sentid=itertools.count(1)):
     parser = grammar.languages[language].parse;
-    for sentidx, sent in enumerate(sentences):
-	sent = sent.strip();
+    def worker(sentence):
+	sentence = sentence.strip();
+	curid = sentid.next();
 	tstart = time.time();
 	kBestParses = [];
 	try:
-	    for parseidx, parse in enumerate( parser(sent, heuristics=0, callbacks=callbacks) ):
-		kBestParses.append(parse);
+	    for parseidx, parse in enumerate( parser(sentence, heuristics=0, callbacks=callbacks) ):
+		kBestParses.append( (parse[0], str(parse[1]) if serializable else parse[1]) );
 		if parseidx == K-1:
 		    break;
 	    tend = time.time();
-	    print >>sys.stderr, '%d\t%.4f' %(sentidx+1, tend-tstart);
-	    yield kBestParses;
+	    print >>sys.stderr, '%d\t%.4f' %(curid, tend-tstart);
+	    return tend-tstart, kBestParses;
 	except pgf.ParseError, err:
 	    tend = time.time();
-	    print >>sys.stderr, '%d\t%.4f\t%s' %(sentidx+1, tend-tstart, err);
-	    yield kBestParses;
+	    print >>sys.stderr, '%d\t%.4f\t%s' %(curid, tend-tstart, err);
+	    return tend-tstart, kBestParses;
 	except UnicodeEncodeError, err:
 	    tend = time.time();
-	    print >>sys.stderr, '%d\t%.4f\t%s' %(sentidx+1, tend-tstart, err);
-	    yield kBestParses;
+	    print >>sys.stderr, '%d\t%.4f\t%s' %(curid, tend-tstart, err);
+	    return tend-tstart, kBestParses;
+    return worker;
 
-def getMultiParses(grammar, language, sentences, bagSize=0.001, callbacks=[]):
+def getMultiParses(grammar, language, bagSize=0.001, callbacks=[], serializable=False, sentid=itertools.count(1)):
+    parser = grammar.languages[language].parse;
     logRange = math.log(bagSize);
     logTol   = 0;
-    parser = grammar.languages[language].parse;
-    for sentidx, sent in enumerate(sentences):
-	sent = sent.strip();
+    def worker(sentence):
+	sentence = sentence.strip();
+	curid = sentid.next();
 	tstart = time.time();
 	kBestParses, maxprob, firstprob = [], sys.maxint, sys.maxint;
 	try:
-	    for parseidx, parse in enumerate( parser(sent, heuristics=0, callbacks=callbacks) ):
+	    for parseidx, parse in enumerate( parser(sentence, heuristics=0, callbacks=callbacks) ):
 		if firstprob == sys.maxint:
 		    firstprob = parse[0];
 		maxprob = min(maxprob, parse[0]);
 		if parse[0] > firstprob-logRange+logTol: 
 		    break;
-		kBestParses.append( parse );
+		kBestParses.append( (parse[0], str(parse[1]) if serializable else parse[1]) );
 	    tend = time.time();
-	    print >>sys.stderr, '%d\t%.4f' %(sentidx+1, tend-tstart);
+	    print >>sys.stderr, '%d\t%.4f' %(curid, tend-tstart);
 	    #yield sorted(filter(lambda X: X[0]<=(maxprob-logRange), kBestParses), key=operator.itemgetter(0));
-	    yield filter(lambda X: X[0]<=(maxprob-logRange), kBestParses);
+	    return tend-tstart, filter(lambda X: X[0]<=(maxprob-logRange), kBestParses);
 	except pgf.ParseError, err:
 	    tend = time.time();
-	    print >>sys.stderr, '%d\t%.4f\t%s' %(sentidx+1, tend-tstart, err);
+	    print >>sys.stderr, '%d\t%.4f\t%s' %(curid, tend-tstart, err);
 	    #yield sorted(filter(lambda X: X[0]<=(maxprob-logRange), kBestParses), key=operator.itemgetter(0));
-	    yield filter(lambda X: X[0]<=(maxprob-logRange), kBestParses);
+	    return tend-tstart, filter(lambda X: X[0]<=(maxprob-logRange), kBestParses);
 	except UnicodeEncodeError, err:
 	    tend = time.time();
-	    print >>sys.stderr, '%d\t%.4f\t%s' %(sentidx+1, tend-tstart, err);
+	    print >>sys.stderr, '%d\t%.4f\t%s' %(curid, tend-tstart, err);
 	    #yield sorted(filter(lambda X: X[0]<=(maxprob-logRange), kBestParses), key=operator.itemgetter(0));
-	    yield filter(lambda X: X[0]<=(maxprob-logRange), kBestParses);
+	    return tend-tstart, filter(lambda X: X[0]<=(maxprob-logRange), kBestParses);
+    return worker;
 
 def pgf_parse(*args):
     grammarfile, start_cat, lang = args[0], args[1], args[2];
-    inputSet = itertools.imap(gf_lexer('translator'), codecs.open(args[3], 'r', 'utf-8') if len(args) > 3 else sys.stdin);
+    #inputSet = itertools.imap(gf_lexer('translator'), codecs.open(args[3], 'r', 'utf-8') if len(args) > 3 else sys.stdin);
     grammar = pgf.readPGF(grammarfile);
+    
+    import translation_pipeline_v3;
+    callbacks = [('PN', translation_pipeline_v3.parseNames(grammar, lang)), ('Symb', translation_pipeline_v3.parseUnknown(grammar, lang))];
+
+    inputSet = web_lexer(grammar, lang, codecs.open(args[4], 'r') if len(args) > 4 else sys.stdin);
     outputPrinter = operator.itemgetter(1);
-    for parsesBlock in getKBestParses(grammar, lang, inputSet, K=1):
+    parser = getKBestParses(grammar, lang, 1, callbacks);
+
+    for time, parsesBlock in itertools.imap(parser, inputSet):
 	print str(outputPrinter(parsesBlock[0])) if len(parsesBlock) else '';
     return;
 
 def pgf_kparse(*args):
     grammarfile, start_cat, lang, K = args[0], args[1], args[2], int(args[3]);
-    inputSet = itertools.imap(gf_lexer('translator'), codecs.open(args[4], 'r') if len(args) > 4 else sys.stdin);
+    #inputSet = itertools.imap(gf_lexer('translator'), codecs.open(args[4], 'r') if len(args) > 4 else sys.stdin);
     grammar = pgf.readPGF(grammarfile);
+    
+    import translation_pipeline_v3;
+    callbacks = [('PN', translation_pipeline_v3.parseNames(grammar, lang)), ('Symb', translation_pipeline_v3.parseUnknown(grammar, lang))];
+
+    inputSet = web_lexer(grammar, lang, codecs.open(args[4], 'r') if len(args) > 4 else sys.stdin);
     outputPrinter = printJohnsonRerankerFormat;
-    for parsesBlock in getKBestParses(grammar, lang, inputSet, K):
+    parser = getKBestParses(grammar, lang, K, callbacks=callbacks);
+
+    for time, parsesBlock in itertools.imap(parser, inputSet):
 	strParses = str(outputPrinter(parsesBlock));
 	if not (strParses == '\n'):
 	    print strParses;
@@ -242,11 +262,12 @@ def pgf_multiparse(*args):
 
     inputSet = web_lexer(grammar, lang, codecs.open(args[4], 'r') if len(args) > 4 else sys.stdin);
     outputPrinter = printJohnsonRerankerFormat;
-    for parsesBlock in getMultiParses(grammar, lang, inputSet, beam, callbacks=callbacks):
+    parser = getMultiParses(grammar, lang, beam, callbacks=callbacks);
+
+    for time, parsesBlock in itertools.imap(parser, inputSet):
 	strParses = str(outputPrinter(parsesBlock));
 	if not (strParses == '\n'):
 	    print strParses;
-	    pass;
     return;
 
 def pgf_translate(*args):
@@ -283,9 +304,9 @@ def pgf_klinearize(*args):
     return;
 
 if __name__ == '__main__':
-    #pgf_parse(*sys.argv[1:]);
+    pgf_parse(*sys.argv[1:]);
     #pgf_kparse(*sys.argv[1:]);
-    pgf_multiparse(*sys.argv[1:]);
+    #pgf_multiparse(*sys.argv[1:]);
     #pgf_klinearize(*sys.argv[1:]);
     #pgf_translate(*sys.argv[1:]);
     #pgf_ktranslate(*sys.argv[1:]);

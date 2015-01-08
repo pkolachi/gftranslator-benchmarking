@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 
 import argparse, codecs, copy, itertools, logging, math, operator, os, os.path, re, string, sys, time;
-#import pathos.multiprocessing as multiprocessing;
-import multiprocessing;
 #import lxml.etree as etree;
 import xml.etree.ElementTree as etree;
 import pgf;
@@ -23,7 +21,7 @@ def indentXMLNodes(elem, level=0):
     else:
 	if level and (not elem.tail or not elem.tail.strip()):
 	    elem.tail = i
-    
+
 def readTranslationPipelineOptions(propsfile, default_namespace):
     with codecs.open(propsfile, 'r', 'utf-8') as infile:
 	for line in infile:
@@ -115,7 +113,7 @@ def translationByLookup(grammar, language, tgtlanguages, sentence):
 
 def translateWordsAsChunks(grammar, language, tgtlanguages, word):
     parser = grammar.languages[language].parse;
-    linearizersList = dict([(lang, grammar.languages[lang].linearize) for lang in tgtlanguages]);
+    linearizersList = dict((lang, grammar.languages[lang].linearize) for lang in tgtlanguages);
     translations = [];
     try:
 	for parseidx, parse in enumerate( parser(word) ):
@@ -181,24 +179,9 @@ def pipelineParsing(grammar, language, sentences):
     #buf = [sent for sent in sentences];
     buf, sentences = itertools.tee(sentences, 2);
     sentences = itertools.imap(gf_utils.gf_lexer(lang=language), sentences);
-    for sent, parsesBlock in itertools.izip(buf, gf_utils.getKBestParses(grammar, language, sentences, 20)):
+    parser = gf_utils.getKBestParses(grammar, language, 20);
+    for sent, (time, parsesBlock) in itertools.izip(buf, itertools.imap(parser, sentences)):
 	yield (sent, parsesBlock);
-
-def pipelineParsing_alt(*args):
-    for result in pipelineParsing(args):
-	yield result;
-
-def pipelineParsing_multi(grammar, language, sentences):
-    buf = [sent for sent in sentences];
-    size = len(buf)/3;
-    chunks = (buf[start:start+size] for start in xrange(0, len(buf)-size+1, size));
-    args = [];
-    for batch in chunks:
-	args.append( (grammar, language, batch) );
-    with multiprocessing.Pool(3) as pool:
-	for resultChunk in pool.imap(pipelineParsing_alt, [arguments for arguments in args], chunksize=math.log(len(args), 10)):
-	    for result in resultChunk:
-		yield result;
 
 def translation_pipeline(props):
     if props.propsfile:
@@ -257,8 +240,7 @@ def translation_pipeline(props):
 
     logging.info( "Parsing text in %s" %(sourceLanguage) );
     # 1. Get Abstract Trees for sentences in source language.
-    absParses = [parsesBlock for parsesBlock in pipelineParsing_multi( grammar, sourceLanguage, itertools.imap(preprocessor, reader(inputDoc)) )];
-    #absParses  = [parsesBlock for parsesBlock in pipelineParsing( grammar, sourceLanguage, itertools.imap(preprocessor, reader(inputDoc)) )];
+    absParses  = [parsesBlock for parsesBlock in pipelineParsing( grammar, sourceLanguage, itertools.imap(preprocessor, reader(inputDoc)) )];
 
     logging.info( "Linearizing into %s" %(','.join(targetLanguages)) );
     # 2. Linearize in all target Languages

@@ -1,8 +1,6 @@
 #!/usr/bin/env python
 
-import argparse, codecs, copy, functools, itertools, logging, math, operator, os, os.path, re, string, sys, time;
-#import pathos.multiprocessing as multiprocessing;
-#import multiprocessing;
+import argparse, codecs, copy, itertools, logging, math, operator, os, os.path, re, string, sys, time;
 #import lxml.etree as etree;
 import xml.etree.ElementTree as etree;
 import pgf;
@@ -98,15 +96,14 @@ def clean_gfstrings(sentence):
 def parseNames(grammar, language):
     def callback(lin_idx, sentence, start):
 	moving_start, end, eot = start, len(sentence), True;
-	if moving_start < end and sentence[moving_start] != sentence[moving_start].upper():
+	if moving_start < end and (not sentence[moving_start].isupper()):
 	    return None;
 	while moving_start < end:
 	    if sentence[moving_start] in string.whitespace:
 		eot = True;
-	    elif eot and sentence[moving_start] == sentence[moving_start].upper():
+	    elif eot and sentence[moving_start].isupper():
 		eot = False;
-		continue;
-	    elif eot and sentence[moving_start] != sentence[moving_start].upper():
+	    elif eot and (not sentence[moving_start].isupper()):
 		end = moving_start-1;
 		break;
 	    moving_start += 1;
@@ -145,7 +142,7 @@ def parseNames(grammar, language):
 def parseUnknown(grammar, language):
     def callback(lin_idx, sentence, start):
 	moving_start, end, eot = start, len(sentence), True;
-	if moving_start < end and sentence[moving_start] != sentence[moving_start].upper():
+	if moving_start < end and (not sentence[moving_start].isupper()):
 	    while moving_start < end:
 		if sentence[moving_start] in string.whitespace:
 		    end = moving_start;
@@ -257,27 +254,11 @@ def pipelineParsing(grammar, language, sentences):
     #buf = [sent for sent in sentences];
     buf, sentences = itertools.tee(sentences, 2);
     sentences = itertools.imap(gf_utils.gf_lexer(lang=language), sentences);
-    for sent, parsesBlock in itertools.izip(buf, gf_utils.getKBestParses(grammar, language, sentences, 20, \
-	    callbacks=[("PN", parseNames(grammar, language)), ("Symb", parseUnknown(grammar, language))])):
-	#print len(parsesBlock);
+    parser = gf_utils.getKBestParses(grammar, language, 20, callbacks=[("PN", parseNames(grammar, language)), ("Symb", parseUnknown(grammar, language))]);
+    for sent, (time, parsesBlock) in itertools.izip(buf, itertools.imap(parser, sentences)):
 	yield (sent, parsesBlock);
 
-def pipelineParsing_alt(*args):
-    for result in pipelineParsing(args):
-	yield result;
-
-def pipelineParsing_multi(grammar, language, sentences):
-    buf = [sent for sent in sentences];
-    size = 25;
-    chunks = (buf[start:start+size] for start in xrange(0, len(buf)-size+1, size));
-    args = [];
-    for batch in chunks:
-	args.append( (grammar, language, batch) );
-    return multiprocessing.Pool(3).imap(pipelineParsing_alt, [arguments for arguments in args], chunksize=math.log(len(args), 10));
-
 def translation_pipeline(props):
-    global GRAMMAR, SRCLANG, TGTLANGS;
-
     if props.propsfile:
 	props = readTranslationPipelineOptions(props.propsfile, props);
 
@@ -334,7 +315,6 @@ def translation_pipeline(props):
 
     logging.info( "Parsing text in %s" %(sourceLanguage) );
     # 1. Get Abstract Trees for sentences in source language.
-    #absParses = [parsesBlock for parsesBlock in pipelineParsing_multi( grammar, sourceLanguage, itertools.imap(preprocessor, reader(inputDoc)) )];
     absParses  = [parsesBlock for parsesBlock in pipelineParsing( grammar, sourceLanguage, itertools.imap(preprocessor, reader(inputDoc)) )];
 
     logging.info( "Linearizing into %s" %(','.join(targetLanguages)) );
