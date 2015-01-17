@@ -311,7 +311,7 @@ def translation_pipeline(props):
 	translationBlocks[tgtlang] = skeletonDoc(inputDoc, tgtlang);
 
     preprocessor  = pipeline_lexer;
-    postprocessor = lambda X: X #clean_gfstrings;
+    postprocessor = clean_gfstrings; #lambda X: X
 
     logging.info( "Parsing text in %s" %(sourceLanguage) );
     # 1. Get Abstract Trees for sentences in source language.
