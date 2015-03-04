@@ -1,0 +1,139 @@
+am I at the airport ?
+are NN 's children tired ?
+are our children in the nearest hotel ?
+are they eleven years old ?
+are you eight years old ?
+are you Norwegian ?
+are your children married ?
+buy apples
+can her daughter swim at the school ?
+can you buy tea and two coffees ?
+can you wait for us at the nearest cinema ?
+can your son swim ?
+can your wife buy milk at the nearest supermarket ?
+do her children know you ?
+do his children live in Romania ?
+do I buy milk and two apples ?
+do I know how much that apple costs ?
+do I know you ?
+do their children know if the supermarket is closed today ?
+do these apples cost five euros ?
+do they have a room for two persons ?
+do they know how much that pizza costs ?
+do they know that I don't have pizzas ?
+do they know what your name is ?
+do they live in England ?
+do they speak French ?
+do they want to sleep ?
+do we have milk ?
+do we know how much these apples cost ?
+do we know where our children are ?
+do we know where we eat ?
+do we want to drink cold beer in the nearest restaurant ?
+do we want to go to the university ?
+do we want wine and chicken ?
+do you buy that fish ?
+do you drink at a disco ?
+do you have a table for two persons ?
+do you have the warm pizzas and cold German beer ?
+do you know her husband ?
+do you know how far the park is by bike ?
+do you know how much this pizza costs ?
+do you know if the shop is closed ?
+do you know if there is a train to the airport ?
+do we know if he knows NN 's daughter ?
+do you know that the cheapest supermarket isn't closed today ?
+do you know that those apples aren't too cheap ?
+do you sleep in a hotel ?
+do you want an apple ?
+do you want to drink Belgian beer and French wine in the most expensive restaurant ?
+do you want to eat the apple ?
+do you want to walk ?
+does he know how old I am ?
+does his daughter want to go to the most popular museum ?
+does your daughter know that you wait ?
+does your husband know where the museum is ?
+don't wait for him
+eat a pizza
+he doesn't have good apples .
+he isn't married .
+his wife has milk .
+how far is a supermarket ?
+how far is the airport by bus ?
+how far is the center ?
+how much do those cheap apples cost ?
+how much does that cheese cost ?
+how old are NN 's children ?
+how old are you ?
+how old are your children ?
+I have cold beer .
+I have pizzas and beer .
+I have three bad apples .
+I have two children .
+I have two warm pizzas and three beers .
+I want to sit .
+is an amusement park open today ?
+is he twelve years old ?
+is his daughter ill ?
+is his son ready ?
+is my son scared ?
+is NN 's son married ?
+is she at an amusement park ?
+is she Finnish ?
+is she in the French restaurant ?
+is the bank closed ?
+is the hospital closed tomorrow ?
+is the most popular disco open on Saturdays ?
+is the nearest airport closed on Thursday ?
+is the nearest bar closed today ?
+is their daughter's name NN ?
+is there a bus to the airport ?
+is there a ferry to the park ?
+is this apple very expensive ?
+is this wine cold ?
+is your wife in a hospital ?
+must her daughter wait for you at a post office ?
+must they eat a pizza in the most expensive restaurant ?
+must they eat the pizza in the most expensive restaurant ?
+must they wait for us ?
+my children don't have bread .
+my name is NN .
+that pizza is very cold .
+the airport isn't closed .
+the amusement park isn't open on Mondays .
+the apples cost five euros .
+the cheese isn't cheap .
+the coffee is very cold .
+the Italian pizza is too cold .
+the nearest airport is closed .
+these pizzas are very suspect .
+they aren't ready .
+they don't have dollars .
+they don't know him .
+they don't speak Flemish .
+this apple isn't fresh .
+this apple isn't too bad .
+wait for my children
+we don't have beer .
+what is his name ?
+where do they want to drink ?
+where does his daughter sleep ?
+where is a hospital ?
+where is the most popular Polish restaurant ?
+where is the nearest bank ?
+where must I wait for them ?
+which bus goes to the airport ?
+which tram goes to the zoo ?
+wine is very cheap .
+you are tired .
+you don't have tea .
+you have dollars .
+you must sleep .
+you want to sit at the theatre .
+your children don't have coffee .
+your daughter's husband doesn't have cheese .
+your son is in the cheapest bar .
+I can't wait for my husband .
+I don't want to wait for their children .
+do we know where we can wait for them ?
+she isn't in the nearest car park .

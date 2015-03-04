@@ -1,0 +1,421 @@
+<appraise-results>
+<post-editing-result source-language="eng" id="molto" target-language="Tha">
+<post-editing-item doc-id="eng-tha.treebank" id="2" duration="00:00:17.479000" user="chotiros">
+<post-edited system="Molto">ผมอยู่ที่สนามบินหรือไม่</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="3" duration="00:00:06.395000" user="chotiros">
+<post-edited system="Molto">ลูกของ NN เหนื่อยไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="5" duration="00:00:26.633000" user="chotiros">
+<post-edited system="Molto">ลูกของเราอยู่ที่โรงแรมที่ใกล้ที่สุดไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="7" duration="00:00:22.125000" user="chotiros">
+<post-edited system="Google">พวกเขาอายุสิบเอ็ดปีใช่ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="9" duration="00:01:53.357000" user="chotiros" from-scratch="true">
+<post-edited system="Molto">คุณอายุแปดปีใช่ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="17" duration="00:00:15.360000" user="chotiros">
+<post-edited system="Molto">เธอเป็นคนนอรเวย์เจี้ยนใช่ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="25" duration="00:00:08.273000" user="chotiros">
+<post-edited system="Molto">ลูกของเธอแต่งงานแล้วไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="32" duration="00:00:10.058000" user="chotiros">
+<post-edited system="Google">ซื้อแอปเปิ้ล</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="35" duration="00:00:24.730000" user="chotiros">
+<post-edited system="Molto">ลูกสาวของหล่อนว่ายน้ำที่โรงเรียนได้ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="38" duration="00:00:44.686000" user="chotiros">
+<post-edited system="Molto">เธอซื้อชาและกาแฟสองที่ได้ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="56" duration="00:00:21.788000" user="chotiros">
+<post-edited system="Molto">เธอรอเราที่โรงหนังที่ใกล้ที่สุดได้ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="86" duration="00:00:24.506000" user="chotiros">
+<post-edited system="Molto">ลูกชายของเธอว่ายน้ำได้ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="102" duration="00:00:28.390000" user="chotiros">
+<post-edited system="Molto">ภรรยาของเธอซื้อนมที่ซุปเปอร์มาเก็ตที่ใกล้ที่สุดได้ไหม </post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="118" duration="00:00:21.454000" user="chotiros">
+<post-edited system="Molto">ลูกของหล่อนรู้จักเธอไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="125" duration="00:00:29.638000" user="chotiros">
+<post-edited system="Molto">ลูกๆของเขาอาศัยอยู่ในประเทศโรมาเนียใช่ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="127" duration="00:00:21.517000" user="chotiros">
+<post-edited system="Molto">ผมซื้อนมและแอปเปิ้ลสองลูกใช่ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="129" duration="00:00:19.270000" user="chotiros">
+<post-edited system="Molto">ผมรู้ไหมว่าแอปเปิ้ลลูกนั้นอยู่เท่าไร</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="131" duration="00:00:10.916000" user="chotiros">
+<post-edited system="Molto">ฉันรู้จักเธอไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="147" duration="00:00:16.387000" user="chotiros">
+<post-edited system="Molto">ลูกของพวกเขารู้ว่าซุปเปอร์มาเก็ตปิดวันนี้ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="148" duration="00:00:15.728000" user="chotiros">
+<post-edited system="Molto">แอปเปิ้ลลูกนี้ราคาห้ายูโรใช่ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="150" duration="00:00:11.868000" user="chotiros">
+<post-edited system="Google">พวกเขามีห้องพักสำหรับสองท่านไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="152" duration="00:00:27.675000" user="chotiros">
+<post-edited system="Molto">พวกเขารู้ไหมว่าพิซซาถาดนั้นราคาเท่าไร</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="156" duration="00:00:25.014000" user="chotiros">
+<post-edited system="Molto">พวกเขารู้ไหมว่าผมไม่มีพิซซา</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="158" duration="00:00:23.016000" user="chotiros">
+<post-edited system="Molto">พวกเขารู้ว่าเธอชื่ออะไรไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="174" duration="00:00:14.540000" user="chotiros">
+<post-edited system="Molto">พวกเขาอาศัยอยู่ในประเทศอังกฤษใช่ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="176" duration="00:00:07.115000" user="chotiros">
+<post-edited system="Molto">พวกเขาพูดภาษาฝรั่งเศสไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="178" duration="00:00:37.408000" user="chotiros">
+<post-edited system="Google">พวกเขาต้องการที่จะนอนหลับไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="180" duration="00:00:04.205000" user="chotiros">
+<post-edited system="Molto">เรามีนมไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="182" duration="00:00:32.267000" user="chotiros">
+<post-edited system="Google">เรารู้ไหมว่าแอปเปิ้ลเหล่านี้ราคาเท่าไหร่</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="186" duration="00:00:32.376000" user="chotiros">
+<post-edited system="Molto">เรารู้ไหมว่าลูกของเราอยู่ที่ไหน</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="190" duration="00:00:30.319000" user="chotiros">
+<post-edited system="Molto">เรารู้ไหมว่าเรากินที่ไหน</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="192" duration="00:00:30.588000" user="chotiros">
+<post-edited system="Molto">เราอยากดื่มเบียร์เย็นๆ ที่ร้านอาหารที่ใกล้ที่สุดไหม </post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="194" duration="00:00:10.543000" user="chotiros">
+<post-edited system="Molto">เราอยากไปมหาวิทยาลัยไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="196" duration="00:00:31.311000" user="chotiros">
+<post-edited system="Molto">เราต้องการไวน์และไก่ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="198" duration="00:00:12.270000" user="chotiros">
+<post-edited system="Molto">เธอซื้อปลาตัวนั้นไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="206" duration="00:00:11.327000" user="chotiros">
+<post-edited system="Molto">เธอดื่มที่ดิสโก้ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="214" duration="00:00:10.846000" user="chotiros">
+<post-edited system="Google">คุณมีโต๊ะสำหรับสองคนไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="222" duration="00:00:28.057000" user="chotiros">
+<post-edited system="Google">คุณมีพิซซ่าอุ่นๆและเบียร์เยอรมันเย็นๆไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="230" duration="00:00:14.956000" user="chotiros">
+<post-edited system="Molto">เธอรู้จักสามีของหล่อนไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="238" duration="00:01:03.501000" user="chotiros">
+<post-edited system="Molto">เธอรู้ว่าไหมว่าสวนไกลเท่าไรโดยการขี่จักรยาน</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="246" duration="00:00:29.087000" user="chotiros">
+<post-edited system="Molto">เธอรู้ไหมว่าพิซซาถาดนี้ราคาเท่าไร</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="254" duration="00:00:33.179000" user="chotiros">
+<post-edited system="Molto">เธอรู้ว่าร้านค้าปิดไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="262" duration="00:00:21.119000" user="chotiros">
+<post-edited system="Molto">เธอรู้ว่ามีรถไฟไปสนามบินไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="270" duration="00:00:50.396000" user="chotiros">
+<post-edited system="Molto">เรารู้ไหมว่าเขารู้จักลูกสาวของNN</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="272" duration="00:00:23.984000" user="chotiros">
+<post-edited system="Google">คุณรู้ไหมว่าซูเปอร์มาร์เก็ตที่ถูกที่สุดไม่ได้ปิดในวันนี้ </post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="280" duration="00:01:20.046000" user="chotiros">
+<post-edited system="Molto">เธอรู้ไหมว่าแอปเปิ้ลเหล่านั้นไม่ราคาถูกเกินไป</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="288" duration="00:01:05.848000" user="chotiros">
+<post-edited system="Molto">เธอนอนที่โรงแรมหรือไม่</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="296" duration="00:00:05.594000" user="chotiros">
+<post-edited system="Molto">เธอต้องการแอปเปิ้ลไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="304" duration="00:00:23.505000" user="chotiros">
+<post-edited system="Molto">เธออยากดื่มเบียร์เบลเยี่ยนและเหล้าองุ่นฝรั่งเศสที่ร้านอาหารที่แพงที่สุดไหม </post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="312" duration="00:00:07.864000" user="chotiros">
+<post-edited system="Molto">เธออยากกินแอปเปิ้ลไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="320" duration="00:00:06.148000" user="chotiros">
+<post-edited system="Molto">เธออยากเดินไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="328" duration="00:00:16.353000" user="chotiros">
+<post-edited system="Molto">เขารู้ว่าผมอายุเท่าไรไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="329" duration="00:00:44.544000" user="chotiros">
+<post-edited system="Molto">ลูกสาวของเขาอยากไปพิพิธภัณฑ์ที่เป็นที่นิยมที่สุดไหม </post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="339" duration="00:00:13.305000" user="chotiros">
+<post-edited system="Molto">ลูกสาวของเธอรู้ว่าเธอรอไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="395" duration="00:00:14.266000" user="chotiros">
+<post-edited system="Molto">สามีของเธอรู้ไหมว่าพิพิธภัณฑ์อยู่ที่ไหน</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="402" duration="00:00:06.548000" user="chotiros">
+<post-edited system="Molto">อย่ารอเขา</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="405" duration="00:00:14.665000" user="chotiros">
+<post-edited system="Molto">กินพิซซาซิ</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="408" duration="00:00:10.304000" user="chotiros">
+<post-edited system="Molto">เขาไม่มีแอปเปิ้ลดีๆ</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="409" duration="00:00:07.543000" user="chotiros">
+<post-edited system="Google">เขาไม่ได้แต่งงาน</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="410" duration="00:00:17.777000" user="chotiros">
+<post-edited system="Molto">ภรรยาของเขามีนม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="411" duration="00:00:10.244000" user="chotiros">
+<post-edited system="Molto">ซุปเปอร์มาเก็ตไกลเท่าไร</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="412" duration="00:00:10.738000" user="chotiros">
+<post-edited system="Molto">สนามบินไกลเท่าไรโดยรถเมล์</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="413" duration="00:00:18.972000" user="chotiros">
+<post-edited system="Molto">ศูนย์กลางไกลเท่าไร</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="414" duration="00:00:46.709000" user="chotiros">
+<post-edited system="Molto">แอปเปิ้ลถูกๆเหล่านั้นราคาเท่าไร</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="415" duration="00:00:22.123000" user="chotiros">
+<post-edited system="Molto">เนยแข็งก้อนนั้นราคาเท่าไร</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="416" duration="00:00:12.290000" user="chotiros">
+<post-edited system="Molto">ลูกของNNอายุเท่าไร</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="418" duration="00:00:07.729000" user="chotiros">
+<post-edited system="Molto">เธออายุเท่าไร</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="426" duration="00:00:16.819000" user="chotiros">
+<post-edited system="Molto">ลูกของเธออายุเท่าไร</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="434" duration="00:00:06.894000" user="chotiros">
+<post-edited system="Google">ฉันมีเบียร์เย็น ๆ</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="436" duration="00:00:09.654000" user="chotiros">
+<post-edited system="Google">ฉันมีพิซซ่าและเบียร์</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="438" duration="00:00:24.783000" user="chotiros">
+<post-edited system="Molto">ผมมีแอปเปิ้ลแย่สามลูก</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="440" duration="00:00:04.981000" user="chotiros">
+<post-edited system="Google">ฉันมีลูกสองคน</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="442" duration="00:00:09.910000" user="chotiros">
+<post-edited system="Molto">ผมมีพิซซาอุ่นสองถาดและเบียร์สามแก้ว</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="444" duration="00:00:08.601000" user="chotiros">
+<post-edited system="Molto">ผมอยากนั่ง</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="445" duration="00:00:09.495000" user="chotiros">
+<post-edited system="Molto">สวนสนุกเปิดวันนี้ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="446" duration="00:00:51.546000" user="chotiros" from-scratch="true">
+<post-edited system="Google">เขาอายุสิบสองปีใช่ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="447" duration="00:00:18.564000" user="chotiros">
+<post-edited system="Molto">ลูกสาวของเขาปวยไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="448" duration="00:00:08.840000" user="chotiros">
+<post-edited system="Molto">ลูกชายของเขาพร้อมไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="450" duration="00:00:18.422000" user="chotiros">
+<post-edited system="Molto">ลูกชายของผมกลัวไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="451" duration="00:00:14.183000" user="chotiros">
+<post-edited system="Molto">ลูกชายของNNแต่งงานแล้วใช่ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="452" duration="00:00:21.361000" user="chotiros">
+<post-edited system="Molto">หล่อนอยู่ที่สวนสนุกใช่ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="453" duration="00:00:21.814000" user="chotiros">
+<post-edited system="Molto">หล่อนเป็นคนฟินนิชใ่ช่ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="454" duration="00:00:23.512000" user="chotiros">
+<post-edited system="Molto">หล่อนอยู่ที่ร้านอาหารฝรั่งเศสใช่ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="455" duration="00:00:20.343000" user="chotiros">
+<post-edited system="Molto">ธนาคารปิดใช่ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="456" duration="00:00:07.702000" user="chotiros">
+<post-edited system="Molto">โรงพยาบาลปิดวันพรุ่งนี้ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="457" duration="00:00:17.294000" user="chotiros">
+<post-edited system="Molto">ดิสโก้ที่โด่งดังที่สุดเปิดวันเสาร์ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="458" duration="00:00:16.353000" user="chotiros">
+<post-edited system="Molto">สนามบินแห่งใกล้ที่สุดปิดวันพฤหัสบดีใช่ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="459" duration="00:00:24.880000" user="chotiros">
+<post-edited system="Molto">บาร์ที่ใกล้ที่สุดปิดวันนี้ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="461" duration="00:00:22.553000" user="chotiros">
+<post-edited system="Molto">ลูกสาวของพวกเขาชื่อNNใช่ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="462" duration="00:00:10.891000" user="chotiros">
+<post-edited system="Molto">มีรถเมล์ไปสนามบินไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="463" duration="00:00:12.382000" user="chotiros">
+<post-edited system="Molto">มีเรือเฟอรี่ไปสวนไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="464" duration="00:00:06.619000" user="chotiros">
+<post-edited system="Molto">แอปเปิ้ลลูกนี้แพงมากไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="465" duration="00:00:16.124000" user="chotiros">
+<post-edited system="Molto">เหล้าองุ่นขวดนี้เย็นไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="467" duration="00:00:22.523000" user="chotiros">
+<post-edited system="Molto">ภรรยาของคุณอยู่ที่โรงพยาบาลใช่ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="475" duration="00:00:49.055000" user="chotiros">
+<post-edited system="Molto">ลูกสาวของหล่อนต้องรอคุณที่ไปรษณีย์ใช่ไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="483" duration="00:00:33.737000" user="chotiros">
+<post-edited system="Google">พวกเขาจะต้องกินพิซซ่าในร้านอาหารที่แพงที่สุด?</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="485" duration="00:00:24.201000" user="chotiros">
+<post-edited system="Molto">พวกเขาต้องกินพิซซาที่ร้านอาหารที่แพงที่สุดไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="489" duration="00:00:17.045000" user="chotiros">
+<post-edited system="Molto">พวกเขาต้องรอเราไหม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="491" duration="00:00:16.130000" user="chotiros">
+<post-edited system="Google">ลูก ๆ ของฉันไม่ได้มีขนมปัง</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="493" duration="00:00:04.604000" user="chotiros">
+<post-edited system="Molto">ผมชื่อNN</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="494" duration="00:00:22.102000" user="chotiros">
+<post-edited system="Molto">พิซซาถาดนั้นเย็นมาก</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="495" duration="00:00:04.852000" user="chotiros">
+<post-edited system="Google">สนามบินไม่ได้ปิด</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="496" duration="00:00:14.720000" user="chotiros">
+<post-edited system="Molto">สวนสนุกไม่เปิดวันจันทร์</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="497" duration="00:00:20.944000" user="chotiros">
+<post-edited system="Molto">แอปเปิ้ลมีราคาห้ายูโร</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="498" duration="00:00:11.321000" user="chotiros">
+<post-edited system="Google">ชีสไม่ได้ราคาถูก</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="499" duration="00:00:06.313000" user="chotiros">
+<post-edited system="Google">กาแฟเย็นมาก</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="500" duration="00:00:07.858000" user="chotiros">
+<post-edited system="Google">พิซซ่าอิตาเลี่ยนเย็นเกินไป</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="501" duration="00:00:15.289000" user="chotiros">
+<post-edited system="Molto">สนามบินที่ใกล้ที่สุดปิด</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="502" duration="00:00:21.981000" user="chotiros">
+<post-edited system="Google">พิซซ่าเหล่านี้น่าสงสัยมาก</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="504" duration="00:00:04.766000" user="chotiros">
+<post-edited system="Google">พวกเขายังไม่พร้อม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="506" duration="00:00:28.930000" user="chotiros">
+<post-edited system="Google">พวกเขาไม่มีดอลล่าห์</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="508" duration="00:00:10.036000" user="chotiros">
+<post-edited system="Google">พวกเขาไม่ได้รู้จักเขา</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="510" duration="00:00:11.312000" user="chotiros">
+<post-edited system="Google">พวกเขาไม่ได้พูดฟลาม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="511" duration="00:00:12.361000" user="chotiros">
+<post-edited system="Molto">แอปเปิ้ลลูกนี้ไม่สด</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="512" duration="00:00:11.632000" user="chotiros">
+<post-edited system="Molto">แอปเปิ้ลลูกนี้ไม่เลวเกินไป</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="514" duration="00:00:23.953000" user="chotiros">
+<post-edited system="Molto">รอลูกของผม</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="520" duration="00:00:07.401000" user="chotiros">
+<post-edited system="Molto">เราไม่มีเบียร์</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="521" duration="00:00:05.729000" user="chotiros">
+<post-edited system="Molto">เขาชื่ออะไร</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="523" duration="00:00:07.466000" user="chotiros">
+<post-edited system="Molto">พวกเขาอยากดื่มที่ไหน</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="524" duration="00:00:07.072000" user="chotiros">
+<post-edited system="Molto">ลูกสาวของเขานอนหลับที่ไหน</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="525" duration="00:00:07.598000" user="chotiros">
+<post-edited system="Molto">โรงพยาบาลอยู่ที่ไหน</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="526" duration="00:00:20.495000" user="chotiros">
+<post-edited system="Molto">ร้านอาหารโปลิชที่โด่งดังที่สุดอยู่ที่ไหน</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="527" duration="00:00:06.734000" user="chotiros">
+<post-edited system="Molto">ธนาคารแห่งใกล้ที่สุดอยู่ที่ไหน</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="531" duration="00:00:42.518000" user="chotiros">
+<post-edited system="Molto">ผมต้องรอพวกเขาที่ไหน</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="532" duration="00:00:21.674000" user="chotiros">
+<post-edited system="Molto">รถเมล์คันไหนไปสนามบิน</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="533" duration="00:00:22.452000" user="chotiros">
+<post-edited system="Molto">รถรางสายไหนไปสวนสัตว์</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="534" duration="00:00:17.323000" user="chotiros">
+<post-edited system="Google">ไวน์ราคาถูกมาก</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="536" duration="00:00:04.944000" user="chotiros">
+<post-edited system="Google">คุณเหนื่อย</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="544" duration="00:00:19.371000" user="chotiros">
+<post-edited system="Molto">เธอไม่มีชา</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="552" duration="00:00:06.581000" user="chotiros">
+<post-edited system="Google">คุณมีดอลลาร์</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="560" duration="00:00:12.501000" user="chotiros">
+<post-edited system="Google">คุณต้องนอนหลับ</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="568" duration="00:00:19.198000" user="chotiros">
+<post-edited system="Molto">เธออยากนั่งที่โรงละคร</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="576" duration="00:00:19.856000" user="chotiros">
+<post-edited system="Molto">ลูกของเธอไม่มีกาแฟ</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="584" duration="00:00:26.037000" user="chotiros">
+<post-edited system="Molto">สามีของลูกสาวเธอไม่มีเนยแข็ง</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="592" duration="00:00:10.519000" user="chotiros">
+<post-edited system="Google">ลูกชายของคุณอยู่ในบาร์ที่ถูกที่สุด</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="600" duration="00:00:23.367000" user="chotiros">
+<post-edited system="Google">ฉันไม่สามารถรอสามีของฉัน</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="610" duration="00:00:13.164000" user="chotiros">
+<post-edited system="Molto">ผมไม่อยากรอลูกของพวกเขา</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="622" duration="00:00:23.954000" user="chotiros">
+<post-edited system="Molto">เรารู้ไหมว่าเรารอพวกเขาได้ที่ไหน</post-edited>
+</post-editing-item>
+<post-editing-item doc-id="eng-tha.treebank" id="627" duration="00:00:16.227000" user="chotiros">
+<post-edited system="Google">เธอไม่ได้อยู่ในที่จอดรถที่ใกล้ที่สุด</post-edited>
+</post-editing-item>
+</post-editing-result>
+</appraise-results>

@@ -1,0 +1,698 @@
+<set id="molto" source-language="eng" target-language="Chi">
+  <seg doc-id="eng-chi.treebank" id="2">
+    <source>am I at the airport ?</source>
+    <translation system="Molto">&#25105;&#22312;&#26426;&#22330;&#21527;&#65311;</translation>
+    <translation system="Google">&#25105;&#26159;&#22312;&#26426;&#22330;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="3">
+    <source>are NN 's children tired ?</source>
+    <translation system="Molto">NN&#30340;&#23401;&#23376;&#32047;&#20102;&#21527;&#65311;</translation>
+    <translation system="Google">&#26159;&#31070;&#32463;&#32593;&#32476;&#30340;&#23401;&#23376;&#20204;&#32047;&#20102;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="5">
+    <source>are our children in the nearest hotel ?</source>
+    <translation system="Molto">&#25105;&#20204;&#30340;&#23401;&#23376;&#22312;&#26368;&#36817;&#30340;&#37027;&#20010;&#26053;&#39302;&#21527;&#65311;</translation>
+    <translation system="Google">&#26159;&#25105;&#20204;&#22312;&#26368;&#36817;&#30340;&#37202;&#24215;&#23401;&#23376;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="7">
+    <source>are they eleven years old ?</source>
+    <translation system="Molto">&#20182;&#20204;&#21313;&#19968;&#23681;&#21527;&#65311;</translation>
+    <translation system="Google">&#20182;&#20204;&#26159;&#21313;&#19968;&#23681;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="9">
+    <source>are you eight years old ?</source>
+    <translation system="Molto">&#20320;&#20843;&#23681;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#20843;&#23681;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="17">
+    <source>are you Norwegian ?</source>
+    <translation system="Molto">&#20320;&#26159;&#25386;&#23041;&#20154;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#26159;&#25386;&#23041;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="25">
+    <source>are your children married ?</source>
+    <translation system="Molto">&#20320;&#30340;&#23401;&#23376;&#26159;&#24050;&#23130;&#30340;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#30340;&#23401;&#23376;&#32467;&#23130;&#20102;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="32">
+    <source>buy apples</source>
+    <translation system="Molto">&#20080;&#20123;&#33529;&#26524;</translation>
+    <translation system="Google">&#20080;&#33529;&#26524;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="35">
+    <source>can her daughter swim at the school ?</source>
+    <translation system="Molto">&#22905;&#30340;&#22899;&#20799;&#33021;&#22312;&#23398;&#26657;&#28216;&#27891;&#21527;&#65311;</translation>
+    <translation system="Google">&#21487;&#22905;&#30340;&#22899;&#20799;&#22312;&#23398;&#26657;&#28216;&#27891;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="38">
+    <source>can you buy tea and two coffees ?</source>
+    <translation system="Molto">&#20320;&#33021;&#20080;&#33590;&#21644;&#20004;&#20010;&#21654;&#21857;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#21487;&#20197;&#20080;&#33590;&#20004;&#26479;&#21654;&#21857;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="56">
+    <source>can you wait for us at the nearest cinema ?</source>
+    <translation system="Molto">&#20320;&#33021;&#22312;&#26368;&#36817;&#30340;&#37027;&#20010;&#30005;&#24433;&#38498;&#31561;&#25105;&#20204;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#33021;&#20026;&#25105;&#20204;&#22312;&#26368;&#36817;&#30340;&#30005;&#24433;&#38498;&#31561;&#24453;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="86">
+    <source>can your son swim ?</source>
+    <translation system="Molto">&#20320;&#30340;&#20799;&#23376;&#33021;&#28216;&#27891;&#21527;&#65311;</translation>
+    <translation system="Google">&#21487;&#20320;&#30340;&#20799;&#23376;&#28216;&#27891;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="102">
+    <source>can your wife buy milk at the nearest supermarket ?</source>
+    <translation system="Molto">&#20320;&#30340;&#22971;&#23376;&#33021;&#22312;&#26368;&#36817;&#30340;&#37027;&#23478;&#36229;&#32423;&#24066;&#22330;&#20080;&#29275;&#22902;&#21527;&#65311;</translation>
+    <translation system="Google">&#21487;&#20320;&#30340;&#22971;&#23376;&#22312;&#26368;&#36817;&#30340;&#36229;&#24066;&#20080;&#29275;&#22902;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="118">
+    <source>do her children know you ?</source>
+    <translation system="Molto">&#22905;&#30340;&#23401;&#23376;&#35748;&#35782;&#20320;&#21527;&#65311;</translation>
+    <translation system="Google">&#20570;&#22905;&#30340;&#23401;&#23376;&#30693;&#36947;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="125">
+    <source>do his children live in Romania ?</source>
+    <translation system="Molto">&#20182;&#30340;&#23401;&#23376;&#20303;&#32599;&#39532;&#23612;&#20122;&#21527;&#65311;</translation>
+    <translation system="Google">&#20570;&#20182;&#30340;&#23401;&#23376;&#29983;&#27963;&#22312;&#32599;&#39532;&#23612;&#20122;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="127">
+    <source>do I buy milk and two apples ?</source>
+    <translation system="Molto">&#25105;&#20080;&#29275;&#22902;&#21644;&#20004;&#20010;&#33529;&#26524;&#21527;&#65311;</translation>
+    <translation system="Google">&#25105;&#20080;&#29275;&#22902;&#21644;&#20004;&#20010;&#33529;&#26524;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="129">
+    <source>do I know how much that apple costs ?</source>
+    <translation system="Molto">&#25105;&#30693;&#36947;&#37027;&#20010;&#33529;&#26524;&#26159;&#22810;&#23569;&#38065;&#21527;&#65311;</translation>
+    <translation system="Google">&#25105;&#30693;&#36947;&#33529;&#26524;&#26377;&#22810;&#22823;&#30340;&#25104;&#26412;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="131">
+    <source>do I know you ?</source>
+    <translation system="Molto">&#25105;&#35748;&#35782;&#20320;&#21527;&#65311;</translation>
+    <translation system="Google">&#25105;&#30693;&#36947;&#20320;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="147">
+    <source>do their children know if the supermarket is closed today ?</source>
+    <translation system="Molto">&#20182;&#20204;&#30340;&#23401;&#23376;&#30693;&#36947;&#20170;&#22825;&#36229;&#32423;&#24066;&#22330;&#26159;&#19981;&#26159;&#20851;&#38381;&#30340;&#21527;&#65311;</translation>
+    <translation system="Google">&#19981;&#35201;&#33258;&#24049;&#30340;&#23401;&#23376;&#30693;&#36947;&#65292;&#22914;&#26524;&#36229;&#24066;&#20170;&#26085;&#25910;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="148">
+    <source>do these apples cost five euros ?</source>
+    <translation system="Molto">&#36825;&#20123;&#33529;&#26524;&#26159;&#20116;&#20010;&#27431;&#20803;&#21527;&#65311;</translation>
+    <translation system="Google">&#20570;&#36825;&#20123;&#33529;&#26524;5&#27431;&#20803;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="150">
+    <source>do they have a room for two persons ?</source>
+    <translation system="Molto">&#20182;&#20204;&#26377;&#32473;&#20004;&#20010;&#20154;&#30340;&#19968;&#20010;&#25151;&#38388;&#21527;&#65311;</translation>
+    <translation system="Google">&#20182;&#20204;&#26377;&#19968;&#20010;&#25151;&#38388;&#20004;&#20010;&#20154;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="152">
+    <source>do they know how much that pizza costs ?</source>
+    <translation system="Molto">&#20182;&#20204;&#30693;&#36947;&#37027;&#20010;&#27604;&#33832;&#39292;&#26159;&#22810;&#23569;&#38065;&#21527;&#65311;</translation>
+    <translation system="Google">&#20182;&#20204;&#30693;&#36947;&#25259;&#33832;&#22810;&#23569;&#30340;&#36153;&#29992;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="156">
+    <source>do they know that I don't have pizzas ?</source>
+    <translation system="Molto">&#20182;&#20204;&#30693;&#36947;&#25105;&#27809;&#26377;&#27604;&#33832;&#39292;&#21527;&#65311;</translation>
+    <translation system="Google">&#38590;&#36947;&#20182;&#20204;&#30693;&#36947;&#25105;&#27809;&#26377;&#25259;&#33832;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="158">
+    <source>do they know what your name is ?</source>
+    <translation system="Molto">&#20182;&#20204;&#30693;&#36947;&#20320;&#36149;&#22995;&#21527;&#65311;</translation>
+    <translation system="Google">&#20182;&#20204;&#30693;&#36947;&#20320;&#30340;&#21517;&#23383;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="174">
+    <source>do they live in England ?</source>
+    <translation system="Molto">&#20182;&#20204;&#20303;&#33521;&#22269;&#21527;&#65311;</translation>
+    <translation system="Google">&#20182;&#20204;&#26159;&#21542;&#20303;&#22312;&#33521;&#22269;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="176">
+    <source>do they speak French ?</source>
+    <translation system="Molto">&#20182;&#20204;&#35828;&#27861;&#35821;&#21527;&#65311;</translation>
+    <translation system="Google">&#20182;&#20204;&#35828;&#30340;&#26159;&#27861;&#35821;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="178">
+    <source>do they want to sleep ?</source>
+    <translation system="Molto">&#20182;&#20204;&#24819;&#30561;&#21527;&#65311;</translation>
+    <translation system="Google">&#20570;&#33258;&#24049;&#24819;&#30561;&#35273;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="180">
+    <source>do we have milk ?</source>
+    <translation system="Molto">&#25105;&#20204;&#26377;&#29275;&#22902;&#21527;&#65311;</translation>
+    <translation system="Google">&#25105;&#20204;&#26377;&#29275;&#22902;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="182">
+    <source>do we know how much these apples cost ?</source>
+    <translation system="Molto">&#25105;&#20204;&#30693;&#36947;&#36825;&#20123;&#33529;&#26524;&#26159;&#22810;&#23569;&#38065;&#21527;&#65311;</translation>
+    <translation system="Google">&#25105;&#20204;&#30693;&#36947;&#36825;&#20123;&#33529;&#26524;&#22810;&#23569;&#38065;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="186">
+    <source>do we know where our children are ?</source>
+    <translation system="Molto">&#25105;&#20204;&#30693;&#36947;&#25105;&#20204;&#30340;&#23401;&#23376;&#22312;&#21738;&#37324;&#21527;&#65311;</translation>
+    <translation system="Google">&#25105;&#20204;&#30693;&#36947;&#25105;&#20204;&#30340;&#23401;&#23376;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="190">
+    <source>do we know where we eat ?</source>
+    <translation system="Molto">&#25105;&#20204;&#30693;&#36947;&#25105;&#20204;&#21435;&#21738;&#37324;&#21507;&#21527;&#65311;</translation>
+    <translation system="Google">&#25105;&#20204;&#30693;&#36947;&#25105;&#20204;&#21507;&#20160;&#20040;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="192">
+    <source>do we want to drink cold beer in the nearest restaurant ?</source>
+    <translation system="Molto">&#25105;&#20204;&#24819;&#22312;&#26368;&#36817;&#30340;&#37027;&#38388;&#39277;&#24215;&#21917;&#20919;&#21860;&#37202;&#21527;&#65311;</translation>
+    <translation system="Google">&#25105;&#20204;&#24819;&#35201;&#21917;&#20937;&#21860;&#37202;&#22312;&#26368;&#36817;&#30340;&#39184;&#39302;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="194">
+    <source>do we want to go to the university ?</source>
+    <translation system="Molto">&#25105;&#20204;&#24819;&#21435;&#22823;&#23398;&#21527;&#65311;</translation>
+    <translation system="Google">&#25105;&#20204;&#24819;&#21435;&#30340;&#22823;&#23398;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="196">
+    <source>do we want wine and chicken ?</source>
+    <translation system="Molto">&#25105;&#20204;&#35201;&#37202;&#21644;&#40481;&#21527;&#65311;</translation>
+    <translation system="Google">&#25105;&#20204;&#24076;&#26395;&#33889;&#33796;&#37202;&#21644;&#40481;&#32905;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="198">
+    <source>do you buy that fish ?</source>
+    <translation system="Molto">&#20320;&#20080;&#37027;&#26465;&#40060;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#20080;&#30340;&#40060;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="206">
+    <source>do you drink at a disco ?</source>
+    <translation system="Molto">&#20320;&#22312;&#19968;&#20010;&#36842;&#26031;&#31185;&#21917;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#22312;&#36842;&#26031;&#31185;&#33310;&#21381;&#21917;&#37202;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="214">
+    <source>do you have a table for two persons ?</source>
+    <translation system="Molto">&#20320;&#26377;&#32473;&#20004;&#20010;&#20154;&#30340;&#19968;&#24352;&#26700;&#23376;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#26377;&#19968;&#24352;&#26700;&#23376;&#20004;&#20010;&#20154;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="222">
+    <source>do you have the warm pizzas and cold German beer ?</source>
+    <translation system="Molto">&#20320;&#26377;&#28909;&#27604;&#33832;&#39292;&#21644;&#20919;&#24503;&#22269;&#21860;&#37202;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#26377;&#28201;&#26262;&#30340;&#27604;&#33832;&#39292;&#21644;&#20919;&#24503;&#22269;&#21860;&#37202;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="230">
+    <source>do you know her husband ?</source>
+    <translation system="Molto">&#20320;&#35748;&#35782;&#22905;&#30340;&#19976;&#22827;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#30693;&#36947;&#22905;&#30340;&#19976;&#22827;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="238">
+    <source>do you know how far the park is by bike ?</source>
+    <translation system="Molto">&#20320;&#30693;&#36947;&#20056;&#33258;&#34892;&#36710;&#21040;&#20844;&#22253;&#26377;&#22810;&#36828;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#30693;&#36947;&#26377;&#22810;&#36828;&#30340;&#20844;&#22253;&#39569;&#33258;&#34892;&#36710;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="246">
+    <source>do you know how much this pizza costs ?</source>
+    <translation system="Molto">&#20320;&#30693;&#36947;&#36825;&#20010;&#27604;&#33832;&#39292;&#26159;&#22810;&#23569;&#38065;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#30693;&#36947;&#36825;&#20010;&#25259;&#33832;&#22810;&#23569;&#36153;&#29992;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="254">
+    <source>do you know if the shop is closed ?</source>
+    <translation system="Molto">&#20320;&#30693;&#36947;&#21830;&#24215;&#26159;&#19981;&#26159;&#20851;&#38381;&#30340;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#30693;&#36947;&#65292;&#22914;&#26524;&#21830;&#24215;&#20851;&#38376;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="262">
+    <source>do you know if there is a train to the airport ?</source>
+    <translation system="Molto">&#20320;&#30693;&#36947;&#26377;&#19981;&#26377;&#21435;&#26426;&#22330;&#30340;&#28779;&#36710;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#30693;&#36947;&#65292;&#22914;&#26524;&#26377;&#28779;&#36710;&#21040;&#26426;&#22330;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="270">
+    <source>do we know if he knows NN 's daughter ?</source>
+    <translation system="Molto">&#25105;&#20204;&#30693;&#36947;&#20182;&#35748;&#35782;&#19981;&#35748;&#35782;NN&#30340;&#22899;&#20799;&#21527;&#65311;</translation>
+    <translation system="Google">&#25105;&#20204;&#30693;&#36947;&#65292;&#22914;&#26524;&#20182;&#30693;&#36947;NN&#30340;&#22899;&#20799;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="272">
+    <source>do you know that the cheapest supermarket isn't closed today ?</source>
+    <translation system="Molto">&#20320;&#30693;&#36947;&#20170;&#22825;&#26368;&#24265;&#20215;&#30340;&#37027;&#23478;&#36229;&#32423;&#24066;&#22330;&#19981;&#26159;&#20851;&#38381;&#30340;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#30693;&#36947;&#26368;&#20415;&#23452;&#30340;&#36229;&#24066;&#26159;&#19981;&#26159;&#20170;&#22825;&#20241;&#24687;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="280">
+    <source>do you know that those apples aren't too cheap ?</source>
+    <translation system="Molto">&#20320;&#30693;&#36947;&#37027;&#20123;&#33529;&#26524;&#19981;&#26159;&#22826;&#24265;&#20215;&#30340;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#30693;&#36947;&#65292;&#36825;&#20123;&#33529;&#26524;&#26159;&#19981;&#26159;&#22826;&#20415;&#23452;&#20102;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="288">
+    <source>do you sleep in a hotel ?</source>
+    <translation system="Molto">&#20320;&#22312;&#19968;&#20010;&#26053;&#39302;&#30561;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#22312;&#37202;&#24215;&#37324;&#30561;&#20102;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="296">
+    <source>do you want an apple ?</source>
+    <translation system="Molto">&#20320;&#35201;&#19968;&#20010;&#33529;&#26524;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#24819;&#35201;&#19968;&#20010;&#33529;&#26524;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="304">
+    <source>do you want to drink Belgian beer and French wine in the most expensive restaurant ?</source>
+    <translation system="Molto">&#20320;&#24819;&#22312;&#26368;&#26114;&#36149;&#30340;&#37027;&#38388;&#39277;&#24215;&#21917;&#27604;&#21033;&#26102;&#21860;&#37202;&#21644;&#27861;&#22269;&#37202;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#24819;&#19981;&#24819;&#21917;&#30340;&#27604;&#21033;&#26102;&#21860;&#37202;&#65292;&#27861;&#22269;&#33889;&#33796;&#37202;&#20013;&#26368;&#20026;&#26114;&#36149;&#30340;&#39184;&#21381;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="312">
+    <source>do you want to eat the apple ?</source>
+    <translation system="Molto">&#20320;&#24819;&#21507;&#33529;&#26524;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#24819;&#19981;&#24819;&#21507;&#33529;&#26524;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="320">
+    <source>do you want to walk ?</source>
+    <translation system="Molto">&#20320;&#24819;&#36208;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#24819;&#36208;&#36335;&#24590;&#20040;&#26679;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="328">
+    <source>does he know how old I am ?</source>
+    <translation system="Molto">&#20182;&#30693;&#36947;&#25105;&#20960;&#23681;&#21527;&#65311;</translation>
+    <translation system="Google">&#20182;&#26159;&#21542;&#30693;&#36947;&#25105;&#22810;&#22823;&#20102;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="329">
+    <source>does his daughter want to go to the most popular museum ?</source>
+    <translation system="Molto">&#20182;&#30340;&#22899;&#20799;&#24819;&#21435;&#26368;&#27969;&#34892;&#30340;&#37027;&#20010;&#21338;&#29289;&#39302;&#21527;&#65311;</translation>
+    <translation system="Google">&#27809;&#26377;&#20182;&#30340;&#22899;&#20799;&#35201;&#21040;&#26368;&#27969;&#34892;&#30340;&#21338;&#29289;&#39302;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="339">
+    <source>does your daughter know that you wait ?</source>
+    <translation system="Molto">&#20320;&#30340;&#22899;&#20799;&#30693;&#36947;&#20320;&#31561;&#21527;&#65311;</translation>
+    <translation system="Google">&#27809;&#26377;&#20320;&#30340;&#22899;&#20799;&#30693;&#36947;&#65292;&#20320;&#31561;&#24453;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="395">
+    <source>does your husband know where the museum is ?</source>
+    <translation system="Molto">&#20320;&#30340;&#19976;&#22827;&#30693;&#36947;&#21338;&#29289;&#39302;&#22312;&#21738;&#37324;&#21527;&#65311;</translation>
+    <translation system="Google">&#20320;&#19976;&#22827;&#30693;&#36947;&#21338;&#29289;&#39302;&#26159;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="402">
+    <source>don't wait for him</source>
+    <translation system="Molto">&#19981;&#31561;&#20182;</translation>
+    <translation system="Google">&#19981;&#35201;&#31561;&#20182;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="405">
+    <source>eat a pizza</source>
+    <translation system="Molto">&#21507;&#19968;&#20010;&#27604;&#33832;&#39292;</translation>
+    <translation system="Google">&#21507;&#25259;&#33832;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="408">
+    <source>he doesn't have good apples .</source>
+    <translation system="Molto">&#20182;&#27809;&#26377;&#22909;&#33529;&#26524;&#12290;</translation>
+    <translation system="Google">&#20182;&#27809;&#26377;&#22909;&#33529;&#26524;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="409">
+    <source>he isn't married .</source>
+    <translation system="Molto">&#20182;&#19981;&#26159;&#24050;&#23130;&#30340;&#12290;</translation>
+    <translation system="Google">&#20182;&#19981;&#23233;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="410">
+    <source>his wife has milk .</source>
+    <translation system="Molto">&#20182;&#30340;&#22971;&#23376;&#26377;&#29275;&#22902;&#12290;</translation>
+    <translation system="Google">&#20182;&#30340;&#22971;&#23376;&#26377;&#29275;&#22902;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="411">
+    <source>how far is a supermarket ?</source>
+    <translation system="Molto">&#19968;&#23478;&#36229;&#32423;&#24066;&#22330;&#26377;&#22810;&#36828;&#65311;</translation>
+    <translation system="Google">&#22810;&#36828;&#26159;&#19968;&#20010;&#36229;&#24066;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="412">
+    <source>how far is the airport by bus ?</source>
+    <translation system="Molto">&#20056;&#20844;&#20849;&#27773;&#36710;&#21040;&#26426;&#22330;&#26377;&#22810;&#36828;&#65311;</translation>
+    <translation system="Google">&#22810;&#36828;&#26159;&#26426;&#22330;&#24052;&#22763;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="413">
+    <source>how far is the center ?</source>
+    <translation system="Molto">&#20013;&#24515;&#26377;&#22810;&#36828;&#65311;</translation>
+    <translation system="Google">&#22810;&#36828;&#26159;&#20013;&#24515;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="414">
+    <source>how much do those cheap apples cost ?</source>
+    <translation system="Molto">&#37027;&#20123;&#24265;&#20215;&#30340;&#33529;&#26524;&#26159;&#22810;&#23569;&#38065;&#65311;</translation>
+    <translation system="Google">&#22810;&#23569;&#38065;&#30340;&#20415;&#23452;&#33529;&#26524;&#30340;&#25104;&#26412;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="415">
+    <source>how much does that cheese cost ?</source>
+    <translation system="Molto">&#37027;&#22359;&#22902;&#37226;&#26159;&#22810;&#23569;&#38065;&#65311;</translation>
+    <translation system="Google">&#22810;&#23569;&#30340;&#22902;&#37226;&#36153;&#29992;&#26159;&#22810;&#23569;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="416">
+    <source>how old are NN 's children ?</source>
+    <translation system="Molto">NN&#30340;&#23401;&#23376;&#20960;&#23681;&#65311;</translation>
+    <translation system="Google">&#24590;&#20040;&#32769;&#26159;&#31070;&#32463;&#32593;&#32476;&#30340;&#23401;&#23376;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="418">
+    <source>how old are you ?</source>
+    <translation system="Molto">&#20320;&#20960;&#23681;&#65311;</translation>
+    <translation system="Google">&#20320;&#22810;&#22823;&#20102;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="426">
+    <source>how old are your children ?</source>
+    <translation system="Molto">&#20320;&#30340;&#23401;&#23376;&#20960;&#23681;&#65311;</translation>
+    <translation system="Google">&#20320;&#30340;&#23401;&#23376;&#22810;&#22823;&#20102;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="434">
+    <source>I have cold beer .</source>
+    <translation system="Molto">&#25105;&#26377;&#20919;&#21860;&#37202;&#12290;</translation>
+    <translation system="Google">&#25105;&#26377;&#20912;&#38215;&#21860;&#37202;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="436">
+    <source>I have pizzas and beer .</source>
+    <translation system="Molto">&#25105;&#26377;&#20123;&#27604;&#33832;&#39292;&#21644;&#21860;&#37202;&#12290;</translation>
+    <translation system="Google">&#25105;&#26377;&#27604;&#33832;&#39292;&#21644;&#21860;&#37202;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="438">
+    <source>I have three bad apples .</source>
+    <translation system="Molto">&#25105;&#26377;&#19977;&#20010;&#22351;&#33529;&#26524;&#12290;</translation>
+    <translation system="Google">&#25105;&#26377;&#19977;&#20010;&#28866;&#33529;&#26524;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="440">
+    <source>I have two children .</source>
+    <translation system="Molto">&#25105;&#26377;&#20004;&#20010;&#23401;&#23376;&#12290;</translation>
+    <translation system="Google">&#25105;&#26377;&#20004;&#20010;&#23401;&#23376;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="442">
+    <source>I have two warm pizzas and three beers .</source>
+    <translation system="Molto">&#25105;&#26377;&#20004;&#20010;&#28909;&#27604;&#33832;&#39292;&#21644;&#19977;&#26479;&#21860;&#37202;&#12290;</translation>
+    <translation system="Google">&#25105;&#26377;&#20004;&#20010;&#28201;&#26262;&#30340;&#27604;&#33832;&#39292;&#21644;&#19977;&#29942;&#21860;&#37202;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="444">
+    <source>I want to sit .</source>
+    <translation system="Molto">&#25105;&#24819;&#22352;&#12290;</translation>
+    <translation system="Google">&#25105;&#35201;&#22352;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="445">
+    <source>is an amusement park open today ?</source>
+    <translation system="Molto">&#20170;&#22825;&#19968;&#20010;&#28216;&#20048;&#22253;&#26159;&#24320;&#25918;&#30340;&#21527;&#65311;</translation>
+    <translation system="Google">&#26159;&#19968;&#20010;&#28216;&#20048;&#22253;&#20170;&#24320;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="446">
+    <source>is he twelve years old ?</source>
+    <translation system="Molto">&#20182;&#19968;&#21313;&#20108;&#23681;&#21527;&#65311;</translation>
+    <translation system="Google">&#26159;&#20182;&#21313;&#20108;&#23681;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="447">
+    <source>is his daughter ill ?</source>
+    <translation system="Molto">&#20182;&#30340;&#22899;&#20799;&#29983;&#30149;&#20102;&#21527;&#65311;</translation>
+    <translation system="Google">&#26159;&#20182;&#30340;&#22899;&#20799;&#29983;&#30149;&#20102;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="448">
+    <source>is his son ready ?</source>
+    <translation system="Molto">&#20182;&#30340;&#20799;&#23376;&#26159;&#20934;&#22791;&#22909;&#30340;&#21527;&#65311;</translation>
+    <translation system="Google">&#26159;&#20182;&#30340;&#20799;&#23376;&#20934;&#22791;&#22909;&#20102;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="450">
+    <source>is my son scared ?</source>
+    <translation system="Molto">&#25105;&#30340;&#20799;&#23376;&#26159;&#24778;&#24908;&#30340;&#21527;&#65311;</translation>
+    <translation system="Google">&#26159;&#25105;&#20799;&#23376;&#23475;&#24597;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="451">
+    <source>is NN 's son married ?</source>
+    <translation system="Molto">NN&#30340;&#20799;&#23376;&#26159;&#24050;&#23130;&#30340;&#21527;&#65311;</translation>
+    <translation system="Google">&#26159;NN&#30340;&#20799;&#23376;&#32467;&#23130;&#20102;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="452">
+    <source>is she at an amusement park ?</source>
+    <translation system="Molto">&#22905;&#22312;&#19968;&#20010;&#28216;&#20048;&#22253;&#21527;&#65311;</translation>
+    <translation system="Google">&#22905;&#26159;&#22312;&#28216;&#20048;&#22253;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="453">
+    <source>is she Finnish ?</source>
+    <translation system="Molto">&#22905;&#26159;&#33452;&#20848;&#20154;&#21527;&#65311;</translation>
+    <translation system="Google">&#22905;&#26159;&#33452;&#20848;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="454">
+    <source>is she in the French restaurant ?</source>
+    <translation system="Molto">&#22905;&#22312;&#27861;&#22269;&#30340;&#39277;&#24215;&#21527;&#65311;</translation>
+    <translation system="Google">&#22905;&#26159;&#22312;&#27861;&#22269;&#39184;&#21381;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="455">
+    <source>is the bank closed ?</source>
+    <translation system="Molto">&#38134;&#34892;&#26159;&#20851;&#38381;&#30340;&#21527;&#65311;</translation>
+    <translation system="Google">&#22312;&#38134;&#34892;&#20851;&#38381;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="456">
+    <source>is the hospital closed tomorrow ?</source>
+    <translation system="Molto">&#21307;&#38498;&#22312;&#26126;&#22825;&#26159;&#20851;&#38381;&#30340;&#21527;&#65311;</translation>
+    <translation system="Google">&#26159;&#21307;&#38498;&#25910;&#30340;&#26126;&#22825;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="457">
+    <source>is the most popular disco open on Saturdays ?</source>
+    <translation system="Molto">&#26368;&#27969;&#34892;&#30340;&#37027;&#20010;&#36842;&#26031;&#31185;&#22312;&#26143;&#26399;&#20845;&#26159;&#24320;&#25918;&#30340;&#21527;&#65311;</translation>
+    <translation system="Google">&#26159;&#30446;&#21069;&#26368;&#27969;&#34892;&#30340;&#36842;&#26031;&#31185;&#33310;&#21381;&#22312;&#26143;&#26399;&#20845;&#24320;&#25918;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="458">
+    <source>is the nearest airport closed on Thursday ?</source>
+    <translation system="Molto">&#26368;&#36817;&#30340;&#37027;&#20010;&#26426;&#22330;&#22312;&#26143;&#26399;&#22235;&#26159;&#20851;&#38381;&#30340;&#21527;&#65311;</translation>
+    <translation system="Google">&#26159;&#19978;&#21608;&#22235;&#26368;&#36817;&#30340;&#26426;&#22330;&#20851;&#38381;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="459">
+    <source>is the nearest bar closed today ?</source>
+    <translation system="Molto">&#20170;&#22825;&#26368;&#36817;&#30340;&#37027;&#20010;&#37202;&#21543;&#26159;&#20851;&#38381;&#30340;&#21527;&#65311;</translation>
+    <translation system="Google">&#26368;&#36817;&#30340;&#37202;&#21543;&#20170;&#26085;&#25910;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="461">
+    <source>is their daughter's name NN ?</source>
+    <translation system="Molto">&#20182;&#20204;&#30340;&#22899;&#20799;&#21483;NN&#21527;&#65311;</translation>
+    <translation system="Google">&#26159;&#20182;&#20204;&#30340;&#22899;&#20799;&#30340;&#21517;&#23383;NN&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="462">
+    <source>is there a bus to the airport ?</source>
+    <translation system="Molto">&#26377;&#21435;&#26426;&#22330;&#30340;&#20844;&#20849;&#27773;&#36710;&#21527;&#65311;</translation>
+    <translation system="Google">&#26377;&#27809;&#26377;&#22823;&#24052;&#21435;&#26426;&#22330;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="463">
+    <source>is there a ferry to the park ?</source>
+    <translation system="Molto">&#26377;&#21435;&#20844;&#22253;&#30340;&#28193;&#33337;&#21527;&#65311;</translation>
+    <translation system="Google">&#26377;&#28193;&#36718;&#21069;&#24448;&#20844;&#22253;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="464">
+    <source>is this apple very expensive ?</source>
+    <translation system="Molto">&#36825;&#20010;&#33529;&#26524;&#26159;&#38750;&#24120;&#26114;&#36149;&#30340;&#21527;&#65311;</translation>
+    <translation system="Google">&#36825;&#26159;&#33529;&#26524;&#24456;&#36149;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="465">
+    <source>is this wine cold ?</source>
+    <translation system="Molto">&#36825;&#29942;&#37202;&#26159;&#20919;&#30340;&#21527;&#65311;</translation>
+    <translation system="Google">&#36825;&#37202;&#20919;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="467">
+    <source>is your wife in a hospital ?</source>
+    <translation system="Molto">&#20320;&#30340;&#22971;&#23376;&#22312;&#19968;&#20010;&#21307;&#38498;&#21527;&#65311;</translation>
+    <translation system="Google">&#26159;&#20320;&#30340;&#22971;&#23376;&#22312;&#21307;&#38498;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="475">
+    <source>must her daughter wait for you at a post office ?</source>
+    <translation system="Molto">&#22905;&#30340;&#22899;&#20799;&#24517;&#39035;&#22312;&#19968;&#20010;&#37038;&#23616;&#31561;&#20320;&#21527;&#65311;</translation>
+    <translation system="Google">&#35201;&#22899;&#20799;&#31561;&#20320;&#22312;&#37038;&#23616;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="483">
+    <source>must they eat a pizza in the most expensive restaurant ?</source>
+    <translation system="Molto">&#20182;&#20204;&#24517;&#39035;&#22312;&#26368;&#26114;&#36149;&#30340;&#37027;&#38388;&#39277;&#24215;&#21507;&#19968;&#20010;&#27604;&#33832;&#39292;&#21527;&#65311;</translation>
+    <translation system="Google">&#35201;&#20182;&#20204;&#21507;&#27604;&#33832;&#39292;&#65292;&#22312;&#26368;&#26114;&#36149;&#30340;&#39184;&#21381;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="485">
+    <source>must they eat the pizza in the most expensive restaurant ?</source>
+    <translation system="Molto">&#20182;&#20204;&#24517;&#39035;&#22312;&#26368;&#26114;&#36149;&#30340;&#37027;&#38388;&#39277;&#24215;&#21507;&#27604;&#33832;&#39292;&#21527;&#65311;</translation>
+    <translation system="Google">&#35201;&#20182;&#20204;&#21507;&#25259;&#33832;&#26368;&#26114;&#36149;&#30340;&#39184;&#21381;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="489">
+    <source>must they wait for us ?</source>
+    <translation system="Molto">&#20182;&#20204;&#24517;&#39035;&#31561;&#25105;&#20204;&#21527;&#65311;</translation>
+    <translation system="Google">&#20182;&#20204;&#24517;&#39035;&#31561;&#24453;&#25105;&#20204;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="491">
+    <source>my children don't have bread .</source>
+    <translation system="Molto">&#25105;&#30340;&#23401;&#23376;&#27809;&#26377;&#38754;&#21253;&#12290;</translation>
+    <translation system="Google">&#25105;&#30340;&#23401;&#23376;&#27809;&#26377;&#38754;&#21253;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="493">
+    <source>my name is NN .</source>
+    <translation system="Molto">&#25105;&#21483;NN&#12290;</translation>
+    <translation system="Google">&#25105;&#30340;&#21517;&#23383;&#21483;&#31070;&#32463;&#32593;&#32476;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="494">
+    <source>that pizza is very cold .</source>
+    <translation system="Molto">&#37027;&#20010;&#27604;&#33832;&#39292;&#26159;&#38750;&#24120;&#20919;&#30340;&#12290;</translation>
+    <translation system="Google">&#27604;&#33832;&#39292;&#26159;&#38750;&#24120;&#20919;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="495">
+    <source>the airport isn't closed .</source>
+    <translation system="Molto">&#26426;&#22330;&#19981;&#26159;&#20851;&#38381;&#30340;&#12290;</translation>
+    <translation system="Google">&#26426;&#22330;&#27809;&#26377;&#20851;&#38381;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="496">
+    <source>the amusement park isn't open on Mondays .</source>
+    <translation system="Molto">&#28216;&#20048;&#22253;&#22312;&#26143;&#26399;&#19968;&#19981;&#26159;&#24320;&#25918;&#30340;&#12290;</translation>
+    <translation system="Google">&#28216;&#20048;&#22253;&#26159;&#26143;&#26399;&#19968;&#19981;&#24320;&#25918;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="497">
+    <source>the apples cost five euros .</source>
+    <translation system="Molto">&#33529;&#26524;&#26159;&#20116;&#20010;&#27431;&#20803;&#12290;</translation>
+    <translation system="Google">&#33529;&#26524;&#33457;&#20102;500&#27431;&#20803;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="498">
+    <source>the cheese isn't cheap .</source>
+    <translation system="Molto">&#22902;&#37226;&#19981;&#26159;&#24265;&#20215;&#30340;&#12290;</translation>
+    <translation system="Google">&#22902;&#37226;&#26159;&#19981;&#20415;&#23452;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="499">
+    <source>the coffee is very cold .</source>
+    <translation system="Molto">&#21654;&#21857;&#26159;&#38750;&#24120;&#20919;&#30340;&#12290;</translation>
+    <translation system="Google">&#21654;&#21857;&#26159;&#38750;&#24120;&#20919;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="500">
+    <source>the Italian pizza is too cold .</source>
+    <translation system="Molto">&#24847;&#22823;&#21033;&#27604;&#33832;&#39292;&#26159;&#22826;&#20919;&#30340;&#12290;</translation>
+    <translation system="Google">&#24847;&#22823;&#21033;&#27604;&#33832;&#22826;&#20919;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="501">
+    <source>the nearest airport is closed .</source>
+    <translation system="Molto">&#26368;&#36817;&#30340;&#37027;&#20010;&#26426;&#22330;&#26159;&#20851;&#38381;&#30340;&#12290;</translation>
+    <translation system="Google">&#26368;&#36817;&#30340;&#26426;&#22330;&#26159;&#20851;&#38381;&#30340;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="502">
+    <source>these pizzas are very suspect .</source>
+    <translation system="Molto">&#36825;&#20123;&#27604;&#33832;&#39292;&#26159;&#38750;&#24120;&#21487;&#30097;&#30340;&#12290;</translation>
+    <translation system="Google">&#36825;&#20123;&#27604;&#33832;&#39292;&#26159;&#38750;&#24120;&#21487;&#30097;&#30340;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="504">
+    <source>they aren't ready .</source>
+    <translation system="Molto">&#20182;&#20204;&#19981;&#26159;&#20934;&#22791;&#22909;&#30340;&#12290;</translation>
+    <translation system="Google">&#20182;&#20204;&#36824;&#27809;&#26377;&#20934;&#22791;&#22909;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="506">
+    <source>they don't have dollars .</source>
+    <translation system="Molto">&#20182;&#20204;&#27809;&#26377;&#32654;&#20803;&#12290;</translation>
+    <translation system="Google">&#20182;&#20204;&#19981;&#24517;&#32654;&#20803;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="508">
+    <source>they don't know him .</source>
+    <translation system="Molto">&#20182;&#20204;&#19981;&#35748;&#35782;&#20182;&#12290;</translation>
+    <translation system="Google">&#20182;&#20204;&#19981;&#35748;&#35782;&#20182;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="510">
+    <source>they don't speak Flemish .</source>
+    <translation system="Molto">&#20182;&#20204;&#19981;&#35828;&#20315;&#20848;&#24503;&#35821;&#12290;</translation>
+    <translation system="Google">&#20182;&#20204;&#19981;&#20250;&#35828;&#20315;&#20848;&#33426;&#35821;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="511">
+    <source>this apple isn't fresh .</source>
+    <translation system="Molto">&#36825;&#20010;&#33529;&#26524;&#19981;&#26159;&#26032;&#40092;&#30340;&#12290;</translation>
+    <translation system="Google">&#36825;&#20010;&#33529;&#26524;&#26159;&#19981;&#26032;&#40092;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="512">
+    <source>this apple isn't too bad .</source>
+    <translation system="Molto">&#36825;&#20010;&#33529;&#26524;&#19981;&#26159;&#22826;&#22351;&#30340;&#12290;</translation>
+    <translation system="Google">&#36825;&#20010;&#33529;&#26524;&#26159;&#19981;&#26159;&#22826;&#31967;&#31957;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="514">
+    <source>wait for my children</source>
+    <translation system="Molto">&#31561;&#25105;&#30340;&#23401;&#23376;</translation>
+    <translation system="Google">&#31561;&#25105;&#30340;&#23401;&#23376;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="520">
+    <source>we don't have beer .</source>
+    <translation system="Molto">&#25105;&#20204;&#27809;&#26377;&#21860;&#37202;&#12290;</translation>
+    <translation system="Google">&#25105;&#20204;&#27809;&#26377;&#21860;&#37202;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="521">
+    <source>what is his name ?</source>
+    <translation system="Molto">&#20182;&#36149;&#22995;&#65311;</translation>
+    <translation system="Google">&#20182;&#21483;&#20160;&#20040;&#21517;&#23383;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="523">
+    <source>where do they want to drink ?</source>
+    <translation system="Molto">&#20182;&#20204;&#22312;&#21738;&#37324;&#24819;&#21917;&#65311;</translation>
+    <translation system="Google">&#20182;&#20204;&#22312;&#21738;&#20799;&#21917;&#30340;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="524">
+    <source>where does his daughter sleep ?</source>
+    <translation system="Molto">&#20182;&#30340;&#22899;&#20799;&#21435;&#21738;&#37324;&#30561;&#65311;</translation>
+    <translation system="Google">&#37027;&#37324;&#27809;&#26377;&#20182;&#30340;&#22899;&#20799;&#30561;&#20102;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="525">
+    <source>where is a hospital ?</source>
+    <translation system="Molto">&#19968;&#20010;&#21307;&#38498;&#22312;&#21738;&#37324;&#65311;</translation>
+    <translation system="Google">&#36825;&#37324;&#26159;&#21307;&#38498;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="526">
+    <source>where is the most popular Polish restaurant ?</source>
+    <translation system="Molto">&#26368;&#27969;&#34892;&#30340;&#37027;&#38388;&#27874;&#20848;&#30340;&#39277;&#24215;&#22312;&#21738;&#37324;&#65311;</translation>
+    <translation system="Google">&#36825;&#37324;&#26159;&#26368;&#27969;&#34892;&#30340;&#27874;&#20848;&#39184;&#21381;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="527">
+    <source>where is the nearest bank ?</source>
+    <translation system="Molto">&#26368;&#36817;&#30340;&#37027;&#38388;&#38134;&#34892;&#22312;&#21738;&#37324;&#65311;</translation>
+    <translation system="Google">&#26368;&#36817;&#30340;&#38134;&#34892;&#22312;&#21738;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="531">
+    <source>where must I wait for them ?</source>
+    <translation system="Molto">&#25105;&#22312;&#21738;&#37324;&#24517;&#39035;&#31561;&#20182;&#20204;&#65311;</translation>
+    <translation system="Google">&#25105;&#22312;&#21738;&#37324;&#24517;&#39035;&#31561;&#24453;&#20182;&#20204;&#21602;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="532">
+    <source>which bus goes to the airport ?</source>
+    <translation system="Molto">&#21738;&#20010;&#20844;&#20849;&#27773;&#36710;&#21435;&#26426;&#22330;&#65311;</translation>
+    <translation system="Google">&#21738;&#21488;&#20844;&#36710;&#21435;&#26426;&#22330;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="533">
+    <source>which tram goes to the zoo ?</source>
+    <translation system="Molto">&#21738;&#20010;&#30005;&#36710;&#21435;&#21160;&#29289;&#22253;&#65311;</translation>
+    <translation system="Google">&#35813;&#30005;&#36710;&#21435;&#21160;&#29289;&#22253;&#21527;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="534">
+    <source>wine is very cheap .</source>
+    <translation system="Molto">&#37202;&#26159;&#38750;&#24120;&#24265;&#20215;&#30340;&#12290;</translation>
+    <translation system="Google">&#37202;&#26159;&#24456;&#20415;&#23452;&#30340;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="536">
+    <source>you are tired .</source>
+    <translation system="Molto">&#20320;&#32047;&#20102;&#12290;</translation>
+    <translation system="Google">&#20320;&#32047;&#20102;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="544">
+    <source>you don't have tea .</source>
+    <translation system="Molto">&#20320;&#27809;&#26377;&#33590;&#12290;</translation>
+    <translation system="Google">&#20320;&#27809;&#26377;&#33590;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="552">
+    <source>you have dollars .</source>
+    <translation system="Molto">&#20320;&#26377;&#32654;&#20803;&#12290;</translation>
+    <translation system="Google">&#20320;&#26377;&#32654;&#20803;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="560">
+    <source>you must sleep .</source>
+    <translation system="Molto">&#20320;&#24517;&#39035;&#30561;&#12290;</translation>
+    <translation system="Google">&#20320;&#24517;&#39035;&#30561;&#35273;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="568">
+    <source>you want to sit at the theatre .</source>
+    <translation system="Molto">&#20320;&#24819;&#22312;&#21095;&#38498;&#22352;&#12290;</translation>
+    <translation system="Google">&#20320;&#24819;&#22352;&#22312;&#24433;&#38498;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="576">
+    <source>your children don't have coffee .</source>
+    <translation system="Molto">&#20320;&#30340;&#23401;&#23376;&#27809;&#26377;&#21654;&#21857;&#12290;</translation>
+    <translation system="Google">&#20320;&#30340;&#23401;&#23376;&#27809;&#26377;&#21654;&#21857;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="584">
+    <source>your daughter's husband doesn't have cheese .</source>
+    <translation system="Molto">&#20320;&#30340;&#22899;&#20799;&#30340;&#19976;&#22827;&#27809;&#26377;&#22902;&#37226;&#12290;</translation>
+    <translation system="Google">&#20320;&#22899;&#20799;&#30340;&#19976;&#22827;&#27809;&#26377;&#22902;&#37226;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="592">
+    <source>your son is in the cheapest bar .</source>
+    <translation system="Molto">&#20320;&#30340;&#20799;&#23376;&#22312;&#26368;&#24265;&#20215;&#30340;&#37027;&#20010;&#37202;&#21543;&#12290;</translation>
+    <translation system="Google">&#20320;&#30340;&#20799;&#23376;&#26159;&#26368;&#20415;&#23452;&#30340;&#21543;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="600">
+    <source>I can't wait for my husband .</source>
+    <translation system="Molto">&#25105;&#19981;&#33021;&#31561;&#25105;&#30340;&#19976;&#22827;&#12290;</translation>
+    <translation system="Google">&#25105;&#19981;&#33021;&#31561;&#24453;&#25105;&#30340;&#19976;&#22827;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="610">
+    <source>I don't want to wait for their children .</source>
+    <translation system="Molto">&#25105;&#19981;&#24819;&#31561;&#20182;&#20204;&#30340;&#23401;&#23376;&#12290;</translation>
+    <translation system="Google">&#25105;&#19981;&#24819;&#31561;&#24453;&#33258;&#24049;&#30340;&#23401;&#23376;&#12290;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="622">
+    <source>do we know where we can wait for them ?</source>
+    <translation system="Molto">&#25105;&#20204;&#30693;&#36947;&#25105;&#20204;&#22312;&#21738;&#37324;&#33021;&#31561;&#20182;&#20204;&#21527;&#65311;</translation>
+    <translation system="Google">&#36825;&#26679;&#20570;&#65292;&#25105;&#20204;&#30693;&#36947;&#25105;&#20204;&#21487;&#20197;&#31561;&#24453;&#21602;&#65311;</translation>
+  </seg>
+  <seg doc-id="eng-chi.treebank" id="627">
+    <source>she isn't in the nearest car park .</source>
+    <translation system="Molto">&#22905;&#19981;&#22312;&#26368;&#36817;&#30340;&#37027;&#20010;&#20572;&#36710;&#22330;&#12290;</translation>
+    <translation system="Google">&#22905;&#26159;&#19981;&#26159;&#22312;&#26368;&#36817;&#30340;&#20572;&#36710;&#22330;&#12290;</translation>
+  </seg>
+</set>
+
