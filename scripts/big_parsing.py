@@ -23,8 +23,8 @@ def large_parser(*args):
 
     sentidx = 0;
     with (codecs.open(args[4], 'w') if len(args) > 4 else sys.stdout) as outputStream:
-	#for time, parsesBlock in itertools.imap(parser, inputSet):
-	for time, parsesBlock in parallelize_utils.parimap(parser, inputSet, default_return=[], threads=3, chunksize=101):
+	#for time, parsesBlock in parallelize_utils.parimap(parser, inputSet, default_return=(0.00, []), threads=3, chunksize=101):
+	for time, parsesBlock in itertools.imap(parser, inputSet):
 	    sentidx += 1;
 	    strParses = str(outputPrinter(parsesBlock));
 	    print >>outputStream, "%d\t%.4f\t%s" %(sentidx, time, strParses);
@@ -50,5 +50,5 @@ def merge_parses(*args):
     return;
 
 if __name__ == '__main__':
-    large_parser(*sys.argv[1:]);
-    #merge_parses(*sys.argv[1:]);
+    #large_parser(*sys.argv[1:]);
+    merge_parses(*sys.argv[1:]);

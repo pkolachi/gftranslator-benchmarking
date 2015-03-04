@@ -142,6 +142,7 @@ def parseNames(grammar, language):
 def parseUnknown(grammar, language):
     def callback(lin_idx, sentence, start):
 	moving_start, end, eot = start, len(sentence), True;
+	isNewToken = (moving_start == 0) or (moving_start > 1 and sentence[moving_start-1].isspace()) # -- added to deal with segmentation errors like may => ma_N + Symb y
 	if moving_start < end and (not sentence[moving_start].isupper()):
 	    while moving_start < end:
 		if sentence[moving_start] in string.whitespace:
@@ -149,7 +150,7 @@ def parseUnknown(grammar, language):
 		    break;
 		moving_start += 1;
 	    unknown_word = sentence[start:end].strip();
-	    if unknown_word:
+	    if unknown_word and isNewToken:
 		count = 0;
 		for analysis in grammar.languages[language].lookupMorpho(unknown_word):
 		    count += 1;
@@ -311,7 +312,7 @@ def translation_pipeline(props):
 	translationBlocks[tgtlang] = skeletonDoc(inputDoc, tgtlang);
 
     preprocessor  = pipeline_lexer;
-    postprocessor = clean_gfstrings; #lambda X: X
+    postprocessor = clean_gfstrings; #lambda X: X #clean_gfstrings;
 
     logging.info( "Parsing text in %s" %(sourceLanguage) );
     # 1. Get Abstract Trees for sentences in source language.

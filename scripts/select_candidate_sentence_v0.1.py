@@ -1,5 +1,5 @@
 
-import codecs, collections, itertools, math, operator, sys;
+import codecs, collections, cProfile, itertools, math, operator, pstats, sys;
 import conll_utils, random_utils;
 
 sys.stdout = codecs.getwriter('utf-8')(sys.stdout);
@@ -14,7 +14,7 @@ def get_tag_mapping(mapfile):
     return mapList;
 
 #GOOGLE_postags = get_tag_mapping('en-ptb.map');
-GOOGLE_postags = get_tag_mapping('fi-tdt.map');
+GOOGLE_postags = get_tag_mapping('sv-treebank.map');
 #postags_of_interest = ['ADJ', 'ADP', 'ADV', 'CONJ', 'DET', 'NOUN', 'NUM', 'PRON', 'PRT', 'VERB', 'X'];
 postags_of_interest = ['ADJ', 'ADV', 'NOUN', 'VERB'];
 
@@ -124,6 +124,7 @@ def pruneRanks(ranks, tags_of_interest):
 def trainRankingModels():
     inputFileName = sys.argv[1] if len(sys.argv) > 1 else '';
     with random_utils.smart_open(inputFileName) as trainfile:
+	for sentence in conll_utils.sentences_from_conll(trainfile):
 	lfreq, sfreq = collections.defaultdict(int), collections.defaultdict(int);
 	for featureinstance in extractFeatures(conll_utils.sentences_from_conll(trainfile)):
 	    for feat in featureinstance['lexprofiles']:
@@ -183,5 +184,15 @@ def estimateCandidateRanks():
     return;
 
 if __name__ == '__main__':
-    trainRankingModels();
-    #estimateCandidateRanks();
+    runFunc = trainRankingModels;
+    #runFunc = estimateCandidateRanks;
+    #runFunc();
+    #'''
+    try:
+	cProfile.run("runFunc()", "profiler")
+	programStats = pstats.Stats("profiler")
+	programStats.sort_stats('cumulative').print_stats(50)
+    except KeyboardInterrupt:
+	programStats = pstats.Stats("profiler")
+	programStats.sort_stats('cumulative').print_stats(50)
+	sys.exit(1) #'''

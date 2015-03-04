@@ -4,7 +4,7 @@ import codecs, copy, itertools, math, multiprocessing, operator, os, os.path, re
 import pgf;
 
 #sys.stdin = codecs.getreader('utf-8')(sys.stdin);
-#sys.stdout = codecs.getwriter('utf-8')(sys.stdout);
+sys.stdout = codecs.getwriter('utf-8')(sys.stdout);
 #sys.stderr = codecs.getwriter('utf-8')(sys.stderr);
 
 '''
@@ -297,8 +297,11 @@ def pgf_ktranslate(*args):
 
 def pgf_linearize(*args):
     grammarfile, tgtlang = args[0], args[1];
-    inputSet = codecs.open(args[2], 'r', 'utf-8') if len(args) > 2 else sys.stdin;
-    grammar = pgf.readPGF(grammarfile);
+    inputSet = itertools.imap(pgf.readExpr, codecs.open(args[2], 'r') if len(args) > 2 else sys.stdin);
+    grammar    = pgf.readPGF(grammarfile);
+    linearizer = grammar.languages[tgtlang].linearize;
+    for linString in itertools.imap(linearizer, inputSet):
+	print gf_postprocessor( linString.decode('utf-8') );
     return;
 
 def pgf_klinearize(*args):
@@ -316,8 +319,9 @@ def pgf_klinearize(*args):
 
 if __name__ == '__main__':
     #pgf_parse(*sys.argv[1:]);
-    pgf_kparse(*sys.argv[1:]);
+    #pgf_kparse(*sys.argv[1:]);
     #pgf_multiparse(*sys.argv[1:]);
+    pgf_linearize(*sys.argv[1:]);
     #pgf_klinearize(*sys.argv[1:]);
     #pgf_translate(*sys.argv[1:]);
     #pgf_ktranslate(*sys.argv[1:]);
