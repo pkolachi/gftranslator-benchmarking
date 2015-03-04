@@ -3,32 +3,36 @@ import codecs, os, sys;
 #import lxml.etree as etree;
 import xml.etree.cElementTree as etree;
 
-if len(sys.argv) < 4:
-    print >>sys.stderr, "./%s <evaluation-task-xml> <results-xml> <data-directory>" %sys.argv[0];
-    sys.exit(1);
+def parseTaskXMLFile(filepath):
+    ## PROCESSING TASK XML
+    source_sentences = dict();
+    system_hypothesis = dict();
+    reference_translations = dict();
+    indoc = etree.parse(filepath);
+    inroot = indoc.getroot();
+    dataset_name, source_lang, target_lang = inroot.attrib['id'], inroot.attrib['source-language'], inroot.attrib['target-language'];
+    for seg in inroot.findall('.//seg'):
+	key = (seg.attrib['doc-id'], seg.attrib['id']);
+	source_sentences[key] = seg.find('source').text;
+	for hypothesis in seg.findall('translation'):
+	    system_name = hypothesis.attrib['system'];
+	    system_hypothesis.setdefault(system_name, dict())[key] = hypothesis.text;
+    return source_sentences, reference_translations, system_hypothesis;
 
-evaluationtask_xml, results_xml, dataDirectory = sys.argv[1], sys.argv[2], sys.argv[3];
-source_sentences = dict();
-system_hypothesis = dict();
-reference_translations = dict();
 
-## PROCESSING TASK XML
-indoc = etree.parse(evaluationtask_xml);
-inroot = indoc.getroot();
-dataset_name, source_lang, target_lang = inroot.attrib['id'], inroot.attrib['source-language'], inroot.attrib['target-language'];
-for seg in inroot.findall('.//seg'):
-    key = (seg.attrib['doc-id'], seg.attrib['id']);
-    source_sentences[key] = seg.find('source').text;
-    for hypothesis in seg.findall('translation'):
-	system_name = hypothesis.attrib['system'];
-	system_hypothesis.setdefault(system_name, dict())[key] = hypothesis.text;
-
-'''
-for key in source_sentences.keys():
-    print source_sentences[key];
-    for sysname in sorted(system_hypothesis.keys()):
-	print "\t%s\t%s" %(sysname, system_hypothesis[sysname].get(key, "NONE"));
-'''
+def main():
+    if len(sys.argv) < 4:
+	print >>sys.stderr, "./%s <evaluation-task-xml> <results-xml> <data-directory>" %sys.argv[0];
+	sys.exit(1);
+	
+    evaluationtask_xml, results_xml, dataDirectory = sys.argv[1], sys.argv[2], sys.argv[3];
+    source_sentences, reference_translations, system_hypothesis = parseTaskXMLFile(evaluationtask_xml);
+    '''
+    for key in source_sentences.keys():
+	print source_sentences[key];
+	for sysname in sorted(system_hypothesis.keys()):
+	    print "\t%s\t%s" %(sysname, system_hypothesis[sysname].get(key, "NONE"));
+    '''
 
 ## PROCESSING RESULT XML
 indoc = etree.parse(results_xml);
