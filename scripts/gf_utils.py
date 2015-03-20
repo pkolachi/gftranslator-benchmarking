@@ -4,7 +4,7 @@ import codecs, copy, itertools, math, multiprocessing, operator, os, os.path, re
 import pgf;
 
 #sys.stdin = codecs.getreader('utf-8')(sys.stdin);
-sys.stdout = codecs.getwriter('utf-8')(sys.stdout);
+#sys.stdout = codecs.getwriter('utf-8')(sys.stdout);
 #sys.stderr = codecs.getwriter('utf-8')(sys.stderr);
 
 '''
@@ -318,10 +318,10 @@ def pgf_klinearize(*args):
     return;
 
 if __name__ == '__main__':
-    #pgf_parse(*sys.argv[1:]);
+    pgf_parse(*sys.argv[1:]);
     #pgf_kparse(*sys.argv[1:]);
     #pgf_multiparse(*sys.argv[1:]);
-    pgf_linearize(*sys.argv[1:]);
+    #pgf_linearize(*sys.argv[1:]);
     #pgf_klinearize(*sys.argv[1:]);
     #pgf_translate(*sys.argv[1:]);
     #pgf_ktranslate(*sys.argv[1:]);
