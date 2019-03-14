@@ -1,0 +1,6 @@
+eng
+swe
+fin
+bul
+por
+spa
