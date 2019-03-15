@@ -149,7 +149,7 @@ def bilinks2inter(bidict, uttlngmap) :
       sbufintlnk = [] ;
       for itm in mgrp :
         for pool,spool in zip(intlnk, sintlnk) :
-          snew = spool + sum(1 if pt in bidict[itm] else 0 for pt in pool) ;
+          snew = spool + sum(1 for pt in pool if pt in bidict[itm]) ;
           bufintlnk.append(pool + [itm]) ; 
           sbufintlnk.append(snew) ; 
       newintlnk = sorted(zip(bufintlnk, sbufintlnk), key=itemgetter(1)) ; 
