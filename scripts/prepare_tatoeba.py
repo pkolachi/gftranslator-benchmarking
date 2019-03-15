@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 
+from __future__ import print_function ;   # in case I accidentally run using Py2 
+
 import argparse ; 
 import io  ;
 import itertools as it ; 
@@ -9,7 +11,6 @@ import sys ;
 from collections import defaultdict ; 
 from operator    import itemgetter ; 
 
-
 corpus_prefix = 'sentences_detailed.csv' ; 
 links_prefix  = 'links.csv' ;
 tags_prefix   = 'tags.csv' ; 
@@ -18,7 +19,7 @@ def readcorpus(crpfpth, langs) :
   # read full corpus file but only keep utterances in the filtered languages
   sls = (l.strip() for l in io.open(crpfpth, encoding='utf-8')) ;
   tls = (X.split('\t') for X in sls) ; 
-  fls = ((X[0], X[1], X[2]) for X in tls if X[1] in langs) ; 
+  fls = ((X[0], X[1], X[2]) for X in tls if len(X) > 2 and X[1] in langs) ; 
   # load the corpus to memory for the filtered languages
   corpus = defaultdict(dict) ; # primary key is iso-3, secondary key is utt.id
   lngsid = {} ;                # utt. id => iso-3 code
@@ -27,20 +28,24 @@ def readcorpus(crpfpth, langs) :
     corpus[X[1]][X[0]] = X[2] ;
     lngsid[X[0]]       = X[1] ;
     uttc += 1 ;
-  print("Loaded {0} utterances from {1} languages- {2}".format(uttc, \
-         len(langs), \
+  print("Loaded {0} utterances from {1} languages- {2}".format(uttc,
+         len(langs),
          ', '.join(langs)),
-         file=sys.stderr) ; 
+         file=sys.stderr) ;
+  for lng in langs : 
+    lngc = sum(1 for _ in lngsid if lngsid[_] == lng) ; 
+    print("Loaded {0} utterances for {1}".format(lngc, lng), file=sys.stderr) ;
   return (corpus, lngsid) ; 
 
 def readbilinks(lnkfpth, uttlngmap) : 
   # read utt. alignment links
   sls = (l.strip() for l in io.open(lnkfpth, encoding='utf-8')) ; 
   tls = (X.split() for X in sls) ; 
-  fls = (X for X in tls if X[0] in uttlngmap and X[1] in uttlngmap) ; 
+  fls = (X for X in tls if len(X) == 2 and 
+             X[0] in uttlngmap and X[1] in uttlngmap) ; 
   # load the links into bilingual table with lists
   bilnks = defaultdict(set) ;
-  mlnks  = defaultdict(int)  ;  # counter abt how many are monolingual alignments
+  mlnks  = defaultdict(int)  ;  # counter of monolingual alignments
   langs  = set(uttlngmap.values()) ;  
   lnkc   = 0 ; 
   for X in fls :
@@ -58,17 +63,22 @@ def readbilinks(lnkfpth, uttlngmap) :
 def writeinterlnks(interlnks, corpus, lnkfpth, corpus_prefix) :
   tap = {} ;    # only write those utts. that have atleast one alignment
   # write interlingual link information
+  print("{0} links found in the corpus".format(len(interlnks)), 
+      file=sys.stderr)  ;
+  langs = sorted(corpus.keys()) ;
   with io.open(lnkfpth, 'w', encoding='utf-8') as outf :
-    for plnk in sorted(interlnks, key=lambda X: len([_ for _ in X if _]), reverse=True) :
+    print(','.join(langs), file=outf) ; 
+    for plnk in sorted( interlnks, 
+        key=lambda X: (len([1 for _ in X if _]), interlnks[X]), 
+        reverse=True ) :
       for uttid in plnk :
         tap[uttid] = True ;
       plnkstr = ','.join(x if x else '-' for x in plnk) ; 
-      print(plnkstr, file=outf) ; 
+      print("{0}\t{1}".format(plnkstr, interlnks[plnk]), file=outf) ; 
   # write sentences in each language to seperate files 
-  langs = corpus.keys() ; 
   for lng in langs :
     outfpth = '{0}.{1}.csv'.format(corpus_prefix, lng) ;
-    snts    = ('\t'.join(ut) for ut in sorted(corpus[lng].items()) if ut[0] in tap) ;
+    snts = ('\t'.join(ut) for ut in sorted(corpus[lng].items()) if ut[0] in tap) ;
     with io.open(outfpth, 'w', encoding='utf-8') as outf :
       for ut in snts :
         print(ut, file=outf) ;
@@ -85,8 +95,7 @@ def cmdline() :
   return argparser ; 
 
 
-def bilinks2inter(bidict, uttlngmap, heuristic='intersect') : 
-  possible_heuristics = ['intersect', 'union'] ;  
+def bilinks2inter(bidict, uttlngmap) : 
   # bidict is a dictionary with bidict[a] == [b] if (a,b) is an possible link
   # interdict is a dictionary with inter[m] == n if (m,n) is a link in the transitive closure of bidict
   
@@ -109,62 +118,47 @@ def bilinks2inter(bidict, uttlngmap, heuristic='intersect') :
     while cur < len(lcl) :
       tpt = lcl[cur] ;
       # all points aligned to tpt not yet included in local group
-      for npt in bidict[tpt] : 
-        if   npt not in lcl  and  heuristic == 'grow' :
-          lcl.append(npt) ;
-        elif npt not in lcl  and  uttlngmap[tpt] != uttlngmap[npt] :
-          lcl.append(npt) ; 
+      buf = sorted((npt for npt in bidict[tpt] if npt not in lcl), 
+                    key=lambda x: deg[x]) ; 
+      lcl.extend(buf) ; 
       cur += 1 ;
     if cur > 1 :   # node is not isolated and has atleast one translation
-      lcllinks.append( tuple(sorted(lcl)) ) ; 
+      lcllinks.append( tuple(lcl) ) ; 
     # add all points in lcl to proc_ids
     for cpt in lcl : 
       proc_ids[cpt] = True ;
-
   print("Found {0} local groups from the parallel alignments".format(len(lcllinks)), file=sys.stderr) ; 
-  
-  # apply heuristics to convert local groups to interlingual tables 
-  interlnks = [] ;
+
+  interlnks = defaultdict(float) ;
   langs  = set(uttlngmap.values()) ;
   for idx,lnk in enumerate(lcllinks, start=1) :
-    # make partitions of local links such that each point in a group 
-    # is a utt.id of a different language
+    if not (idx % 10000) :
+      print("Processed {0} local groups to create {1} entries".format(idx, len(interlnks)), file=sys.stderr) ; 
+    # make partitions s.t each partition maps to a different language 
     lnktbl = defaultdict(list) ; 
     for pt in lnk : 
       lnktbl[uttlngmap[pt]].append(pt) ; 
     lnkgrp = [tuple(lnktbl[lng]) if lnktbl[lng] else (None,) for lng in langs] ; 
+    
+    # use an incremental way to construct combinations of localgrps
+    # brute force approach of it.product ++ it.combinations is too slow even for 3 languages
+    intlnk  = [[pt] for pt in lnkgrp[0]] ; 
+    sintlnk = [0    for pt in lnkgrp[0]] ;
+    for mgrp in lnkgrp[1:] : 
+      bufintlnk  = [] ;  # a buffer to store valid links 
+      sbufintlnk = [] ;
+      for itm in mgrp :
+        for pool,spool in zip(intlnk, sintlnk) :
+          snew = spool + sum(1 if pt in bidict[itm] else 0 for pt in pool) ;
+          bufintlnk.append(pool + [itm]) ; 
+          sbufintlnk.append(snew) ; 
+      newintlnk = sorted(zip(bufintlnk, sbufintlnk), key=itemgetter(1)) ; 
+      intlnk  = map(itemgetter(0), newintlnk) ; 
+      sintlnk = map(itemgetter(1), newintlnk) ; 
 
-    if heuristic == 'intersect' :
-      # there should be one translation in all languages 
-      # only those entries which are attested by original ids are used
-      if (None,) in lnkgrp :
-        continue ;
-      # use an incremental way to construction intersection of localgrps
-      # brute force approach of it.product ++ it.combinations is too slow even for 3 languages
-      intlnk = [] ; 
-      for grp in lnkgrp : 
-        if not intlnk :
-          # check if all items in intlnk have an alignment with itm
-          for itm in grp :
-            intlnk.append([itm]) ; 
-        else :
-          for itm in grp :
-            for lnk in intlnk :
-              isintersect = all(True if pt in bidict[itm] else False for pt in lnk) ;
-              if isintersect :
-                lnk.append(itm) ; 
-
-
-      for grp in it.product(*lnkgrp) :
-        #print(grp, file=sys.stderr) ; 
-        isintersect = all(\
-            True if pair[1] in bidict[pair[0]] else False \
-            for pair in it.combinations(grp, 2)) ; 
-        if isintersect : 
-          interlnks.append(grp) ; 
-
-    if not (idx % 10000) :
-      print("Processed {0} local groups to create {1} entries".format(idx, len(interlnks)), file=sys.stderr) ; 
+    for lnk,slnk in zip(intlnk, sintlnk) :
+      if slnk >= 1 :
+        interlnks[tuple(lnk)] = slnk ; 
 
   return interlnks ; 
 
@@ -186,7 +180,7 @@ def main() :
   # this is the actual function that matters
   # different ways to convert bilingual links used in parallel corpora
   # to interlingual links
-  interlnks = bilinks2inter(bilnks, lngsid, heuristic='intersect') ;  
+  interlnks = bilinks2inter(bilnks, lngsid) ;  
 
   if not os.path.isdir(runenv.outdir) : 
     os.makedirs(runenv.outdir) ; 
