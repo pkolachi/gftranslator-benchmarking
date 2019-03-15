@@ -140,7 +140,21 @@ def bilinks2inter(bidict, uttlngmap, heuristic='intersect') :
       if (None,) in lnkgrp :
         continue ;
       # use an incremental way to construction intersection of localgrps
-      # brute force approach of it.product ++ it.combinations is too slow even for 3 languages 
+      # brute force approach of it.product ++ it.combinations is too slow even for 3 languages
+      intlnk = [] ; 
+      for grp in lnkgrp : 
+        if not intlnk :
+          # check if all items in intlnk have an alignment with itm
+          for itm in grp :
+            intlnk.append([itm]) ; 
+        else :
+          for itm in grp :
+            for lnk in intlnk :
+              isintersect = all(True if pt in bidict[itm] else False for pt in lnk) ;
+              if isintersect :
+                lnk.append(itm) ; 
+
+
       for grp in it.product(*lnkgrp) :
         #print(grp, file=sys.stderr) ; 
         isintersect = all(\
