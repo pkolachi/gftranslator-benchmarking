@@ -29,7 +29,7 @@ def readcorpus(crpfpth, langs) :
     uttc += 1 ;
   print("Loaded {0} utterances from {1} languages- {2}".format(uttc, \
          len(langs), \
-         ','.join(langs)),
+         ', '.join(langs)),
          file=sys.stderr) ; 
   return (corpus, lngsid) ; 
 
@@ -115,33 +115,42 @@ def bilinks2inter(bidict, uttlngmap, heuristic='intersect') :
         elif npt not in lcl  and  uttlngmap[tpt] != uttlngmap[npt] :
           lcl.append(npt) ; 
       cur += 1 ;
-
-    lcllinks.append( tuple(sorted(lcl)) ) ; 
+    if cur > 1 :   # node is not isolated and has atleast one translation
+      lcllinks.append( tuple(sorted(lcl)) ) ; 
     # add all points in lcl to proc_ids
     for cpt in lcl : 
       proc_ids[cpt] = True ;
+
+  print("Found {0} local groups from the parallel alignments".format(len(lcllinks)), file=sys.stderr) ; 
   
   # apply heuristics to convert local groups to interlingual tables 
   interlnks = [] ;
-  lnglst = set(uttlngmap.values()) ;
-  if heuristic == 'intersect' :
-    # only keep those entries which are attested by original ids
-    for lnk in lcllinks :
-      lnkgrp = [] ; 
-      for lng in lnglst : 
-        pts = tuple(pt for pt in lnk if uttlngmap[pt] == lng) ;
-        if not len(pts) :
-          pts = (None, ) ; 
-        lnkgrp.append(pts) ; 
+  langs  = set(uttlngmap.values()) ;
+  for idx,lnk in enumerate(lcllinks, start=1) :
+    # make partitions of local links such that each point in a group 
+    # is a utt.id of a different language
+    lnktbl = defaultdict(list) ; 
+    for pt in lnk : 
+      lnktbl[uttlngmap[pt]].append(pt) ; 
+    lnkgrp = [tuple(lnktbl[lng]) if lnktbl[lng] else (None,) for lng in langs] ; 
+
+    if heuristic == 'intersect' :
+      # there should be one translation in all languages 
+      # only those entries which are attested by original ids are used
+      if (None,) in lnkgrp :
+        continue ;
+      # use an incremental way to construction intersection of localgrps
+      # brute force approach of it.product ++ it.combinations is too slow even for 3 languages 
       for grp in it.product(*lnkgrp) :
-        pts = [pt for pt in grp if pt] ;
-        if len(pts) == 1 : 
-          continue ; 
+        #print(grp, file=sys.stderr) ; 
         isintersect = all(\
             True if pair[1] in bidict[pair[0]] else False \
-            for pair in it.combinations(pts, 2)) ; 
+            for pair in it.combinations(grp, 2)) ; 
         if isintersect : 
           interlnks.append(grp) ; 
+
+    if not (idx % 10000) :
+      print("Processed {0} local groups to create {1} entries".format(idx, len(interlnks)), file=sys.stderr) ; 
 
   return interlnks ; 
 
