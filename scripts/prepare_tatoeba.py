@@ -92,6 +92,7 @@ def cmdline() :
   argparser.add_argument('-b', '--links',  dest='lnkfpth', required=True,  help='bilingual links from the project') ;
   argparser.add_argument('-t', '--tags',   dest='tagfpth', required=False, help='tags information from the project') ;
   argparser.add_argument('-o', '--outdir', dest='outdir',  default='',     help='output directory') ;
+  argparser.add_argument('--all', dest='alllangs', default=False, help='only include those links with utterances in all languages') ; 
   return argparser ; 
 
 
@@ -181,6 +182,8 @@ def main() :
   # different ways to convert bilingual links used in parallel corpora
   # to interlingual links
   interlnks = bilinks2inter(bilnks, lngsid) ;  
+  if runenv.alllangs :
+    interlnks = dict((lnk,interlnks[lnk]) for lnk in interlnks if None not in lnk) ; 
 
   if not os.path.isdir(runenv.outdir) : 
     os.makedirs(runenv.outdir) ; 
