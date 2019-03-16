@@ -24,10 +24,16 @@ This script differs from the above implementation because:
   a) The previous implementation finds an alignment by taking the smallest 
   language corpus and finding one translation in each language aligned to 
   a sentence in the smallest language.
-  b) Instead, I use a clustering based approach: first create small local 
-  clusters of translations and from them extract multiway translations. 
-  That way, it can be possible to extract multiway translations even if 
+  b) Instead, in bilinks2inter[1] I use an approach from clustering:
+    i)  create small connected components in the sparse graph
+    ii) extract paths within each component such that each node in the path 
+    belongs to a different language 
+  This makes it possible to extract multiway translations even if 
   translations are not available in all languages. 
+  The problem with this approach is there are too many paths even when tested
+  for a small #languages (I haven't managed to run it for 6 languages, 3 seems
+  to work alright)
+
 The resulting interlinks.tsv gives a score for each multiway alignment- which
 for n languages, is upper-bounded by C(n,2). The script also filters alignments
 using a lower-bound of 2. 
@@ -170,16 +176,13 @@ def bilinks2inter(bidict, uttlngmap) :
 
     # use an incremental way to construct combinations of localgrps
     # brute force approach of it.product ++ it.combinations is too slow even for 3 languages
-    """
     intlnk  = [([pt],0) for pt in lnkgrp[0]] ; 
     for mgrp in lnkgrp[1:] : 
       bufintlnk  = [] ;  # a buffer to store valid links 
-      for itm in mgrp :
-        for pool,spool in intlnk :
+      for pool,spool in intlnk :
+        for itm in mgrp :
           snew = spool + sum(1 for pt in pool if pt in bidict[itm]) ; 
           bufintlnk.append((pool + [itm], snew)) ; 
-      print("Length of bufintlnk {0}".format(len(bufintlnk)), file=sys.stderr) ; 
-      #intlnk = sorted(bufintlnk, key=itemgetter(1)) ; 
       intlnk = bufintlnk ; 
     """
     intlnk  = [[pt] for pt in lnkgrp[0]] ; 
@@ -197,7 +200,7 @@ def bilinks2inter(bidict, uttlngmap) :
       intlnk  = map(itemgetter(0), newintlnk) ; 
       sintlnk = map(itemgetter(1), newintlnk) ; 
     intlnk = zip(intlnk, sintlnk) ; 
-    #"""
+    """
     for lnk,slnk in intlnk :
       if slnk >= 1 :
         interlnks[tuple(lnk)] = slnk ; 
