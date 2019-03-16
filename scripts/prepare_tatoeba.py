@@ -11,7 +11,30 @@ import sys ;
 from collections import defaultdict ; 
 from operator    import itemgetter ; 
 
-corpus_prefix = 'sentences_detailed.csv' ; 
+"""
+This script takes the corpus from the tatoeba project and creates a multi-way
+corpus for selected languages.
+After I started writing the script, I found an implementation on github 
+https://github.com/jonsafari/multiway-corpus
+This script differs from the above implementation because:
+  a) The previous implementation finds an alignment by taking the smallest 
+  language corpus and finding one translation in each language aligned to 
+  a sentence in the smallest language.
+  b) Instead, I use a clustering based approach: first create small local 
+  clusters of translations and from them extract multiway translations. 
+  That way, it can be possible to extract multiway translations even if 
+  translations are not available in all languages. 
+The resulting interlinks.tsv gives a score for each multiway alignment- which
+for n languages, is upper-bounded by C(n,2). The script also filters alignments
+using a lower-bound of 2. 
+
+TODO: I am unable to run the script with Python 2- only tested it with Python 3
+Hence one needs to check if the implementation is sound and doesn't yield
+strange results due to Python 3.
+
+"""
+
+corpus_prefix = 'sentences.csv' # 'sentences_detailed.csv' ; 
 links_prefix  = 'links.csv' ;
 tags_prefix   = 'tags.csv' ; 
 
@@ -42,7 +65,7 @@ def readbilinks(lnkfpth, uttlngmap) :
   sls = (l.strip() for l in io.open(lnkfpth, encoding='utf-8')) ; 
   tls = (X.split() for X in sls) ; 
   fls = (X for X in tls if len(X) == 2 and 
-             X[0] in uttlngmap and X[1] in uttlngmap) ; 
+                           X[0] in uttlngmap and X[1] in uttlngmap) ; 
   # load the links into bilingual table with lists
   bilnks = defaultdict(set) ;
   mlnks  = defaultdict(int)  ;  # counter of monolingual alignments
@@ -68,9 +91,9 @@ def writeinterlnks(interlnks, corpus, lnkfpth, corpus_prefix) :
   langs = sorted(corpus.keys()) ;
   with io.open(lnkfpth, 'w', encoding='utf-8') as outf :
     print(','.join(langs), file=outf) ; 
-    for plnk in sorted( interlnks, 
-        key=lambda X: (len([1 for _ in X if _]), interlnks[X]), 
-        reverse=True ) :
+    for plnk in sorted(interlnks, 
+                      key=lambda X: (len([1 for _ in X if _]), interlnks[X]), 
+                      reverse=True) :
       for uttid in plnk :
         tap[uttid] = True ;
       plnkstr = ','.join(x if x else '-' for x in plnk) ; 
@@ -120,7 +143,7 @@ def bilinks2inter(bidict, uttlngmap) :
       tpt = lcl[cur] ;
       # all points aligned to tpt not yet included in local group
       buf = sorted((npt for npt in bidict[tpt] if npt not in lcl), 
-                    key=lambda x: deg[x]) ; 
+                   key=lambda x: deg[x]) ; 
       lcl.extend(buf) ; 
       cur += 1 ;
     if cur > 1 :   # node is not isolated and has atleast one translation
@@ -143,6 +166,18 @@ def bilinks2inter(bidict, uttlngmap) :
     
     # use an incremental way to construct combinations of localgrps
     # brute force approach of it.product ++ it.combinations is too slow even for 3 languages
+    """
+    intlnk  = [([pt],0) for pt in lnkgrp[0]] ; 
+    for mgrp in lnkgrp[1:] : 
+      bufintlnk  = [] ;  # a buffer to store valid links 
+      for itm in mgrp :
+        for pool,spool in intlnk :
+          snew = spool + sum(1 for pt in pool if pt in bidict[itm]) ;
+          bufintlnk.append((pool + [itm], snew)) ; 
+      print("Length of bufintlnk {0}".format(len(bufintlnk)), file=sys.stderr) ;
+      #intlnk = sorted(bufintlnk, key=itemgetter(1)) ;  
+      intlnk = bufintlnk ; 
+    """
     intlnk  = [[pt] for pt in lnkgrp[0]] ; 
     sintlnk = [0    for pt in lnkgrp[0]] ;
     for mgrp in lnkgrp[1:] : 
@@ -156,8 +191,9 @@ def bilinks2inter(bidict, uttlngmap) :
       newintlnk = sorted(zip(bufintlnk, sbufintlnk), key=itemgetter(1)) ; 
       intlnk  = map(itemgetter(0), newintlnk) ; 
       sintlnk = map(itemgetter(1), newintlnk) ; 
-
-    for lnk,slnk in zip(intlnk, sintlnk) :
+    intlnk = zip(intlnk, sintlnk) ; 
+    #"""
+    for lnk,slnk in intlnk :
       if slnk >= 1 :
         interlnks[tuple(lnk)] = slnk ; 
 
